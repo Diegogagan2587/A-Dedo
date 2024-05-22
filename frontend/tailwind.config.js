@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ['Comfortaa', 'sans-serif'],
+        sans: [ 'Roboto Flex', 'sans-serif']
+      },
+      colors: {
+        customGreen: '#00A66A',
+      },
+    },
   },
   plugins: [],
 }
