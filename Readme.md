@@ -45,12 +45,13 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> Would you like to know more about the tech and tools we use in this project?
 
 <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://reactrouter.com/en/main">React Router</a></li>
   </ul>
 </details>
 
