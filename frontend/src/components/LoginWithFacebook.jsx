@@ -1,16 +1,18 @@
 import facebookSVG from '../assets/facebook.svg';
+import RoundedBtn from './RoundedBtn';
 
-const LoginWithFacebook = () => {
+const LoginWithFacebook = ({ text }) => {
   const handleLogin = () => {
     // Facebook login logic
   };
   return (
-    <button
-     className="bg-[#1877F2] text-white flex items-center justify-center p-2 rounded-full gap-2" 
-    onClick={handleLogin}>
-      <img src={facebookSVG} alt="facebook logo" />
-      <span>Ingresar con facebook</span>
-    </button>
+    <RoundedBtn
+      text={text}
+      onClick={handleLogin}
+      className="bg-[#1877F2] text-white"
+      logo={facebookSVG}
+      alt="facebook logo"
+    />
   );
 };
 
