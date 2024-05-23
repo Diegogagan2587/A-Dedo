@@ -1,12 +1,10 @@
-import Navbar from "./components/Navbar"
-
+import Main from "./pages/Main"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Navbar />
+      <Main />
     </>
   )
 }
