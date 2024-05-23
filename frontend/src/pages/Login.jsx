@@ -1,3 +1,6 @@
+import LoginWithFacebook from '../components/LoginWithFacebook';
+import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
+
 const Login = () => {
   return (
     <section className="flex flex-col">
@@ -10,9 +13,11 @@ const Login = () => {
           <button type="button">Ingresar</button>
         </div>
       </form>
-      <p>Olvidaste tu contrasena?</p>
-      <button type="button">Ingresar con Facebook</button>
-      <button type="button">Ingresar con Google</button>
+      <div className='flex flex-col border-2 w-3/ gap-2'>
+        <p>Olvidaste tu contrasena?</p>
+        <LoginWithFacebook text={'Ingresar con facebook'} />
+        <LoginWGoogleBtn text={'Ingresar con Google'} />
+      </div>
     </section>
   );
 };
