@@ -15,7 +15,7 @@ const Login = () => {
         </div>
       </form>
       <div className='flex flex-col w-3/4 gap-2'>
-        <p>Olvidaste tu contrasena?</p>
+        <p className='text-sm'>Olvidaste tu contrasena?</p>
         <LoginWithFacebook text={'Ingresar con facebook'} />
         <LoginWGoogleBtn text={'Ingresar con Google'} />
       </div>
