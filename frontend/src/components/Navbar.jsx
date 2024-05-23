@@ -6,8 +6,8 @@ const Navbar = () => {
     <nav
       className="relative"
     >
-      <img src={bgNavCurve} alt="background" className="z-0  absolute w-full" />
-      <div className="flex items-center justify-center z-10 relative w-full">
+      <img src={bgNavCurve} alt="background" className="z-0  relative w-full" />
+      <div className="flex items-center justify-center z-10 absolute top-0 w-full">
         <div className="flex flex-col items-center">
           <h1 className="font-title text-white text-4xl">a dedo</h1>
           <p className="text-white text-sm text-center ml-8">
