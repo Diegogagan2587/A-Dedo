@@ -1,5 +1,6 @@
 import LoginWithFacebook from '../components/LoginWithFacebook';
 import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
+import ButtonGreen from '../components/ButtonGreen';
 
 const Login = () => {
   return (
@@ -8,9 +9,9 @@ const Login = () => {
       <form className="flex flex-col">
         <input type="text" placeholder="Mail" />
         <input type="password" placeholder="Contraseña" />
-        <div className="flex">
-          <button type="button">Crear cuenta</button>
-          <button type="button">Ingresar</button>
+        <div className="flex gap-2 items-center">
+          <ButtonGreen text={'Crear Cuenta'} />
+          <ButtonGreen text={'Ingresar'} />
         </div>
       </form>
       <div className='flex flex-col border-2 w-3/ gap-2'>
