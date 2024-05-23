@@ -9,7 +9,7 @@ export default {
       fontFamily: {
         title: ['Comfortaa', 'sans-serif'],
         sans: [ 'Roboto Flex', 'sans-serif'],
-        mainTitle: ['Baloo Thambi', 'sans-serif']
+        mainTitle: ['Baloo Thambi 2', 'sans-serif']
       },
       colors: {
         customGreen: '#00A66A',
