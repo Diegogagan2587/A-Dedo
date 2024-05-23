@@ -1,0 +1,32 @@
+import LoginWithFacebook from '../components/LoginWithFacebook';
+import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
+import ButtonGreen from '../components/ButtonGreen';
+import Input from '../components/Input';
+
+const handleClick = (e) => {
+  //place holder to prevent default
+  e.preventDefault();
+}
+
+const Login = () => {
+  return (
+    <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-0">
+      <h1 className="my-2 text-xl text-black">Iniciar sesion</h1>
+      <form className="flex flex-col w-full items-center justify-around">
+        <Input type="text" placeholder="Mail" />
+        <Input type="password" placeholder="Contraseña" />
+        <div className="flex gap-2 items-center my-2 w-full">
+          <ButtonGreen onClick={handleClick} text={'Crear Cuenta'} className={"text-lg w-1/2"}/>
+          <ButtonGreen onClick={handleClick} text={'Ingresar'} className={"text-sm w-1/2"}/>
+        </div>
+      </form>
+      <div className='flex flex-col gap-2 w-full items-center my-2'>
+        <p className='text-sm'>Olvidaste tu contrasena?</p>
+        <LoginWithFacebook onClick={handleClick} text={'Ingresar con facebook'} />
+        <LoginWGoogleBtn onClick={handleClick} text={'Ingresar con Google'} />
+      </div>
+    </section>
+  );
+};
+
+export default Login;
