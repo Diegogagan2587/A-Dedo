@@ -8,10 +8,10 @@ function Main() {
               <p className="text-white w-1/2 text-1xl mb-4 ">Conectate con personas que van al mismo lugar que vos y ahorra dinero.</p>
               <GreenButton />
         </main>
-     <section className="flex items-center flex-col">
+    <section className="flex items-center flex-col">
         <h2 className="mt-3 p-4 text-2xl">¿Qué es <span className="text-customGreen font-title">a dedo</span>?</h2>
         <p className="text-center mb-4"><span className="text-customGreen font-title">a dedo</span> es una plataforma que te permite contactarte de manera facil y segura con otras personas que van al mismo destino que vos.</p>
-     </section>
+    </section>
     </div>
   )
 }
