@@ -8,11 +8,12 @@ export default {
     extend: {
       fontFamily: {
         title: ['Comfortaa', 'sans-serif'],
-        sans: [ 'Roboto Flex', 'sans-serif']
+        sans: [ 'Roboto Flex', 'sans-serif'],
+        mainTitle: ['Baloo Thambi', 'sans-serif']
       },
       colors: {
         customGreen: '#00A66A',
-      },
+      }
     },
   },
   plugins: [],
