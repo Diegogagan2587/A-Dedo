@@ -10,11 +10,11 @@ const Login = () => {
         <input type="text" placeholder="Mail" />
         <input type="password" placeholder="Contraseña" />
         <div className="flex gap-2 items-center">
-          <ButtonGreen text={'Crear Cuenta'} />
-          <ButtonGreen text={'Ingresar'} />
+          <ButtonGreen text={'Crear Cuenta'} className={"text-lg"}/>
+          <ButtonGreen text={'Ingresar'} className={"text-sm"}/>
         </div>
       </form>
-      <div className='flex flex-col w-3/4 gap-2'>
+      <div className='flex flex-col gap-2'>
         <p className='text-sm'>Olvidaste tu contrasena?</p>
         <LoginWithFacebook text={'Ingresar con facebook'} />
         <LoginWGoogleBtn text={'Ingresar con Google'} />

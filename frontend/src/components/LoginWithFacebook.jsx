@@ -9,7 +9,7 @@ const LoginWithFacebook = ({ text }) => {
     <RoundedBtn
       text={text}
       onClick={handleLogin}
-      className="bg-[#1877F2] text-white"
+      className="bg-[#1877F2] text-white text-xs"
       logo={facebookSVG}
       alt="facebook logo"
     />

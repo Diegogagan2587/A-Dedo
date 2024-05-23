@@ -1,10 +1,10 @@
 import RoundedBtn from "./RoundedBtn";
 
-const ButtonGreen = ({ text }) => {
+const ButtonGreen = ({ text, className }) => {
     return (
         <RoundedBtn
         text={text}
-        className="text-[#00A66A] hover:text-white hover:bg-[#00A66A]"
+        className={`${className} text-[#00A66A] hover:text-white hover:bg-[#00A66A]`}
         />
     );
 }  
