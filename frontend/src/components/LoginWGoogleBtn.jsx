@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import googleSVG from '../assets/google.svg';
 import RoundedBtn from './RoundedBtn';
 
@@ -14,6 +15,10 @@ const LoginWGoogleBtn = ({text}) => {
         alt="google logo"
     />
   );
+};
+
+LoginWGoogleBtn.propTypes = {
+  text: PropTypes.string,
 };
 
 export default LoginWGoogleBtn;

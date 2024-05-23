@@ -1,10 +1,8 @@
+import { PropTypes } from 'prop-types';
 import facebookSVG from '../assets/facebook.svg';
 import RoundedBtn from './RoundedBtn';
 
-const LoginWithFacebook = ({ text }) => {
-  const handleLogin = () => {
-    // Facebook login logic
-  };
+const LoginWithFacebook = ({ text, handleLogin }) => {
   return (
     <RoundedBtn
       text={text}
@@ -14,6 +12,11 @@ const LoginWithFacebook = ({ text }) => {
       alt="facebook logo"
     />
   );
+};
+
+LoginWithFacebook.propTypes = {
+  text: PropTypes.string,
+  handleLogin: PropTypes.func
 };
 
 export default LoginWithFacebook;

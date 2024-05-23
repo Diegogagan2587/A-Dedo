@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import RoundedBtn from "./RoundedBtn";
 
 const ButtonGreen = ({ text, className, onClick }) => {
@@ -9,5 +10,11 @@ const ButtonGreen = ({ text, className, onClick }) => {
         />
     );
 }  
+
+ButtonGreen.propTypes = {
+    text: PropTypes.string,
+    className: PropTypes.string,
+    onClick: PropTypes.func
+};
 
 export default ButtonGreen;

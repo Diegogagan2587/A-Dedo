@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types';
+
 const RoundedBtn = ({ text, onClick, className, logo, alt }) => {
   return (
     <button
@@ -9,5 +11,13 @@ const RoundedBtn = ({ text, onClick, className, logo, alt }) => {
     </button>
   );
 }
+
+RoundedBtn.propTypes = {
+  text: PropTypes.string,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+  logo: PropTypes.string,
+  alt: PropTypes.string
+};
 
 export default RoundedBtn;
