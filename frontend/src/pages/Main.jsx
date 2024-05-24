@@ -4,7 +4,7 @@ function Main() {
   return (
     <div>
         <main className="h-screen bg-main-image flex items-center flex-col justify-center ">
-              <h1 className="text-white font-mainTitle text-center text-5xl font-bold mb-4">Viaja <br /> ahorrando</h1>
+              <h1 className="text-white font-mainTitle text-center text-5xl font-extrabold mb-4">Viaja <br /> ahorrando</h1>
               <p className="text-white w-1/2 text-1xl mb-4 ">Conectate con personas que van al mismo lugar que vos y ahorra dinero.</p>
               <GreenButton />
         </main>
