@@ -1,5 +1,8 @@
 import { PropTypes } from 'prop-types';
-import location from '../assets/location.png'
+import location from '../assets/location.png';
+import petsIcon from '../assets/pets.png'
+import handIcon from '../assets/hand.png'
+import kidsIcon from '../assets/family.png'
 
 const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   return (
@@ -8,6 +11,11 @@ const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTi
       <section>
         <h2 className="text-base font-bold text-center">{name}</h2>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
+        <div className='mt-2 flex flex-row justify-between'>
+          <img src={petsIcon} alt="pets icon" />
+          <img src={handIcon} alt="hand icon" />
+          <img src={kidsIcon} alt="kids icon" />
+        </div>
       </section>
       <section className='h-full'>
           <div>       
