@@ -10,7 +10,7 @@ const handleClick = (e) => {
 
 const Login = () => {
   return (
-    <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-0">
+    <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
       <h1 className="my-2 text-xl text-black">Iniciar sesion</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input type="text" placeholder="Mail" />
