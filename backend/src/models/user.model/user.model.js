@@ -34,6 +34,11 @@ const userSchema = new mongoose.Schema({
             Type: mongoose.Schema.Types.ObjectId,
             ref: "Message"
         }
+    ],
+    calification: [
+        {
+            Type: Number
+        }
     ]
 });
 
