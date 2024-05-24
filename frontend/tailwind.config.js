@@ -13,6 +13,7 @@ export default {
       },
       colors: {
         customGreen: '#00A66A',
+        textColor: "#263238"
       },
       backgroundImage: {
         'nav-curve': `url(./src/assets/nav-background.svg)`
