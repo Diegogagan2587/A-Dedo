@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import LoginWithFacebook from '../components/LoginWithFacebook';
 import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
 import ButtonGreen from '../components/ButtonGreen';
@@ -27,6 +28,10 @@ const Login = ({setIsLoggedIn}) => {
       </div>
     </section>
   );
+};
+
+Login.propTypes = {
+  setIsLoggedIn: PropTypes.func,
 };
 
 export default Login;
