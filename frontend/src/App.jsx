@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Main from './pages/Main';
 import Login from './pages/Login';
+import Home from './pages/Home';
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -19,7 +20,7 @@ function App() {
               path="/login"
               element={<Login setIsLoggedIn={setIsLoggedIn} />}
             />
-            <Route path="/home" element={<h1>Home here</h1>} />
+            <Route path="/home" element={<Home />} />
           </Routes>
         </main>
       </div>
