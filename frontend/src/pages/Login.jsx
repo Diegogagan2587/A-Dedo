@@ -3,12 +3,12 @@ import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
 import ButtonGreen from '../components/ButtonGreen';
 import Input from '../components/Input';
 
-const handleClick = (e) => {
-  //place holder to prevent default
-  e.preventDefault();
-}
-
-const Login = () => {
+const Login = ({setIsLoggedIn}) => {
+  const handleClick = (e) => {
+    //place holder to prevent default
+    e.preventDefault();
+    setIsLoggedIn(true);
+  }
   return (
     <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
       <h1 className="my-2 text-xl text-black">Iniciar sesion</h1>
