@@ -41,6 +41,7 @@ const Menu = ({ isActive, isLoggedIn }) => {
 
 Menu.propTypes = {
   isActive: PropTypes.bool.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
 };
 
 export default Menu;
