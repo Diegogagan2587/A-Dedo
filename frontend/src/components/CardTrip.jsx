@@ -6,7 +6,7 @@ import kidsIcon from '../assets/family.png'
 
 const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   return (
-    <article className='w-[328px] h-[126px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-20 ml-3'>
+    <article className='w-[328px] h-[126px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-5 ml-3'>
       <img src={profilePicture} alt={name} className="w-[60px] h-[60px] rounded-full" />
       <section>
         <h2 className="text-base font-bold text-center">{name}</h2>
@@ -40,7 +40,6 @@ const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTi
   )
 }
 
-
 CardTrip.propTypes = {
     name: PropTypes.string.isRequired,
     profilePicture: PropTypes.string.isRequired,
@@ -50,6 +49,5 @@ CardTrip.propTypes = {
     endLocation: PropTypes.string.isRequired,
     endTime: PropTypes.string.isRequired
 };
-
 
 export default CardTrip
