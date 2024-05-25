@@ -1,5 +1,5 @@
-import logo from '../assets/logo.png';
-import bgNavCurve from '../assets/nav-background.svg';
+import logo from '../../assets/logo.png';
+import bgNavCurve from '../../assets/nav-background.svg';
 
 const Navbar = () => {
   return (
