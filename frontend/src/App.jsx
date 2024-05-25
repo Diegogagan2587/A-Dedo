@@ -16,7 +16,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/login" element={<Login />} />
+            <Route 
+              path="/login"               
+              element={<Login setIsLoggedIn={setIsLoggedIn} />} 
+            />
             <Route path="/home" element={<Home />} />
           </Routes>
         </main>
