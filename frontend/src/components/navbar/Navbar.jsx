@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { PropTypes } from 'prop-types';
 import Menu from './Menu';
 import logo from '../../assets/logo.png';
 import bgNavCurve from '../../assets/nav-background.svg';
 import menuIcon from '../../assets/menu-icon-hamb.svg';
 
-const Navbar = () => {
+const Navbar = ({isLoggedIn}) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <nav className="relative">
@@ -25,9 +26,13 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <Menu isActive={isActive} />
+      <Menu isActive={isActive} isLoggedIn={isLoggedIn}/>
     </nav>
   );
 };
+
+Navbar.propTypes = {
+  isLoggedIn: PropTypes.bool,
+}
 
 export default Navbar;
