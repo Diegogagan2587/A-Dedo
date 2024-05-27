@@ -6,7 +6,7 @@ import kidsIcon from '../assets/family.png'
 
 const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   return (
-    <article className='w-[328px] h-[126px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-5 ml-3'>
+    <article className='w-[328px] h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
       <img src={profilePicture} alt={name} className="w-[60px] h-[60px] rounded-full" />
       <section>
         <h2 className="text-base font-bold text-center">{name}</h2>
@@ -25,7 +25,7 @@ const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTi
             </div>
               <p className="text-gray-700 ml-7 text-[11px]">{startTime}</p>
           </div> 
-          <div className="relative h-8">
+          <div className="relative h-10">
               <div className="absolute left-2 bottom-2 h-full border-l-2 border-dashed border-customGreen"></div>
             </div>
           <div> 

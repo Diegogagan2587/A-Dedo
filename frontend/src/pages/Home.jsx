@@ -20,11 +20,11 @@ const Home = () => {
           <img src={auto} alt="auto icon" />
         </div>
 
-        <section className="mt-7">
-            <Date
+        <Date
             date="Miercoles 21 de Mayo 2024"
             />
 
+        <section className="flex flex-col items-center">
             <CardTrip 
             profilePicture="src\assets\profile1.png"
             name="Elena"
@@ -44,11 +44,13 @@ const Home = () => {
             endLocation="Santa Clara del Mar"
             endTime="19:00hs"
             />
-
+          
+        </section>
             <Date
             date="Jueves 22 de Mayo 2024"
             />
 
+        <section className="flex flex-col items-center">
             <CardTrip 
             profilePicture="src\assets\profile1.png"
             name="Elena"
