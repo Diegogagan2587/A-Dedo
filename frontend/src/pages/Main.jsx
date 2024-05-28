@@ -1,6 +1,6 @@
 import GreenButton from "../components/GreenButton"
 import './Main.css'
-import mainDirver from '../assets/main-driver.png'
+import mainDriver from '../assets/main-driver.png'
 
 function Main() {
   return (
@@ -17,7 +17,7 @@ function Main() {
         <section>
           <h2>Seguridad y confianza</h2>
           <article>
-            <img src={mainDirver} alt="" />
+            <img src={mainDriver} alt="" />
             <p>Como conductor, tener el derecho de elegir con quien viajar, aceptando o cancelando las solicitudes. </p>
           </article>
           <article>
