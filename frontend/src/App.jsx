@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import Main from './pages/Main';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import TripDetails from './pages/TripDetails';
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -16,11 +17,12 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route 
-              path="/login"               
-              element={<Login setIsLoggedIn={setIsLoggedIn} />} 
+            <Route
+              path="/login"
+              element={<Login setIsLoggedIn={setIsLoggedIn} />}
             />
             <Route path="/home" element={<Home />} />
+            <Route path="trip-details" element={<TripDetails />} />
           </Routes>
         </main>
       </div>
