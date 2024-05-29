@@ -38,3 +38,15 @@ _IMPORTANT NOTE: Read **all** requirements before you start building your projec
 #### Features
 
 Depending on the time we might implement optional features, but we must strive to complete core features.
+
+##### Core features - Required.
+
+1. The user logs in to the website, by typing the username and password (If there is enough time, you can implement login / sign up with google and facebook).
+2. In the navigation panel, the user can see links to:
+   - Create Account (Visible for everyone unless logged)
+   - I want to be a Driver (Visible for everyone unless logged and driver)
+   - Help (Visible for everyone)
+   - About Us (Visible for everyone )
+   - Profile (Only visible if logged)
+   - Chat (Only visible if logged)
+   - My trips (Only visible if logged)
