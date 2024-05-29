@@ -53,30 +53,30 @@ function Main() {
 
       <section id="beneficios">
         <h2 className="text-[24px] ml-4 mt-6 font-bold font-mainTitle">Beneficios</h2>
-            <article className="flex items-center m-4 gap-[5px] p-3">
+            <article className="flex items-center m-3 gap-[5px] p-3">
               <img src={ahorroDinero} alt="" className="min-w-[60px] min-h-[60px]"/>
-              <div className="flex items-center flex-col">
+              <div className="flex items-center flex-col ml-2">
                 <h3 className="text-customGreen font-bold text-center">Ahorra dinero</h3>
                 <p className="text-center">Dividí gastos con otros pasajeros.</p>
               </div>
             </article>
-            <article className="flex items-center m-4 gap-[5px] p-3">
+            <article className="flex items-center m-3 gap-[5px] p-3">
               <img src={ahorroTiempo} alt="" className="min-w-[60px] min-h-[60px]" />
-              <div className="flex items-center flex-col">
+              <div className="flex items-center flex-col ml-2">
                 <h3 className="text-customGreen font-bold text-center">Ahorra tiempo</h3>
-                <p className="text-center">Decile chau a esperar el colectivo,<br /> coordina un horario, te subis y listo.</p>
+                <p className="text-center">Decile chau a esperar el colectivo, coordina un horario, te subis y listo.</p>
               </div>
             </article>
-            <article className="flex items-center m-4 gap-[5px] p-3">
+            <article className="flex items-center m-3 gap-[5px] p-3">
               <img src={amigos} alt="" className="min-w-[60px] min-h-[60px]" />
-              <div className="flex items-center flex-col">
+              <div className="flex items-center flex-col ml-2">
                 <h3 className="text-customGreen font-bold text-center">Hace amigos nuevos</h3>
                 <p className="text-center">Viaja acompañado y conoce nuevas personas.</p>
               </div>
             </article>
-            <article className="flex items-center m-4 gap-[5px] p-3">
+            <article className="flex items-center m-3 gap-[5px] p-3">
               <img src={medioAmbiente} alt="" className="min-w-[60px] min-h-[60px]"/>
-              <div className="flex items-center flex-col">
+              <div className="flex items-center flex-col ml-2">
                 <h3 className="text-customGreen font-bold text-center">Cuida el medio ambiente</h3>
                 <p className="text-center">Hay menos trafico y autos, juntos creamos ambiente libre de contaminacion.</p>
               </div>
