@@ -20,7 +20,9 @@ const TripDetails = () => {
       bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
       driverProfile={driverProfile}
       />
-      <div className="mt-20 pt-20 px-4 flex flex-col gap-8 items-center">
+      <div className="
+      pt-[10vw] mt-[10vw] sm:pt-[10vw] sm:mt-[20vw]
+      px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
           <Date date="Miercoles 21 de Mayo del 2024" />
