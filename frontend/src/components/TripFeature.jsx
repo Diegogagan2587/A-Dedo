@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const TripFeature = ({ text, icon }) => {
     return (
       <li
@@ -9,5 +11,10 @@ const TripFeature = ({ text, icon }) => {
       </li>
     );
   };
+
+TripFeature.propTypes = {
+    text: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+};
 
   export default TripFeature;

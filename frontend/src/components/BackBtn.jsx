@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const BackBtn = ({to}) => {
     return (
@@ -35,5 +36,9 @@ const BackBtn = ({to}) => {
       </button>
     );
   };
+
+BackBtn.propTypes = {
+    to: PropTypes.string.isRequired,
+};
 
   export default BackBtn;
