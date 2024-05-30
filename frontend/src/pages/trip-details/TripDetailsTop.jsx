@@ -19,7 +19,7 @@ const TripDetailsTop = ({ name, bio, driverProfile }) => {
       <div
         className="
         relative z-20
-        flex
+        flex pt-4
         "
       >
         <div className="flex items-start">
