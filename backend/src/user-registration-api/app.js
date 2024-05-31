@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Conexion a Mongodb
 
-const mongo_uri = 'mongodb://localhost:27017/adedo'
+const mongo_uri = URI_CONNECTION_DB_LOCAL || URI_CONNECTION_DB_ATLAS;
 
 mongoose.connect(mongo_uri, function(err){
     if (err){
