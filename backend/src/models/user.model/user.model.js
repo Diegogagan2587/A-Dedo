@@ -2,42 +2,42 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     name: {
-        Type: String,
+        type: String,
         require: true
     },
     surname: {
-        Type: String,
+        type: String,
         require: true
     },
     password: {
-        Type: String,
+        type: String,
         require: true
     },
     rol: [
         {
-            Type: String,
+            type: String,
             require: true
         }
     ],
     phone: {
-        Type: String,
+        type: String,
         require: true
     },
     history_trip:[
         {
-            Type: mongoose.Schema.Types.ObjectId,
+            type: mongoose.Schema.types.ObjectId,
             ref: "Trip"
         }
     ],
     messages:[
         {
-            Type: mongoose.Schema.Types.ObjectId,
+            type: mongoose.Schema.types.ObjectId,
             ref: "Message"
         }
     ],
     calification: [
         {
-            Type: Number
+            type: Number
         }
     ]
 });
