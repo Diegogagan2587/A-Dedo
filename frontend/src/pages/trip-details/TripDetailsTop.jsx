@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import curve from '../../assets//navbar/curve-2.svg';
 import BackBtn from '../../components/BackBtn';
 
@@ -37,6 +38,12 @@ const TripDetailsTop = ({ name, bio, driverProfile }) => {
       </div>
     </section>
   );
+};
+
+TripDetailsTop.propTypes = {
+  name: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  driverProfile: PropTypes.string,
 };
 
 export default TripDetailsTop;
