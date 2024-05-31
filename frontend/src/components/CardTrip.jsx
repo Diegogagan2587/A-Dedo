@@ -6,8 +6,8 @@ import kidsIcon from '../assets/family.png'
 
 const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   return (
-    <article className='w-[328px] h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
-      <img src={profilePicture} alt={name} className="w-[60px] h-[60px] rounded-full" />
+    <article className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
+      <img src={profilePicture} alt={name} className="w-[68px] h-[64px] rounded-full" />
       <section>
         <h2 className="text-base font-bold text-center">{name}</h2>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
