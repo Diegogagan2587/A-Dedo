@@ -4,7 +4,7 @@ import morgan from "morgan";
 
 //import local
 import { root_index } from "./router/root_index.js";
-import { PORT, URI_CONNECTION_DB_LOCAL } from "./config/conf.js";
+import { PORT, URI_CONNECTION_DB_LOCAL } from "../config/conf.js";
 import { connectMongoDB } from "./db/connection.js";
 
 const server = express();
