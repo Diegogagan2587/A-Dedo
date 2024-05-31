@@ -7,10 +7,6 @@ import User from "../models/user.model/user.model.js";
 
 const app = express();
 
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const user = require('./user');
-
 const port = 3000; 
 
 
