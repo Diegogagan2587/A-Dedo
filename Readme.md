@@ -146,6 +146,10 @@ Open the `backend` folder in your terminal an run:
 ```sh
   npm install
 ```
+In your `backend` folder create and .env file and add env variables as shown below:
+```JavaScript
+PORT = 3000;
+```
 
 ### Usage
 
