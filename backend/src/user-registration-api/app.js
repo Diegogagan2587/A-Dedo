@@ -1,6 +1,7 @@
-const express = require('express');
-const path = require('path');
-const bodyParse = require('body-parse');
+import express from "express";
+import path from "path";
+import bodyParse from "body-parse";
+
 const app = express();
 
 const mongoose = require('mongoose');
