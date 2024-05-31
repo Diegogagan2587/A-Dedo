@@ -21,14 +21,14 @@ const vehicleSchema = new mongoose.Schema({
     occupants:[
         {
             Type: mongoose.Schema.Types.ObjectId,
-            require:true,
+            require:false,
             ref: "User",
         }
     ],
     calification_driver: [
         {
             Type: mongoose.Schema.Types.ObjectId,
-            require:true,
+            require:false,
             ref: "Trip",
         }
     ]
