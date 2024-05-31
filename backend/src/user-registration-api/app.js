@@ -10,8 +10,8 @@ const app = express();
 const port = 3000; 
 
 
-app.use(bodyParse.jason());
-app.use(bodyParse.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
