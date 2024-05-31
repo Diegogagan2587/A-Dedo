@@ -104,6 +104,7 @@ In order to run this project you need:
 
 - a linux terminal or similar
 - node.js
+- MongoDB installed and running or a MongoDB running in cloud.
 
 <!--
 Example command:
