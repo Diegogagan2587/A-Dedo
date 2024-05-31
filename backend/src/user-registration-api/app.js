@@ -1,12 +1,11 @@
 import express from "express";
 import path from "path";
 import bodyParse from "body-parse";
+import mongoose from "mongoose";
+import bcrypt from "bcrypt";
+import user from "./user";
 
 const app = express();
-
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const user = require('./user');
 
 const port = 3000; 
 
