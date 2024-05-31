@@ -5,6 +5,8 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import User from "../models/user.model/user.model.js";
+import { URI_CONNECTION_DB_ATLAS, URI_CONNECTION_DB_LOCAL } from "../../config/conf.js";
+import { connectMongoDB } from "../db/connection.js";
 
 const app = express();
 
