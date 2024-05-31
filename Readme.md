@@ -104,7 +104,8 @@ In order to run this project you need:
 
 - a linux terminal or similar
 - node.js
-- MongoDB installed and running or a MongoDB running in cloud.
+- MongoDB installed and running or a MongoDB running in cloud so you can get the
+URL that allows the connection.
 
 <!--
 Example command:
@@ -149,7 +150,11 @@ Open the `backend` folder in your terminal an run:
 ```
 In your `backend` folder create and .env file and add env variables as shown below:
 ```JavaScript
-PORT = 3000;
+// your local port
+PORT = 3000
+// Add the URL of the DB you want to run in dev/local
+URI_CONNECTION_DB_LOCAL = my/database/url/connection
+
 ```
 
 ### Usage
