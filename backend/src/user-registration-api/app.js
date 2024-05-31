@@ -25,13 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const mongo_uri = URI_CONNECTION_DB_LOCAL || URI_CONNECTION_DB_ATLAS;
 
-mongoose.connect(mongo_uri, function(err){
-    if (err){
-        throw err;
-    }else {
-        console.log('Successfully connected to ${mongo_uri}');
-    }
-});
+connectMongoDB(mongo_uri)
 
 app.post('/register', (req, res) => {
     const {email, password} = req.body;
