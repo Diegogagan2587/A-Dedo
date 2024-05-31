@@ -2,34 +2,34 @@ import mongoose from "mongoose";
 
 const tripSchema = new mongoose.Schema({
     destination_point: {
-        Type: String,
+        type: String,
         require: true
     },
 
     starting_point: {
-        Type: String,
+        type: String,
         require: true
 
     },
 
     description: {
-        Type: String,
+        type: String,
         require: false
     },
 
     date_publication: {
-        Type: Date,
+        type: Date,
         require: true
     },
 
     date_start_trip: {
-        Type: Date,
+        type: Date,
         require: true
     },
 
     ocupation: [
         {
-            Type: mongoose.Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             require:false,
             ref: "User"
         }
@@ -37,7 +37,7 @@ const tripSchema = new mongoose.Schema({
 
     messages_trip: [
         {
-            Type: mongoose.Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "Message"
         }
 
@@ -45,7 +45,7 @@ const tripSchema = new mongoose.Schema({
 
     calification:[
         {
-            Type: Number
+            type: Number
         }
     ]
 

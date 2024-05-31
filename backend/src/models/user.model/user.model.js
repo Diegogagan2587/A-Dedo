@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
-
-const bcrypt = require('bcrypt');
-const mongoose = require('mongoose');
+import bcrypt from "bcrypt";
 
 const saltRounds = 10;
 
