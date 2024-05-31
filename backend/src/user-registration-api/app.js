@@ -28,9 +28,9 @@ mongoose.connect(mongo_uri, function(err){
 });
 
 app.post('/register', (req, res) => {
-    const {username, password} = req.body;
+    const {email, password} = req.body;
 
-    const user = new user({username, password});
+    const user = new user({email, password});
 
     user.save(err => {
         if(err){
@@ -45,9 +45,9 @@ app.post('/register', (req, res) => {
 });
 
 app.post('/authenticate', (req, res) => {
-    const {username, password} = req.body;
+    const {email, password} = req.body;
 
-    user.findOne({username}, (err, user) =>{
+    user.findOne({email}, (err, user) =>{
         if(err){
             res.status(500).send('ERROR AL AUTENTICAR USUARIO');
 
