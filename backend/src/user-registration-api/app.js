@@ -1,6 +1,9 @@
 import express from "express";
 import path from "path";
-import bodyParse from "body-parse";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import bcrypt from "bcrypt";
+import User from "../models/user.model/user.model.js";
 
 const app = express();
 
