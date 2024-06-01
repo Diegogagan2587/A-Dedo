@@ -65,6 +65,7 @@
 <summary>Database</summary>
   <ul>
     <li><a href="https://github.com/Automattic/mongoose">ORM: Mongoose</a></li>
+    <li><a href="https://www.mongodb.com/docs/">DB: MongoDB</a></li>
   </ul>
 </details> 
 
@@ -72,11 +73,13 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> See below our key features
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **user can create an account**
+- **user(driver) can share a trip**
+- **user(driver) can add a price**
+- **user can book a trip**
+- **Trip chat available**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,7 +97,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+> Are you a new developer and would like to know how to start?
 
 To get a local copy up and running, follow these steps.
 
@@ -141,6 +144,11 @@ open the `frontend` folder in your terminal an run:
 ```sh
   npm install
 ```
+
+Create an `.env` file and add the base API url:
+```sh
+VITE_API_URL_BASE = ""
+```
 #### Back End
 
 Open the `backend` folder in your terminal an run:
@@ -151,7 +159,7 @@ Open the `backend` folder in your terminal an run:
 In your `backend` folder create and .env file and add env variables as shown below:
 ```JavaScript
 // your local port
-PORT = 3000
+PORT = 3002
 // Add the URL of the DB you want to run in dev/local
 URI_CONNECTION_DB_LOCAL = my/database/url/connection
 
@@ -186,16 +194,18 @@ Example command:
 --->
 
 ### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
+#### front-end
+You can deploy the front-end using:
 
 ```sh
-
+npm run build
 ```
- -->
+#### back-end
+you might use:
+```sh
+npm install
+npm run start
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +213,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+> Below our beloved team members!
 
 👤 **Author1**
 
@@ -211,13 +221,12 @@ Example:
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+👤 **Rocio Naomi Clause - Designer**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Behance: [Ro Claus](https://www.behance.net/roclaus)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rocio-naomi-claus/)
 
-👤 **Diego Vidal Lopez**
+👤 **Diego Vidal Lopez - Full Stack Developer**
 
 - GitHub: [@Diegogagan2587](https://github.com/Diegogagan2587)
 - X (former Twitter): [@dieg02587](https://x.com/dieg02587)
@@ -230,11 +239,11 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> We know there are a lot of chances to improve, see below future features:
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Embedded Map**
+- [ ] **Update user documentation**
+- [ ] **Share location**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -256,9 +265,9 @@ We appreciate that contributions stick to the [ "A Dedo" original design](https:
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+> Would you like to help?
 
-If you like this project...
+- We appreciate if you try our app and report any issues you might find in the issues page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -268,7 +277,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank to all team members who contributed to this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -276,7 +285,7 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+> See Frequent Ask questions below:
 
 - **[Question_1]**
 
