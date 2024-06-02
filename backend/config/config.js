@@ -1,10 +1,9 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import UserModel from "../models/user.model/user.model.js";
-import TripModel from "../models/trip.model/trip.model.js";
-import MessageModel from "../models/message.model/message.model.js";
-
+import UserModel from "../src/models/user.js";
+import TripModel from "../src/models/trip.js";
+import MessageModel from "../src/models/message.js";
 
 export const {
     PORT,

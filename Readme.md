@@ -54,7 +54,7 @@
   </ul>
 </details>
 
-<!-- <details>
+<details>
   <summary>Server</summary>
   <ul>
     <li><a href="https://expressjs.com/">Express.js</a></li>
@@ -64,9 +64,9 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://github.com/Automattic/mongoose">ORM: Mongoose</a></li>
   </ul>
-</details> -->
+</details> 
 
 <!-- Features -->
 
@@ -102,6 +102,11 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+- a linux terminal or similar
+- node.js
+- MongoDB installed and running or a MongoDB running in cloud so you can get the
+URL that allows the connection.
+
 <!--
 Example command:
 
@@ -112,41 +117,61 @@ Example command:
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
+In you terminal access the folder where you want to
+clone the project:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
 ```
---->
+
+Clone this repository to your desired folder:
+
+```sh
+  git clone git@github.com:Diegogagan2587/A-Dedo.git
+```
+
 
 ### Install
 
-Install this project with:
+Install this project with the next steps:
+#### Front End
 
-<!--
-Example command:
+open the `frontend` folder in your terminal an run:
 
 ```sh
-  cd my-project
-  gem install
+  npm install
 ```
---->
+#### Back End
+
+Open the `backend` folder in your terminal an run:
+
+```sh
+  npm install
+```
+In your `backend` folder create and .env file and add env variables as shown below:
+```JavaScript
+// your local port
+PORT = 3000
+// Add the URL of the DB you want to run in dev/local
+URI_CONNECTION_DB_LOCAL = my/database/url/connection
+
+```
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
+#### Front End
+To run the project, make sure you have opened your terminal in the `frontend` folder and execute the following command:
 
 ```sh
-  rails server
+  npm run dev
 ```
---->
+
+#### Back End
+To run the Back-End, make sure you have opened your terminal in the `backend` folder and execute the following command:
+
+```sh
+  npm run start
+```
 
 ### Run tests
 
