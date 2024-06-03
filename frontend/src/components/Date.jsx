@@ -3,9 +3,9 @@ import calendar from '../assets/calendargreen.png'
 
 const Date = ({ date }) => {
   return (
-    <div className='flex flex-row items-center ml-4 mt-3' >
+    <div className='flex flex-row' >
         <img src={calendar} alt="calendar picture" />
-        <h2 className='ml-2 text-base'>{date}</h2>
+        <h2 className='ml-2'>{date}</h2>
     </div>
   )
 }
