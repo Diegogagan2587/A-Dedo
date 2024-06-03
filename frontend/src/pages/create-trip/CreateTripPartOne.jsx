@@ -4,8 +4,8 @@ import BtnNextIcon from "../../components/BtnNextIcon"
 
 const CreateTripPartOne = () => {
   return (
+    <>
     <main className="mt-28">
-  
       <section className="m-4 mt-2">
         <div>
           <span className="absolute right-3">
@@ -37,8 +37,8 @@ const CreateTripPartOne = () => {
       <span className="absolute right-12">
         <BtnNextIcon />
       </span>
-
     </main>
+    </>
   )
 }
 
