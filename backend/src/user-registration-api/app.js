@@ -22,8 +22,6 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Conexion a Mongodb
-console.log(URI_CONNECTION_DB_ATLAS);
-console.log(URI_CONNECTION_DB_LOCAL);
 const mongo_uri = URI_CONNECTION_DB_LOCAL || URI_CONNECTION_DB_ATLAS;
 
 connectMongoDB(mongo_uri)
@@ -43,20 +41,7 @@ app.post('/register', async (req, res) => {
       
         res.status(500).send( `ERROR AL REGISTRAR USUARIO  ${err.message}`);
       
-      }
-
-    /*const responseStatus = (err => {
-        if (err) {
-            res.status(500).send('ERROR AL REGISTRAR USUARIO');
-
-        } else {
-            res.status(200).send('USUARIO REGISTRADO');
-
-        }
-    });*/
-
-    
-
+     }   
 });
 
 app.post('/authenticate', (req, res) => {
