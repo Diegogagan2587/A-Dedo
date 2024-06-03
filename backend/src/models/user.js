@@ -36,18 +36,21 @@ const userSchema = new mongoose.Schema({
     history_trip: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Trip"
+            ref: "Trip",
+            required: false
         }
     ],
     messages: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Message"
+            ref: "Message",
+            required: false
         }
     ],
     calification: [
         {
-            type: Number
+            type: Number,
+            required: false
         }
     ]
 });
@@ -87,4 +90,5 @@ userSchema.method.isCorrectPassword = function(password, callback){
 
 }
 
-export default mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+export  default User;
