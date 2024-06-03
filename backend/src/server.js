@@ -3,8 +3,8 @@ import express from "express";
 import morgan from "morgan";
 
 //import local
-import { root_index } from "./router/root_index.js";
-import { PORT, URI_CONNECTION_DB_LOCAL } from "../config/conf.js";
+import { routes } from "./router/routes.js";
+import { PORT, URI_CONNECTION_DB_LOCAL } from "../config/config.js";
 import { connectMongoDB } from "./db/connection.js";
 
 const server = express();
@@ -13,12 +13,11 @@ const server = express();
 server.use(morgan("dev"));
 server.use(express.json());
 server.use(express.urlencoded({extended:true}));
-
-//connection
-connectMongoDB( URI_CONNECTION_DB_LOCAL || 'mongodb://localhost:27017/adedo');
-
 //router
-server.use(root_index);
+server.use(routes);
+
+//connects ORM with DB
+connectMongoDB( URI_CONNECTION_DB_LOCAL || 'mongodb://localhost:27017/adedo');
 
 //listener
 server.listen(PORT,()=>{
