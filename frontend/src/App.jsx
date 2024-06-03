@@ -5,6 +5,16 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import TripDetails from './pages/TripDetails';
+import CreateTripPartOne from './pages/create-trip/CreateTripPartOne';
+import CreateTripPartTwo from './pages/create-trip/CreateTripPartTwo';
+import CreateTripPartThree from './pages/create-trip/CreateTripPartThree';
+import DriverRegister from './pages/driver-register/DriverRegister';
+import DriverDNI from './pages/driver-register/DriverDNI';
+import DriverWait from './pages/driver-register/DriverWait';
+import DriverEnd from './pages/driver-register/DriverEnd';
+import CarRegister from './pages/driver-register/CarRegister';
+import CarWait from './pages/driver-register/CarWait';
+import CarEnd from './pages/driver-register/CarEnd'
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -23,6 +33,18 @@ function App() {
             />
             <Route path="/home" element={<Home />} />
             <Route path="trip-details" element={<TripDetails />} />
+            {/* Driver register render */}
+            <Route path="/driver-register" element={<DriverRegister />} />
+            <Route path="/driver-dni" element={<DriverDNI />} />
+            <Route path="/driver-wait" element={<DriverWait />} />
+            <Route path="/driver-end" element={<DriverEnd />} />
+            <Route path="/car-register" element={<CarRegister />} />
+            <Route path="/car-wait" element={<CarWait />} />
+            <Route path="/car-end" element={<CarEnd />} />
+            {/* create trip render */}
+            <Route path="/create-trip-part-one" element={<CreateTripPartOne />} />
+            <Route path="/create-trip-part-two" element={<CreateTripPartTwo />} />
+            <Route path="/create-trip-part-three" element={<CreateTripPartThree />} />
           </Routes>
         </main>
       </div>
