@@ -26,24 +26,6 @@ const mongo_uri = URI_CONNECTION_DB_LOCAL || URI_CONNECTION_DB_ATLAS;
 
 connectMongoDB(mongo_uri)
 
-app.post('/register', async (req, res) => {
-    const { name, surname, email, password, rol, phone} = req.body;
-
-    const user = new User({ name, surname, email, password, rol, phone});
-
-
-    try {
-
-        await user.save();
-        res.status(200).send('USUARIO REGISTRADO');
-      
-      } catch (err) {
-      
-        res.status(500).send( `ERROR AL REGISTRAR USUARIO  ${err.message}`);
-      
-     }   
-});
-
 app.post('/authenticate', (req, res) => {
     const { name, surname, email, password, rol, phone} = req.body;
 
