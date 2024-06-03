@@ -4,12 +4,12 @@ import { allPath } from '../controllers/errors/errorsController.js';
 export const routes = Router();
 
 // Import Controllers
-import { default as users_controller }  from '../controllers/usersController.js';
+import usersController from '../controllers/usersController.js';
 import { default as trips_controller } from '../controllers/tripsController.js'
 import { default as messages_controller } from "../controllers/messagesController.js"
 
 // user
-routes.use('/user', users_controller);
+routes.post('/user/register', usersController.register);
 
 // trip
 routes.use('/trip', trips_controller);
