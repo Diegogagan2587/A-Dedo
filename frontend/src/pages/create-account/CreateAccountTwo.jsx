@@ -1,8 +1,14 @@
+import { useState } from "react"
 import Input from "../../components/Input"
-
-
+import PopupCreateTrip from "../../components/PopupCreateTrip"
 
 const CreateAccountTwo = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  }
+  
   return (
     <main className="mt-20">
         <section className='flex flex-col items-center'>
@@ -30,10 +36,13 @@ const CreateAccountTwo = () => {
           <p className="m-3">He leído y acepto los <span className="text-customGreen">TÉRMINOS Y CONDICIONES</span></p>
         </section>
         <section className="flex items-center justify-center">
-          <button className="w-[165px] h-14 bg-customGreen text-white rounded-full m-6 p-2">
-            <a href="">Registrarme</a>
+          <button 
+          onClick={togglePopup}
+          className="w-[165px] h-14 bg-customGreen text-white rounded-full m-6 p-2">
+            Registrarme
           </button>
         </section>
+        <PopupCreateTrip show={showPopup} onClose={togglePopup} />
     </main>
   )
 }
