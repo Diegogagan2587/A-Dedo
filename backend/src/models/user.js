@@ -1,4 +1,8 @@
 import mongoose from "mongoose";
+import bcrypt from "bcrypt";
+
+const saltRounds = 10;
+
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -8,6 +12,12 @@ const userSchema = new mongoose.Schema({
     surname: {
         type: String,
         required: true
+        
+    },
+    email: {
+        type: String,
+        require: true,
+        unique: true
     },
     password: {
         type: String,
@@ -26,20 +36,45 @@ const userSchema = new mongoose.Schema({
     history_trip: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Trip"
+            ref: "Trip",
+            required: false
         }
     ],
     messages: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Message"
+            ref: "Message",
+            required: false
         }
     ],
     calification: [
         {
-            type: Number
+            type: Number,
+            required: false
         }
     ]
 });
 
-export default mongoose.model("User", userSchema);
+// guarda la contraseña nueva o modificada
+userSchema.pre('save', function(next){
+    if(this.isNew || this.isModified('password')){
+        
+        const document = this;
+
+        bcrypt.hash(document.password, saltRounds, (err, hashedPassword) => {
+            if(err){
+                next(err);
+
+            }else{
+                document.password = hashedPassword;
+                next();
+            }
+        });
+
+    }else{
+        next();
+    }
+});
+
+const User = mongoose.model("User", userSchema);
+export  default User;
