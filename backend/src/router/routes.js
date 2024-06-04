@@ -10,7 +10,7 @@ import { default as messages_controller } from "../controllers/messagesControlle
 
 // user
 routes.post('/register', usersController.register);
-
+routes.post('/authenticate', usersController.authenticate);
 
 // trip
 routes.use('/trip', trips_controller);
