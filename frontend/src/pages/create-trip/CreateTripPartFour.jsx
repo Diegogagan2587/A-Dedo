@@ -4,8 +4,16 @@ import paradas from "../../assets/paradas.png"
 import pets from "../../assets/pets.png"
 import family from "../../assets/family.png"
 import fastFood from "../../assets/fastfood.png"
+import { useState } from "react"
+import PopupCreateTrip from "../../components/PopupCreateTrip"
 
 const CreateTripPartFour = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  }
+
   return (
     <main className="mt-20">
       <section className="m-4 flex items-center">
@@ -49,10 +57,13 @@ const CreateTripPartFour = () => {
       </section>
       {/* esto despues lo cambio por el componente crear viaje bnt */}
       <section className="absolute right-3">
-        <button className="w-36 h-14 bg-customGreen text-white rounded-full m-6">
+        <button 
+          onClick={togglePopup}
+        className="w-36 h-14 bg-customGreen text-white rounded-full m-6">
           Crear Viaje
         </button>
       </section>
+      <PopupCreateTrip show={showPopup} onClose={togglePopup} />
     </main>
   )
 }
