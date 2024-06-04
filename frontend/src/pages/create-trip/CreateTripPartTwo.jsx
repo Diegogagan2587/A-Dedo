@@ -1,28 +1,49 @@
+import Input from "../../components/Input"
 import volante from "../../assets/volante.png"
-import removeCricle from "../../assets/remove_circle.png"
-import addCricle from "../../assets/add_circle.png"
 import BtnNextIcon from "../../components/BtnNextIcon"
 
 const CreateTripPartTwo = () => {
   return (
-    <main className="mt-[85px]">
-      <section className="m-4 mt-2 py-3">
-          <span className="absolute right-3">
-            <img src={volante} alt="" />
-          </span>
-				<h2 className="text-[18px] font-semibold">Cantidad de pasajeros</h2>
-				<input type="number" placeholder="Pasajeros" className='border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] placeholder-[#49454F] placeholder:text-sm text-base'/>
+    <main className="mt-20">
+      <section className="m-4 flex items-center">
+        <img src={volante} alt="" />
+        <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Punto de llegada</h2>
+			</section>
+      <section className="m-4">
+        <h2 className="text-[18px] font-semibold">Domicilio</h2>
+				<Input
+				type="text"
+        placeholder="Calle y número"
+				/>
       </section>
-      <section className="m-4 py-3">
-        <h2 className="text-[18px] font-semibold">Selecciona el precio por pasajero</h2>
-        <div className="flex items-center justify-around py-5">
-          <img src={removeCricle} alt="" />
-          <span className="font-semibold text-[26px]">$1090</span>
-          <img src={addCricle} alt="" />
+      <section className="m-4">
+        <h2 className="text-[18px] font-semibold">Localidad</h2>
+        <Input
+        type="text"
+        />
+      </section>
+      <section className="m-4">
+        <h2 className="text-[18px] font-semibold">Código Postal</h2>
+        <input 
+        type="number"
+        className="w-[100px] border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F]"
+        />
+      </section>
+			<section className="m-4 flex items-center justify-between">
+        <div>
+          <h2 className="text-[18px] font-semibold">Fecha</h2>
+          <Input
+          type="date"
+          />
         </div>
-        <em className="text-[14px] py-4">Valor recomendado para el viaje</em>
-      </section>
-      <span className="absolute right-12 bottom-20">
+        <div>
+          <h2 className="text-[18px] font-semibold">Horario</h2>
+          <Input
+          type="time"
+          />
+        </div>
+			</section>
+      <span className="absolute right-12">
         <BtnNextIcon />
       </span>
     </main>

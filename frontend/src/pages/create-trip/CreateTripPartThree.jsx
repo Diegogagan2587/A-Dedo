@@ -1,61 +1,33 @@
 import volante from "../../assets/volante.png"
-import Input from "../../components/Input"
-import paradas from "../../assets/paradas.png"
-import pets from "../../assets/pets.png"
-import family from "../../assets/family.png"
-import fastFood from "../../assets/fastfood.png"
+import removeCricle from "../../assets/remove_circle.png"
+import addCricle from "../../assets/add_circle.png"
+import BtnNextIcon from "../../components/BtnNextIcon"
 
 const CreateTripPartThree = () => {
   return (
     <main className="mt-20">
-      <section>
-        <div className="flex items-center justify-evenly">
-          <h2 className="text-[18px] font-semibold">Selecciona tus <br /> observaciones</h2>
-          <img src={volante} alt="" />
+      <section className="m-4 flex items-center">
+        <img src={volante} alt="" />
+        <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Acompañantes</h2>
+			</section>
+      <section className="m-4 mt-2 py-3">
+      <h2 className="text-[18px] font-semibold">Cantidad de pasajeros</h2>
+				<input type="number" placeholder="Pasajeros" className='border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] placeholder-[#49454F] placeholder:text-sm text-base'/>
+      </section>
+      <section className="m-4 py-3">
+        <h2 className="text-[18px] font-semibold">Selecciona el precio por pasajero</h2>
+        <div className="flex items-center justify-around py-5">
+          <img src={removeCricle} alt="" />
+          <span className="font-semibold text-[26px]">$1090</span>
+          <img src={addCricle} alt="" />
         </div>
+        <p className="text-center">
+          <em className="text-[14px] py-4">Valor recomendado por persona</em>
+        </p>
       </section>
-
-      <section>
-        <article className="flex items-center gap-4 m-7">
-          <img src={paradas} alt="" />
-          <p>Aceptas paradas intermedias</p>
-          <input 
-          type="checkbox" 
-          className="w-[20px] h-[20px]"/>
-        </article>
-        <article className="flex items-center gap-4 m-7">
-        <img src={pets} alt="" className="w-[23px] h-[25px]" />
-          <p>Aceptas viajar con mascotas</p>
-          <input 
-          type="checkbox" 
-          className="w-[20px] h-[20px]"/>
-        </article>
-        <article className="flex items-center gap-4 m-7">
-        <img src={family} alt="" className="w-[23px] h-[25px]" />
-          <p>Aceptas viajar con niños</p>
-          <input 
-          type="checkbox" 
-          className="w-[20px] h-[20px]"/>
-        </article>
-        <article className="flex items-center gap-4 m-7">
-        <img src={fastFood} alt="" />
-          <p>Aceptas comer durante el viaje</p>
-          <input 
-          type="checkbox" 
-          className="w-[20px] h-[20px]"/>
-        </article>
-      </section>
-
-      <section className="m-4 mt-10">
-        <h2 className="text-[18px] font-semibold mb-3">¿Queres informar algo más?</h2>
-        <Input />
-      </section>
-      {/* esto despues lo cambio por el componente crear viaje bnt */}
-      <section className="absolute right-3">
-        <button className="w-36 h-14 bg-customGreen text-white rounded-full m-6">
-          Crear Viaje
-        </button>
-      </section>
+      <span className="absolute right-12 bottom-20">
+        <BtnNextIcon />
+      </span>
     </main>
   )
 }
