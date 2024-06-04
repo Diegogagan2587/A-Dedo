@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Input from "../../components/Input"
-import PopupCreateTrip from "../../components/PopupCreateTrip"
+import PopupCreateAccount from "../../components/PopupCreateAccount";
 
 const CreateAccountTwo = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -42,7 +42,7 @@ const CreateAccountTwo = () => {
             Registrarme
           </button>
         </section>
-        <PopupCreateTrip show={showPopup} onClose={togglePopup} />
+        <PopupCreateAccount show={showPopup} onClose={togglePopup} />
     </main>
   )
 }
