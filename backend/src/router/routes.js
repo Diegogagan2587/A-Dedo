@@ -9,7 +9,8 @@ import { default as trips_controller } from '../controllers/tripsController.js'
 import { default as messages_controller } from "../controllers/messagesController.js"
 
 // user
-routes.post('/user/register', usersController.register);
+routes.post('/register', usersController.register);
+
 
 // trip
 routes.use('/trip', trips_controller);
