@@ -76,19 +76,5 @@ userSchema.pre('save', function(next){
     }
 });
 
-// valida el password
-userSchema.method.isCorrectPassword = function(password, callback){
-    bcrypt.compare(password, this.password, function(err, same){
-        if(err){
-            callback(err);
-
-        }else{
-            callback(err, same)
-        }
-
-    });
-
-}
-
 const User = mongoose.model("User", userSchema);
 export  default User;
