@@ -8,6 +8,7 @@ import TripDetails from './pages/TripDetails';
 import CreateTripPartOne from './pages/create-trip/CreateTripPartOne';
 import CreateTripPartTwo from './pages/create-trip/CreateTripPartTwo';
 import CreateTripPartThree from './pages/create-trip/CreateTripPartThree';
+import CreateTripPartFour from './pages/create-trip/CreateTripPartFour';
 import DriverRegister from './pages/driver-register/DriverRegister';
 import DriverDNI from './pages/driver-register/DriverDNI';
 import DriverWait from './pages/driver-register/DriverWait';
@@ -45,6 +46,7 @@ function App() {
             <Route path="/create-trip-part-one" element={<CreateTripPartOne />} />
             <Route path="/create-trip-part-two" element={<CreateTripPartTwo />} />
             <Route path="/create-trip-part-three" element={<CreateTripPartThree />} />
+            <Route path="/create-trip-part-four" element={<CreateTripPartFour />} />
           </Routes>
         </main>
       </div>
