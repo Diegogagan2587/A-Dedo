@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 
-const PopupCreateTrip = ({ show, onClose }) => {
+const PopupCreateAccount = ({ show, onClose }) => {
   if (!show) return null;
 
   return (
@@ -23,9 +23,9 @@ const PopupCreateTrip = ({ show, onClose }) => {
   )
 }
 
-PopupCreateTrip.propTypes = {
+PopupCreateAccount.propTypes = {
   show: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
 }
 
-export default PopupCreateTrip
+export default PopupCreateAccount
