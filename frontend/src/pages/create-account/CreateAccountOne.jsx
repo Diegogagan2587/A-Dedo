@@ -1,5 +1,6 @@
 import Input from '../../components/Input';
 import argentina from '../../assets/argentina.png'
+import back from '../../assets/back.png'
 
 function CreateAccountOne() {
   return (
@@ -40,7 +41,11 @@ function CreateAccountOne() {
           </div>
         </section>
       </form>
-      
+      <button className='bg-customGreen rounded-full absolute right-10 mt-3'>
+        <a href="/create-account-part-two">
+            <img src={back} alt="" className='w-[60px] h-[60px]' />
+        </a>
+      </button>
     </main>
   )
 }
