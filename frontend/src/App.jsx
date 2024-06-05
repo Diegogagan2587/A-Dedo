@@ -5,6 +5,9 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import TripDetails from './pages/TripDetails';
+import CreateAccountOne from './pages/create-account/CreateAccountOne';
+import CreateAccountTwo from './pages/create-account/CreateAccountTwo';
+import CreateAccountEnd from './pages/create-account/CreateAccountEnd';
 import CreateTripPartOne from './pages/create-trip/CreateTripPartOne';
 import CreateTripPartTwo from './pages/create-trip/CreateTripPartTwo';
 import CreateTripPartThree from './pages/create-trip/CreateTripPartThree';
@@ -35,6 +38,10 @@ function App() {
             />
             <Route path="/home" element={<Home />} />
             <Route path="trip-details" element={<TripDetails />} />
+            {/* Create Account */}
+            <Route path="/create-account-part-one" element={<CreateAccountOne />} />
+            <Route path="/create-account-part-two" element={<CreateAccountTwo />} />
+            <Route path="/create-account-part-end" element={<CreateAccountEnd />} />
             {/* Driver register render */}
             <Route path="/driver-register" element={<DriverRegister />} />
             <Route path="/driver-dni" element={<DriverDNI />} />

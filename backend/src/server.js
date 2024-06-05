@@ -4,7 +4,7 @@ import morgan from "morgan";
 
 //import local
 import { routes } from "./router/routes.js";
-import { PORT, URI_CONNECTION_DB_LOCAL } from "../config/config.js";
+import { URI_CONNECTION_DB_ATLAS,PORT, URI_CONNECTION_DB_LOCAL } from "../config/config.js";
 import { connectMongoDB } from "./db/connection.js";
 
 const server = express();
@@ -17,7 +17,7 @@ server.use(express.urlencoded({extended:true}));
 server.use(routes);
 
 //connects ORM with DB
-connectMongoDB( URI_CONNECTION_DB_LOCAL || 'mongodb://localhost:27017/adedo');
+connectMongoDB( URI_CONNECTION_DB_LOCAL || URI_CONNECTION_DB_ATLAS);
 
 //listener
 server.listen(PORT,()=>{
