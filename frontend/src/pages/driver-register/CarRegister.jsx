@@ -27,7 +27,7 @@ const CarRegister = () => {
       </section>
       <section className="flex items-center justify-center">
         <NextBtn 
-        href="CarWait"
+        href="/car-wait"
         />
       </section>
     </main>
