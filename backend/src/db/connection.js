@@ -5,6 +5,6 @@ export async function connectMongoDB(uri){
         await mongoose.connect(uri)
         console.log(" =========>> Connection successfully <<========= ");
     } catch (error) {
-        console.log({error,message:"Error in connection"});
+        console.log({error,message:"Error in Data Base connection"});
     }
 }
