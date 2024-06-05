@@ -9,6 +9,12 @@ export const userSlice = createSlice({
   reducers: {
     //reducers here
   },
+  extraReducers: (builder) => {
+      builder
+      .addCase("user/authenticate/fulfilled", (state, action)=> {
+        return { ...state, ...action.payload }
+      }) 
+  },
 });
 // below export reducers once declared
 //export const { reducer1, reducer2 } = userSlice.actions;
