@@ -44,7 +44,9 @@ const CreateTripPartOne = () => {
         </div>
 			</section>
       <span className="absolute right-12">
-        <BtnNextIcon />
+        <BtnNextIcon
+        href="/create-trip-part-two"
+        />
       </span>
     </main>
   )

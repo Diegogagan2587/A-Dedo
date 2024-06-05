@@ -18,7 +18,7 @@ const CreateTripPartThree = () => {
         <h2 className="text-[18px] font-semibold">Selecciona el precio por pasajero</h2>
         <div className="flex items-center justify-around py-5">
           <img src={removeCricle} alt="" />
-          <span className="font-semibold text-[26px]">$1090</span>
+          <span className="font-semibold text-[26px]">$10.000</span>
           <img src={addCricle} alt="" />
         </div>
         <p className="text-center">
@@ -26,7 +26,9 @@ const CreateTripPartThree = () => {
         </p>
       </section>
       <span className="absolute right-12 bottom-20">
-        <BtnNextIcon />
+        <BtnNextIcon
+        href="/create-trip-part-four"
+        />
       </span>
     </main>
   )
