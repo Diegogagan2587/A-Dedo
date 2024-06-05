@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
+
 import LoginWithFacebook from '../components/LoginWithFacebook';
 import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
 import ButtonGreen from '../components/ButtonGreen';
 import Input from '../components/Input';
 
 const Login = ({setIsLoggedIn}) => {
+  const [user, setUser] = useState({email: '', password: ''});
+
   const handleClick = (e) => {
     //place holder to prevent default
     e.preventDefault();
