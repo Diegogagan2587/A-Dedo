@@ -23,7 +23,7 @@ const DriverDNI = () => {
 
         <section className='flex justify-center'>
           <NextBtn 
-          href="/driver-wait"
+          to="/register/driver-end"
           />
         </section>
     </main>

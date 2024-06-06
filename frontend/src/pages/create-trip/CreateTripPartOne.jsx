@@ -45,7 +45,7 @@ const CreateTripPartOne = () => {
 			</section>
       <span className="absolute right-12">
         <BtnNextIcon
-        href="/create-trip-part-two"
+        to="/trips/new/step-2"
         />
       </span>
     </main>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import papelpicado1 from '../../assets/papel-picado1.png'
 import papelpicado2 from '../../assets/papel-picado2.png'
 import papelpicado3 from '../../assets/papel-picado3.png'
@@ -20,10 +21,10 @@ const CreateAccountEnd = () => {
       </section>
       <section className='m-5 flex justify-center'>
         <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2">
-          <a href="">Crear viaje</a>
+          <Link href="/trips/new/step-1">Crear viaje</Link>
         </button>
         <button className='w-[103px] h-14 bg-customGreen text-white rounded-full m-6'>
-          <a href="">Ver viajes</a>
+          <Link to="/trips">Ver viajes</Link>
         </button>
       </section>
     </main>

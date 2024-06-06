@@ -1,18 +1,19 @@
+import { Link } from 'react-router-dom';
 import back from '../assets/back.png'
 import { PropTypes } from 'prop-types';
 
-const BtnNextIcon = ({ href }) => {
+const BtnNextIcon = ({ to }) => {
   return (
   <button className='bg-customGreen rounded-full'>
-    <a href={href}>
+    <Link to={to}>
         <img src={back} alt="" className='w-[60px] h-[60px]' />
-    </a>
+    </Link>
   </button>
   )
 }
 
 BtnNextIcon.propTypes = {
-  href: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired
 }
 
 export default BtnNextIcon

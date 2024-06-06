@@ -9,7 +9,7 @@ const DriverEnd = () => {
       <p className='text-center m-4 text-[20px]'>Tu documentación fue <br /> validada con exíto.</p>
 
       <NextBtn
-      href='/car-register'
+      to='/register/vehicle'
       />
     </main>
   )
