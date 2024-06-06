@@ -38,8 +38,8 @@ function App() {
               path="/login"
               element={<Login setIsLoggedIn={setIsLoggedIn} />}
             />
-            <Route path='/profile'>
-              <Route path='driver' element={<ProfileDriver />} />
+            <Route path="/profile">
+              <Route path="driver" element={<ProfileDriver />} />
             </Route>
             <Route path="/trips" >
               <Route path="/trips" element={<Home />}/>
