@@ -38,7 +38,8 @@ function App() {
             />
             <Route path="/trips" >
               <Route path="/trips" element={<Home />}/>
-              <Route path=":id/details" element={<TripDetails />} />                    
+              <Route path=":id/details" element={<TripDetails />} />
+              <Route path=':id/reserve' element={<p className='mt-20'>Reserve Trip here</p>} />                 
               <Route path="new">
                 <Route path="step-1" element={<CreateTripPartOne />} />
                 <Route path="step-2" element={<CreateTripPartTwo />} />
