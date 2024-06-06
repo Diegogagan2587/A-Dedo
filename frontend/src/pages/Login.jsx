@@ -22,7 +22,11 @@ const Login = ({setIsLoggedIn}) => {
     e.preventDefault();
     dispatch(authenticateUser(user));
     setIsLoggedIn(true);
-    navigate('/home');
+    navigate('/trips');
+  };
+  const handleCreateAccount = (e) => {
+    e.preventDefault();
+    navigate('/register/step-1');
   };
   return (
     <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
@@ -43,7 +47,7 @@ const Login = ({setIsLoggedIn}) => {
         required={true} 
         />
         <div className="flex gap-2 items-center my-2 w-full">
-          <ButtonGreen onClick={handleClick} text={'Crear Cuenta'} className={"text-lg w-1/2"}/>
+          <ButtonGreen onClick={handleCreateAccount} text={'Crear Cuenta'} className={"text-lg w-1/2"}/>
           <ButtonGreen onClick={handleLogin} text={'Ingresar'} className={"text-sm w-1/2"}/>
         </div>
       </form>

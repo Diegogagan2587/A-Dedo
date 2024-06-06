@@ -1,6 +1,7 @@
-import Input from '../../components/Input';
-import argentina from '../../assets/argentina.png'
-import back from '../../assets/back.png'
+import { Link } from "react-router-dom"
+import Input from '../../../components/Input';
+import argentina from '../../../assets/argentina.png'
+import back from '../../../assets/back.png'
 
 function CreateAccountOne() {
   return (
@@ -42,9 +43,9 @@ function CreateAccountOne() {
         </section>
       </form>
       <button className='bg-customGreen rounded-full absolute right-10 mt-3'>
-        <a href="/create-account-part-two">
+        <Link to="/register/step-2">
             <img src={back} alt="" className='w-[60px] h-[60px]' />
-        </a>
+        </Link>
       </button>
     </main>
   )

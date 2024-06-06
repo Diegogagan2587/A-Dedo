@@ -26,6 +26,7 @@ const Home = () => {
 
         <section className="flex flex-col items-center">
             <CardTrip 
+            id="1"
             profilePicture="src\assets\profile1.png"
             name="Elena"
             seatsAvailable="3"
@@ -36,6 +37,7 @@ const Home = () => {
             />
 
             <CardTrip 
+            id="2"
             profilePicture="src\assets\profile2.png"
             name="Mario"
             seatsAvailable="4"
@@ -52,6 +54,7 @@ const Home = () => {
 
         <section className="flex flex-col items-center">
             <CardTrip 
+            id="3"
             profilePicture="src\assets\profile1.png"
             name="Elena"
             seatsAvailable="1"
