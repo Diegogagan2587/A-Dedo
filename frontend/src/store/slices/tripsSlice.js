@@ -31,12 +31,13 @@ export const tripsSlice = createSlice({
   initialState: trips,
   reducers:{
     setOrigin: (state, action) => {
-      console.log('setOriging: updating origin')
-      console.log(action.payload)
       state.new.origin = action.payload;
     },
+    setDestination: (state, action) => {
+      state.new.destination = action.payload;
+    }
   }
 });
 
-export const { setOrigin } = tripsSlice.actions;
+export const { setOrigin, setDestination } = tripsSlice.actions;
 export default tripsSlice.reducer;
