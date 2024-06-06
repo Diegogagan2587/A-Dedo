@@ -23,6 +23,7 @@ import CarEnd from './pages/register/driver/CarEnd'
 import ProfileDriver from './pages/profile-driver/ProfileDriver';
 import DriverDetailTrip from './pages/profile-driver/DriverDetailTrip';
 import ReserveConfirmation from './pages/trips/ReserveConfirmation';
+import ReserveTrip from './pages/trips/ReserveTrip';
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -46,7 +47,7 @@ function App() {
               <Route path="/trips" element={<Home />}/>
               <Route path=":id/details" element={<TripDetails />} />
               <Route path=":id/details-driver" element={<DriverDetailTrip />} />
-              <Route path=':id/reserve' element={<p className='mt-20'>Reserve Trip here</p>} />  
+              <Route path=':id/reserve' element={<ReserveTrip />} />  
               <Route path=":id/reserve/confirmation" element={<ReserveConfirmation />} />               
               <Route path="new">
                 <Route path="step-1" element={<CreateTripPartOne />} />
