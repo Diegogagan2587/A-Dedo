@@ -1,6 +1,6 @@
-import carEnd from '../../assets/carEnd.png'
-import CreateTripBtn from '../../components/CreateTripBtn'
-import GoHomeBtn from '../../components/GoHomeBtn'
+import carEnd from '../../../assets/carEnd.png'
+import CreateTripBtn from '../../../components/CreateTripBtn'
+import GoHomeBtn from '../../../components/GoHomeBtn'
 
 const CarEnd = () => {
   return (

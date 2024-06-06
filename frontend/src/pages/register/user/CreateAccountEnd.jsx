@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import papelpicado1 from '../../assets/papel-picado1.png'
-import papelpicado2 from '../../assets/papel-picado2.png'
-import papelpicado3 from '../../assets/papel-picado3.png'
-import createaccountIMG from '../../assets/createaccountIMG.png'
+import papelpicado1 from '../../../assets/papel-picado1.png'
+import papelpicado2 from '../../../assets/papel-picado2.png'
+import papelpicado3 from '../../../assets/papel-picado3.png'
+import createaccountIMG from '../../../assets/createaccountIMG.png'
 
 const CreateAccountEnd = () => {
   return (

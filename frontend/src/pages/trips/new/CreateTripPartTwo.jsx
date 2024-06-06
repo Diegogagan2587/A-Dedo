@@ -1,6 +1,6 @@
-import Input from "../../components/Input"
-import volante from "../../assets/volante.png"
-import BtnNextIcon from "../../components/BtnNextIcon"
+import Input from "../../../components/Input"
+import volante from "../../../assets/volante.png"
+import BtnNextIcon from "../../../components/BtnNextIcon"
 
 const CreateTripPartTwo = () => {
   return (

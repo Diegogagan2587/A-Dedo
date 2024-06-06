@@ -1,6 +1,6 @@
-import viajeCreado from '../../assets/viaje-creado.png'
-import BtnHomeGreen from '../../components/BtnHomeGreen'
-import DeleteTripBtn from '../../components/DeleteTripBtn'
+import viajeCreado from '../../../assets/viaje-creado.png'
+import BtnHomeGreen from '../../../components/BtnHomeGreen'
+import DeleteTripBtn from '../../../components/DeleteTripBtn'
 
 const TripEnd = () => {
   return (

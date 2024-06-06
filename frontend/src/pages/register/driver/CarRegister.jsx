@@ -1,6 +1,6 @@
-import Input from "../../components/Input"
-import imagenAdjuntar from '../../assets/Imagen-adjuntar.png'
-import { NextBtn } from "../../components/NextBtn"
+import Input from "../../../components/Input"
+import imagenAdjuntar from '../../../assets/Imagen-adjuntar.png'
+import { NextBtn } from "../../../components/NextBtn"
 
 const CarRegister = () => {
   return (

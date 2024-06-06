@@ -1,5 +1,5 @@
-import tarjetaIdentificacionLista from '../../assets/documento.png'
-import { NextBtn } from '../../components/NextBtn'
+import tarjetaIdentificacionLista from '../../../assets/documento.png'
+import { NextBtn } from '../../../components/NextBtn'
 
 const DriverEnd = () => {
   return (

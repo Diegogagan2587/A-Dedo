@@ -1,5 +1,5 @@
-import tarjetadeidentificacion from '../../assets/tarjeta-de-identificacion.png'
-import RegisterBtn from '../../components/RegisterBtn'
+import tarjetadeidentificacion from '../../../assets/tarjeta-de-identificacion.png'
+import RegisterBtn from '../../../components/RegisterBtn'
 
 const DriverRegister = () => {
   return (
