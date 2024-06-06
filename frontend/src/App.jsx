@@ -20,6 +20,8 @@ import DriverEnd from './pages/driver-register/DriverEnd';
 import CarRegister from './pages/driver-register/CarRegister';
 import CarWait from './pages/driver-register/CarWait';
 import CarEnd from './pages/driver-register/CarEnd'
+import ProfileDriver from './pages/profile-driver/ProfileDriver';
+import DriverDetailTrip from './pages/profile-driver/DriverDetailTrip';
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -56,6 +58,9 @@ function App() {
             <Route path="/create-trip-part-three" element={<CreateTripPartThree />} />
             <Route path="/create-trip-part-four" element={<CreateTripPartFour />} />
             <Route path="/trip-end" element={<TripEnd />} />
+            {/* Profile Driver */}
+            <Route path="/profile-driver" element={<ProfileDriver />} />
+            <Route path="/detail-driver" element={<DriverDetailTrip />} />
           </Routes>
         </main>
       </div>
