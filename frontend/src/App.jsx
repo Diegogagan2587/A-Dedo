@@ -4,22 +4,22 @@ import Navbar from './components/navbar/Navbar';
 import Main from './pages/Main';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import TripDetails from './pages/TripDetails';
-import CreateAccountOne from './pages/create-account/CreateAccountOne';
-import CreateAccountTwo from './pages/create-account/CreateAccountTwo';
-import CreateAccountEnd from './pages/create-account/CreateAccountEnd';
-import CreateTripPartOne from './pages/create-trip/CreateTripPartOne';
-import CreateTripPartTwo from './pages/create-trip/CreateTripPartTwo';
-import CreateTripPartThree from './pages/create-trip/CreateTripPartThree';
-import CreateTripPartFour from './pages/create-trip/CreateTripPartFour';
-import TripEnd from './pages/create-trip/TripEnd';
-import DriverRegister from './pages/driver-register/DriverRegister';
-import DriverDNI from './pages/driver-register/DriverDNI';
-import DriverWait from './pages/driver-register/DriverWait';
-import DriverEnd from './pages/driver-register/DriverEnd';
-import CarRegister from './pages/driver-register/CarRegister';
-import CarWait from './pages/driver-register/CarWait';
-import CarEnd from './pages/driver-register/CarEnd';
+import TripDetails from './pages/trips/TripDetails';
+import CreateAccountOne from './pages/register/user/CreateAccountOne';
+import CreateAccountTwo from './pages/register/user/CreateAccountTwo';
+import CreateAccountEnd from './pages/register/user/CreateAccountEnd';
+import CreateTripPartOne from './pages/trips/new/CreateTripPartOne';
+import CreateTripPartTwo from './pages/trips/new/CreateTripPartTwo';
+import CreateTripPartThree from './pages/trips/new/CreateTripPartThree';
+import CreateTripPartFour from './pages/trips/new/CreateTripPartFour';
+import TripEnd from './pages/trips/new/TripEnd';
+import DriverRegister from './pages/register/driver/DriverRegister';
+import DriverDNI from './pages/register/driver/DriverDNI';
+import DriverWait from './pages/register/driver/DriverWait';
+import DriverEnd from './pages/register/driver/DriverEnd';
+import CarRegister from './pages/register/driver/CarRegister';
+import CarWait from './pages/register/driver/CarWait';
+import CarEnd from './pages/register/driver/CarEnd'
 
 function App() {
   //trigger render when user logs in for demo purposes
