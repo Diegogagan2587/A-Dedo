@@ -26,7 +26,7 @@ const userController = {
       const data = { _id, name, surname,  calification, history_trip, messages ,  phone, rol  };
       res.status(200).json({message: 'USUARIO AUTENTICADO CORRECTAMENTE' , data: data });
     } else {
-      const response = `ERROR AL AUTENTICAR: La contrasena es incorrecta`;
+      const response = `ERROR AL AUTENTICAR: LA CONTRASEÑA ES INCORRECTA`;
       res.status(500).json({message: response});
     }
   },
