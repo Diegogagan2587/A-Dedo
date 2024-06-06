@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Input from "../../components/Input"
-import PopupCreateAccount from "../../components/PopupCreateAccount";
+import Input from "../../../components/Input"
+import PopupCreateAccount from "../../../components/PopupCreateAccount";
 
 const CreateAccountTwo = () => {
   const [showPopup, setShowPopup] = useState(false);

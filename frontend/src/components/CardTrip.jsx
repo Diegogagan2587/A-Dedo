@@ -1,12 +1,19 @@
 import { PropTypes } from 'prop-types';
+import { useNavigate } from "react-router-dom";
 import location from '../assets/location.png';
 import petsIcon from '../assets/pets.png'
 import handIcon from '../assets/hand.png'
 import kidsIcon from '../assets/family.png'
 
-const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
+const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate(`/trips/${id}/details`);
+  };
+
   return (
-    <article className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
+    <article id={id} onClick={handleClick} className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
       <img src={profilePicture} alt={name} className="w-[68px] h-[64px] rounded-full" />
       <section>
         <h2 className="text-base font-bold text-center">{name}</h2>
@@ -41,6 +48,7 @@ const CardTrip = ({ name, profilePicture, seatsAvailable, startLocation, startTi
 }
 
 CardTrip.propTypes = {
+    id: PropTypes.string.isRequired,  
     name: PropTypes.string.isRequired,
     profilePicture: PropTypes.string.isRequired,
     seatsAvailable: PropTypes.string.isRequired,

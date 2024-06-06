@@ -1,6 +1,6 @@
-import Input from "../../components/Input"
-import volante from "../../assets/volante.png"
-import BtnNextIcon from "../../components/BtnNextIcon"
+import Input from "../../../components/Input"
+import volante from "../../../assets/volante.png"
+import BtnNextIcon from "../../../components/BtnNextIcon"
 
 const CreateTripPartTwo = () => {
   return (
@@ -45,7 +45,7 @@ const CreateTripPartTwo = () => {
 			</section>
       <span className="absolute right-12">
         <BtnNextIcon 
-          href="/create-trip-part-three"
+          to="/trips/new/step-3"
         />
       </span>
     </main>

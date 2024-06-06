@@ -1,7 +1,7 @@
-import volante from "../../assets/volante.png"
-import removeCricle from "../../assets/remove_circle.png"
-import addCricle from "../../assets/add_circle.png"
-import BtnNextIcon from "../../components/BtnNextIcon"
+import volante from "../../../assets/volante.png"
+import removeCricle from "../../../assets/remove_circle.png"
+import addCricle from "../../../assets/add_circle.png"
+import BtnNextIcon from "../../../components/BtnNextIcon"
 
 const CreateTripPartThree = () => {
   return (
@@ -27,7 +27,7 @@ const CreateTripPartThree = () => {
       </section>
       <span className="absolute right-12 bottom-20">
         <BtnNextIcon
-        href="/create-trip-part-four"
+        to="/trips/new/step-4"
         />
       </span>
     </main>

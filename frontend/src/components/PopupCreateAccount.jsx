@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+import { Link } from "react-router-dom"
 
 const PopupCreateAccount = ({ show, onClose }) => {
   if (!show) return null;
@@ -15,7 +16,7 @@ const PopupCreateAccount = ({ show, onClose }) => {
             Cancelar
           </button>
           <button className="px-4 py-2 text-customGreen rounded-md">
-            <a href="/create-account-part-end"> Continuar</a>
+            <Link to="/register/step-3"> Continuar</Link>
           </button>
         </div>
       </div>

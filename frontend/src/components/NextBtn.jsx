@@ -1,13 +1,14 @@
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
-export const NextBtn = ({ href }) => {
+export const NextBtn = ({ to }) => {
   return (
     <button className="w-[165px] h-14 bg-customGreen text-white rounded-full m-6 p-2">
-        <a href={href} >Continuar</a>
+        <Link to={to} >Continuar</Link>
     </button>
   )
 }
 
 NextBtn.propTypes = {
-  href: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired
 }

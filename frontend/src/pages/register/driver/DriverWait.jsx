@@ -1,4 +1,4 @@
-import car from '../../assets/car.png'
+import car from '../../../assets/car.png'
 
 const DriverWait = () => {
   return (

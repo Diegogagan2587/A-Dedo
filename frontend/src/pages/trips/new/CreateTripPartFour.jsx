@@ -1,11 +1,11 @@
-import volante from "../../assets/volante.png"
-import Input from "../../components/Input"
-import paradas from "../../assets/paradas.png"
-import pets from "../../assets/pets.png"
-import family from "../../assets/family.png"
-import fastFood from "../../assets/fastfood.png"
+import volante from "../../../assets/volante.png"
+import Input from "../../../components/Input"
+import paradas from "../../../assets/paradas.png"
+import pets from "../../../assets/pets.png"
+import family from "../../../assets/family.png"
+import fastFood from "../../../assets/fastfood.png"
 import { useState } from "react"
-import PopupCreateTrip from "../../components/PopupCreateTrip"
+import PopupCreateTrip from "../../../components/PopupCreateTrip"
 
 const CreateTripPartFour = () => {
   const [showPopup, setShowPopup] = useState(false);
