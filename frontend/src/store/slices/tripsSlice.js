@@ -39,8 +39,11 @@ export const tripsSlice = createSlice({
     setAvailableSeats: (state,action) => {
       state.new.seats = action.payload;
     },
+    setAdditionalOptions: (state,action) => {
+      state.new = {...state.new, ...action.payload }
+    }
   }
 });
 
-export const { setOrigin, setDestination, setAvailableSeats } = tripsSlice.actions;
+export const { setOrigin, setDestination, setAvailableSeats, setAdditionalOptions } = tripsSlice.actions;
 export default tripsSlice.reducer;
