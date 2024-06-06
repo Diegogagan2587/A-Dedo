@@ -26,8 +26,29 @@ const mongo_uri = URI_CONNECTION_DB_LOCAL || URI_CONNECTION_DB_ATLAS;
 
 connectMongoDB(mongo_uri)
 
+app.post('/trip', async (req,res) =>{
+    const { destination_point, starting_point, description, date_publication, date_start_trip, ocupation, messages_trip } = req.body;
 
-app.post('/authenticate', (req, res) => {
+    try {
+        const newTrip = new Trip({
+            destination_point, 
+            starting_point, 
+            description, 
+            date_publication, 
+            date_start_trip, 
+            ocupation, 
+            messages_trip
+        });
+
+        await newTrip.save();
+        res.status(200).json(newTrip);
+    } catch (err) {
+        res.status(400).json({ error: 'ERROR AL CREAR VIAJE' });
+    }
+});
+
+
+/*app.post('/authenticate', (req, res) => {
     const { email, password } = req.body;
 
     User.findOne({ email }, (err, user) => {
@@ -52,7 +73,7 @@ app.post('/authenticate', (req, res) => {
         }
     })
 
-});
+});*/
 
 app.listen(port, () => {
     console.log('Server Started');
