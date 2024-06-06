@@ -20,6 +20,8 @@ import DriverEnd from './pages/register/driver/DriverEnd';
 import CarRegister from './pages/register/driver/CarRegister';
 import CarWait from './pages/register/driver/CarWait';
 import CarEnd from './pages/register/driver/CarEnd'
+import ProfileDriver from './pages/profile-driver/ProfileDriver';
+import DriverDetailTrip from './pages/profile-driver/DriverDetailTrip';
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -36,10 +38,15 @@ function App() {
               path="/login"
               element={<Login setIsLoggedIn={setIsLoggedIn} />}
             />
+            <Route path="/profile">
+              <Route path="driver" element={<ProfileDriver />} />
+            </Route>
             <Route path="/trips" >
               <Route path="/trips" element={<Home />}/>
               <Route path=":id/details" element={<TripDetails />} />
-              <Route path=':id/reserve' element={<p className='mt-20'>Reserve Trip here</p>} />                 
+              <Route path=":id/details-driver" element={<DriverDetailTrip />} />
+              <Route path=':id/reserve' element={<p className='mt-20'>Reserve Trip here</p>} />  
+              <Route path=":id/reserve/confirmation" element={<p>Felicitacion</p>} />               
               <Route path="new">
                 <Route path="step-1" element={<CreateTripPartOne />} />
                 <Route path="step-2" element={<CreateTripPartTwo />} />
