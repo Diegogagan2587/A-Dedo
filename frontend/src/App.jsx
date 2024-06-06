@@ -19,7 +19,7 @@ import DriverWait from './pages/driver-register/DriverWait';
 import DriverEnd from './pages/driver-register/DriverEnd';
 import CarRegister from './pages/driver-register/CarRegister';
 import CarWait from './pages/driver-register/CarWait';
-import CarEnd from './pages/driver-register/CarEnd'
+import CarEnd from './pages/driver-register/CarEnd';
 
 function App() {
   //trigger render when user logs in for demo purposes
@@ -36,26 +36,30 @@ function App() {
               path="/login"
               element={<Login setIsLoggedIn={setIsLoggedIn} />}
             />
-            <Route path="/home" element={<Home />} />
-            <Route path="trip-details" element={<TripDetails />} />
-            {/* Create Account */}
-            <Route path="/create-account-part-one" element={<CreateAccountOne />} />
-            <Route path="/create-account-part-two" element={<CreateAccountTwo />} />
-            <Route path="/create-account-part-end" element={<CreateAccountEnd />} />
-            {/* Driver register render */}
-            <Route path="/driver-register" element={<DriverRegister />} />
-            <Route path="/driver-dni" element={<DriverDNI />} />
-            <Route path="/driver-wait" element={<DriverWait />} />
-            <Route path="/driver-end" element={<DriverEnd />} />
-            <Route path="/car-register" element={<CarRegister />} />
-            <Route path="/car-wait" element={<CarWait />} />
-            <Route path="/car-end" element={<CarEnd />} />
-            {/* create trip render */}
-            <Route path="/create-trip-part-one" element={<CreateTripPartOne />} />
-            <Route path="/create-trip-part-two" element={<CreateTripPartTwo />} />
-            <Route path="/create-trip-part-three" element={<CreateTripPartThree />} />
-            <Route path="/create-trip-part-four" element={<CreateTripPartFour />} />
-            <Route path="/trip-end" element={<TripEnd />} />
+            <Route path="/trips" >
+              <Route path="/trips" element={<Home />}/>
+              <Route path=":id/details" element={<TripDetails />} />                    
+              <Route path="new">
+                <Route path="step-1" element={<CreateTripPartOne />} />
+                <Route path="step-2" element={<CreateTripPartTwo />} />
+                <Route path="step-3" element={<CreateTripPartThree />} />
+                <Route path="step-4" element={<CreateTripPartFour />} />
+                <Route path="step-5" element={<TripEnd />} />
+              </Route>
+              
+            </Route>
+            <Route path="/register">
+              <Route path="step-1" element={<CreateAccountOne />} />
+              <Route path="step-2" element={<CreateAccountTwo />} />
+              <Route path="step-3" element={<CreateAccountEnd />} />
+              <Route path="driver" element={<DriverRegister />} />
+              <Route path="driver-dni" element={<DriverDNI />} />
+              <Route path="driver-end" element={<DriverEnd />} />
+              <Route path="vehicle" element={<CarRegister />} />
+              <Route path="vehicle-end" element={<CarEnd />} />
+              <Route path="driver-wait" element={<DriverWait />} />  {/*ommited due lack of logic*/}
+              <Route path="car-wait" element={<CarWait />} />        {/*ommited due lack of logic*/}
+            </Route>
           </Routes>
         </main>
       </div>
