@@ -1,3 +1,3 @@
 export function allPath(req, res) {
-    res.send("404 | Page not found")
+  res.json({ error: '404 | Page not found' });
 }

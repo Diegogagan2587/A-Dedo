@@ -8,9 +8,9 @@ const userController = {
 
     try {
       await user.save();
-      res.status(200).send('USUARIO REGISTRADO');
+      res.status(200).json({message:'USUARIO REGISTRADO'});
     } catch (err) {
-      res.status(500).send(`ERROR AL REGISTRAR USUARIO  ${err.message}`);
+      res.status(500).json({error: `ERROR AL REGISTRAR USUARIO  ${err.message}`});
     }
   },
 
@@ -19,12 +19,15 @@ const userController = {
     const password = req.body.password;
     const isCorrectPassword = userController.isCorrectPassword;
     const currentUser = await User.findOne({ email: email });
+    if(!currentUser){ return res.status(404).json({error:'User Not Found!'}); }// stop execution if user not found
     const userValidated = await isCorrectPassword( password, currentUser.password );
     if (userValidated) {
-      res.status(200).send('USUARIO AUTENTICADO CORRECTAMENTE');
+      const { _id, name, surname,  calification, history_trip, messages ,  phone, rol  } = currentUser;
+      const data = { _id, name, surname,  calification, history_trip, messages ,  phone, rol  };
+      res.status(200).json({message: 'USUARIO AUTENTICADO CORRECTAMENTE' , data: data });
     } else {
       const response = `ERROR AL AUTENTICAR: La contrasena es incorrecta`;
-      res.status(500).send(response);
+      res.status(500).json({message: response});
     }
   },
 
