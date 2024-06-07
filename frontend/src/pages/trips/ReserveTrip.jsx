@@ -1,4 +1,3 @@
-import Date from "../../components/Date"
 import Time from "../../components/Time"
 import LocationBarIcons from "../../components/LocationBarIcons"
 import ButtonGreen from "../../components/ButtonGreen"
@@ -7,6 +6,7 @@ import PopupReserveTrip from "../../components/PopupReserveTrip"
 import Switch from "../../components/Switch"
 import BackNav from "../../components/BackNav"
 import CarModel from "../../components/CarModel"
+import DateDisplay from "../../components/DateDisplay"
 
 const ReserveTrip = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -25,7 +25,7 @@ const ReserveTrip = () => {
         <section className="min-h-[139px] flex flex-col justify-between gap-4 p-1 w-full">
           <h2 className='text-textColor font-extrabold text-mainTitle text-center text-[26px]'>Reserva de viaje</h2>
           <div className="flex text-sm items-center justify-between w-full mt-2 flex-wrap">
-            <Date date="Miercoles 21 de Mayo del 2024" />
+            <DateDisplay date="Miercoles 21 de Mayo del 2024" />
             <Time time="13:00 hrs" />
             <CarModel text="EcoSport, Ford, Blanco, año 2010" />
           </div>

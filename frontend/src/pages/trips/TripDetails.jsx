@@ -17,6 +17,7 @@ import CarModel from "../../components/CarModel";
 
 const TripDetails = () => {
   const navigate = useNavigate();
+
   const handleRedirect = () => {
     navigate('/trips/:id/reserve')
   }
