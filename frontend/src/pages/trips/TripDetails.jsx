@@ -26,7 +26,7 @@ const TripDetails = () => {
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
           <Date date="Miercoles 21 de Mayo del 2024" />
-          <Time />
+          <Time time="13:00 hrs"/>
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
           <LocationBarIcons />
