@@ -7,8 +7,9 @@ import createTrip from '../store/requests/createTrip'
 const PopupCreateTrip = ({ show, onClose }) => {
   const dispatch = useDispatch();
   const trip = useSelector((state) => state.trips.new);
+  const driver = useSelector((state) => state.user.data._id);
   const handleContinue = async () => {
-    dispatch(createTrip(trip));
+    dispatch(createTrip({driver, ...trip}));
   };
   if (!show) return null;
   return (

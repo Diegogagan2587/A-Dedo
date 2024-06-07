@@ -26,7 +26,120 @@ const initialTripForm = {
 
 const trips = {
   new: initialTripForm,
-  list: []
+  list: [
+    {
+      origin: {
+        address: 'Platano 1',
+        city: 'Ciudad Gotica',
+        postalCode: '111111',
+        date: '2024-08-02T00:00:00.000Z',
+        time: '22:27'
+      },
+      destination: {
+        address: 'Cacao 1',
+        city: 'Ciudad Gotica',
+        postalCode: '222222',
+        date: '2024-08-02T00:00:00.000Z',
+        time: '22:28'
+      },
+      seats: 3,
+      price: 0,
+      stops: true,
+      pets: true,
+      childrens: true,
+      acceptFood: true,
+      notes: 'un refresco por favor',
+      passengers: [],
+      messages_trip: [],
+      calification: [],
+      _id: '66628c4ca155835ca4df9bdb',
+      __v: 0
+    },
+    {
+      origin: {
+        address: 'Platano 2',
+        city: 'Ciudad Gotica',
+        postalCode: '111111',
+        date: '2024-08-02T00:00:00.000Z',
+        time: '22:27'
+      },
+      destination: {
+        address: 'Cacao 2',
+        city: 'Ciudad Gotica',
+        postalCode: '222222',
+        date: '2024-08-02T00:00:00.000Z',
+        time: '22:28'
+      },
+      seats: 3,
+      price: 0,
+      stops: true,
+      pets: true,
+      childrens: true,
+      acceptFood: true,
+      notes: 'un refresco por favor',
+      passengers: [],
+      messages_trip: [],
+      calification: [],
+      _id: '66628c4ca155835ca4df9bxb',
+      __v: 0
+    },
+    {
+      origin: {
+        address: 'Guineo 1',
+        city: 'Saltadilla',
+        postalCode: '111111',
+        date: '2024-06-22T00:00:00.000Z',
+        time: '22:27'
+      },
+      destination: {
+        address: 'Cacao 1',
+        city: 'Saltadilla',
+        postalCode: '222222',
+        date: '2024-06-02T00:00:00.000Z',
+        time: '22:28'
+      },
+      seats: 3,
+      price: 0,
+      stops: true,
+      pets: true,
+      childrens: true,
+      acceptFood: true,
+      notes: 'un refresco por favor',
+      passengers: [],
+      messages_trip: [],
+      calification: [],
+      _id: '66628c4ca155835ca4df9bdc',
+      __v: 0
+    },
+    {
+      origin: {
+        address: 'Guineo 5',
+        city: 'Saltadilla 5',
+        postalCode: '55555',
+        date: '2024-05-22T00:00:00.000Z',
+        time: '22:27'
+      },
+      destination: {
+        address: 'Cacao 1',
+        city: 'Saltadilla',
+        postalCode: '222222',
+        date: '2024-05-02T00:00:00.000Z',
+        time: '22:28'
+      },
+      seats: 3,
+      price: 0,
+      stops: true,
+      pets: true,
+      childrens: true,
+      acceptFood: true,
+      notes: 'un refresco por favor',
+      passengers: [],
+      messages_trip: [],
+      calification: [],
+      _id: '66628c4ca155835ca4df9zdh',
+      __v: 0
+    }
+  ]
 }
 
 export const tripsSlice = createSlice({

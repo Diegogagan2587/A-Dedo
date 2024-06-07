@@ -2,7 +2,7 @@
 import TripFeature from '../../components/TripFeature'
 import LocationBarIcons from '../../components/LocationBarIcons'
 import Time from '../../components/Time'
-import Date from '../../components/Date'
+import DateDisplay from '../../components/DateDisplay'
 import freeSeats from '../../assets/free-seats.svg';
 import hand from '../../assets/back_hand.svg';
 import kids from '../../assets/kids.svg';
@@ -38,7 +38,7 @@ const DriverDetailTrip = () => {
       <section className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
-          <Date date="Jueves 13 de junio 2024" />
+          <DateDisplay date="Jueves 13 de junio 2024" />
           <Time time="10:00 hrs"/>
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
