@@ -4,7 +4,7 @@ import {setAdditionalOptions} from '../../../store/slices/tripsSlice';
 import volante from "../../../assets/volante.png"
 import Input from "../../../components/Input"
 import paradas from "../../../assets/paradas.png"
-import pets from "../../../assets/pets.png"
+import petsImg from "../../../assets/pets.png"
 import family from "../../../assets/family.png"
 import fastFood from "../../../assets/fastfood.png"
 import PopupCreateTrip from "../../../components/PopupCreateTrip"
@@ -45,7 +45,7 @@ const CreateTripPartFour = () => {
           className="w-[20px] h-[20px]"/>
         </article>
         <article className="flex items-center gap-4 m-7">
-        <img src={pets} alt="" className="w-[23px] h-[25px]" />
+        <img src={petsImg} alt="" className="w-[23px] h-[25px]" />
           <p>Aceptas viajar con mascotas</p>
           <input 
           type="checkbox"
