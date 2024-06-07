@@ -16,6 +16,7 @@ Item.propTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.string,
   to: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Item;
