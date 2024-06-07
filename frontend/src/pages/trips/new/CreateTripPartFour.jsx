@@ -19,7 +19,6 @@ const CreateTripPartFour = () => {
   const [notes, setNotes] = useState('');
 
   const handleCreateTrip = () => {
-    console.log('handlign creation of trip')
     setShowPopup(!showPopup);
     dispatch(setAdditionalOptions({stops, pets, childrens, acceptFood, notes}));
   };
