@@ -1,9 +1,27 @@
 import { Link } from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import {
+  setFullName,
+  setEmail,
+  setPhone,
+} from "../../../store/slices/userSlice";
 import Input from '../../../components/Input';
 import argentina from '../../../assets/argentina.png'
 import back from '../../../assets/back.png'
 
 function CreateAccountOne() {
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handleNext = () => {
+    dispatch(setFullName(name));
+    dispatch(setEmail(mail));
+    dispatch(setPhone(phoneNumber));
+  };
+
   return (
     <main className='mt-20'>
       <section className='flex flex-col items-center'>
@@ -18,6 +36,7 @@ function CreateAccountOne() {
             id="name"
             type="text"
             placeholder="Nombre y apellido"
+            onChange={(e) => setName(e.target.value)}
           />
         </section>
       
@@ -27,6 +46,7 @@ function CreateAccountOne() {
             id="email"
             type="email"
             placeholder="Email"
+            onChange={(e) => setMail(e.target.value)}
           />
         </section>
 
@@ -38,11 +58,13 @@ function CreateAccountOne() {
             id="phone"
             type="phone"
             placeholder="Teléfono"
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
           </div>
         </section>
       </form>
-      <button className='bg-customGreen rounded-full absolute right-10 mt-3'>
+      <button className='bg-customGreen rounded-full absolute right-10 mt-3'
+        onClick={handleNext}>
         <Link to="/register/step-2">
             <img src={back} alt="" className='w-[60px] h-[60px]' />
         </Link>
