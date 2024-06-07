@@ -3,7 +3,7 @@ import Trip from '../models/trip.js'
 const tripsController = {
     create: async (req, res) => {
         const {
-            driverId,
+            driver,
             origin,
             destination,
             seats,
@@ -18,7 +18,7 @@ const tripsController = {
 
         try {
             const newTrip = new Trip({
-                driverId: mongoose.Types.ObjectId(driverId),
+                driver: mongoose.Types.ObjectId(driverId),
                 origin: {
                     address: origin.address,
                     city: origin.city,
