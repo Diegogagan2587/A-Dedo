@@ -12,7 +12,7 @@ const Menu = ({ isActive, isLoggedIn }) => {
       className={`
          z-10 fixed  
          border-2 rounded-3xl
-         pt-10 sm:pt-[25vw]
+         pt-[17vw] sm:pt-[25vw]
          w-full h-screen
          transition-all duration-500 ease-in-out ${
            isActive ? 'top-0' : 'top-[-100%]'
