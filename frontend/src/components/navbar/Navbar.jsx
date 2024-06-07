@@ -8,9 +8,9 @@ import menuIcon from '../../assets/menu-icon-hamb.svg';
 const Navbar = ({isLoggedIn}) => {
   const [isActive, setIsActive] = useState(false);
   return (
-    <nav className="relative">
-      <img src={bgNavCurve} alt="background" className="z-0  absolute w-full" />
-      <div className="flex items-center justify-center z-10 relative top-0 pt-2 w-full">
+    <nav className="fixed w-full top-0">
+      <img src={bgNavCurve} alt="background" className="z-20  absolute w-full" />
+      <div className="flex items-center justify-center z-30 relative top-0 pt-2 w-full">
         <div className="flex items-center border-white w-3/4 justify-center">
           <div className='flex flex-col'>
             <h1 className="font-title text-white text-4xl">a dedo</h1>

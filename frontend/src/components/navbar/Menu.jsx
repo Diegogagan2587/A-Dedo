@@ -10,12 +10,14 @@ const Menu = ({ isActive, isLoggedIn }) => {
   return (
     <ul
       className={`
-         z-20 fixed top-0  
+         z-10 fixed  
          border-2 rounded-3xl
-         w-3/4 h-screen
+         pt-60 sm:pt-100 
+         w-full h-screen
          transition-all duration-500 ease-in-out ${
-           isActive ? 'left-0' : 'left-[-100%]'
+           isActive ? 'top-0' : 'top-[-100%]'
          } 
+         flex flex-col justify-center
          bg-white px-2 py-8
          `}
     >
