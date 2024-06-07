@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import formatDate from "../store/utils/formatDate";
+import sortTripsByDate from "../store/utils/sortTripsByDate";
 import CardTrip from "../components/CardTrip"
 import DriverButton from "../components/DriverButton";
 import mainProfilePicture from '../assets/main-profilepic.png'
@@ -8,19 +9,8 @@ import DateDisplay from "../components/DateDisplay";
 
 const Home = () => {
   const trips = useSelector((state) => state.trips.list);
-  console.log('Trips accessed from Home: ', trips);
-    // Group trips by date
-    const tripsByDate = trips.reduce((acc, trip) => {
-      const date = trip.origin.date; // or trip.destination.date, depending on your data
-      if (!acc[date]) {
-        acc[date] = [];
-      }
-      acc[date].push(trip);
-      return acc;
-    }, {});
-  console.log('Trips grouped by date: ', tripsByDate);  
+  const tripsByDate = sortTripsByDate(trips);
   const sortedDates = Object.keys(tripsByDate).sort((a, b) => new Date(a) - new Date(b));
-  console.log('Sorted dates: ', sortedDates);
   return (
     <main className="mt-10">
       <section className="flex flex-row items-center justify-center">
