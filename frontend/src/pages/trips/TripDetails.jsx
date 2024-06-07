@@ -1,5 +1,5 @@
 import TripDetailsTop from "../trips/TripDetailsTop";
-import Date from '../../components/Date';
+import DateDisplay from '../../components/DateDisplay';
 import Time from '../../components/Time';
 import LocationBarIcons from '../../components/LocationBarIcons';
 import TripFeature from '../../components/TripFeature';
@@ -25,7 +25,7 @@ const TripDetails = () => {
       px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
-          <Date date="Miercoles 21 de Mayo del 2024" />
+          <DateDisplay date="Miercoles 21 de Mayo del 2024" />
           <Time time="13:00 hrs"/>
         </div>
         <div id="locations" className="flex items-center justify-center w-full">

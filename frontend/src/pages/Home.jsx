@@ -1,72 +1,57 @@
+import { useSelector } from "react-redux";
+import formatDate from "../store/utils/formatDate";
+import sortTripsByDate from "../store/utils/sortTripsByDate";
 import CardTrip from "../components/CardTrip"
 import DriverButton from "../components/DriverButton";
 import mainProfilePicture from '../assets/main-profilepic.png'
 import auto from '../assets/auto.png'
-import Date from "../components/Date";
+import DateDisplay from "../components/DateDisplay";
 
 const Home = () => {
+  const trips = useSelector((state) => state.trips.list);
+  const tripsByDate = sortTripsByDate(trips);
+  const sortedDates = Object.keys(tripsByDate).sort((a, b) => new Date(a) - new Date(b));
   return (
     <main className="mt-10">
-        <section className="flex flex-row items-center justify-center">
-          <img src={mainProfilePicture} alt=""/>
-          <div className="m-4">
-            <h1 className="text-center text-2xl font-extrabold text-mainTitle text-textColor mb-2">Hola Marcos</h1>
-            <DriverButton />
-          </div>
-        </section>
-
-        <div className="flex flex-row items-center justify-center">
-          <h1 className="text-customGreen font-extrabold text-mainTitle text-xl m-2">Viajes disponibles</h1>
-          <img src={auto} alt="auto icon" />
+      <section className="flex flex-row items-center justify-center">
+        <img src={mainProfilePicture} alt="" />
+        <div className="m-4">
+          <h1 className="text-center text-2xl font-extrabold text-mainTitle text-textColor mb-2">
+            Hola Marcos
+          </h1>
+          <DriverButton />
         </div>
+      </section>
 
-        <Date
-            date="Miercoles 21 de Mayo 2024"
-            />
+      <div className="flex flex-row items-center justify-center">
+        <h1 className="text-customGreen font-extrabold text-mainTitle text-xl m-2">
+          Viajes disponibles
+        </h1>
+        <img src={auto} alt="auto icon" />
+      </div>
 
-        <section className="flex flex-col items-center">
-            <CardTrip 
-            id="1"
-            profilePicture="src\assets\profile1.png"
-            name="Elena"
-            seatsAvailable="3"
-            startLocation="Santa Clara del Mar"
-            startTime="13:00hs"
-            endLocation="Mar del Plata"
-            endTime="14:00hs"
-            />
-
-            <CardTrip 
-            id="2"
-            profilePicture="src\assets\profile2.png"
-            name="Mario"
-            seatsAvailable="4"
-            startLocation="Mar del Plata"
-            startTime="18:00hs"
-            endLocation="Santa Clara del Mar"
-            endTime="19:00hs"
-            />
-          
-        </section>
-            <Date
-            date="Jueves 22 de Mayo 2024"
-            />
-
-        <section className="flex flex-col items-center">
-            <CardTrip 
-            id="3"
-            profilePicture="src\assets\profile1.png"
-            name="Elena"
-            seatsAvailable="1"
-            startLocation="Buenos Aires"
-            startTime="18:00hs"
-            endLocation="Santa Clara del Mar"
-            endTime="19:00hs"
-            />
-            
-        </section>
+      <section className="flex flex-col items-center">
+        {sortedDates.map((date) => (
+          <section key={date} className="flex flex-col items-center">
+            <DateDisplay date={formatDate(date)} />
+            {tripsByDate[date].map((trip) => (
+              <CardTrip
+                key={trip._id}
+                id={`${trip._id}`}
+                profilePicture="src/assets/profile1.png"
+                name="Elena"
+                seatsAvailable={`${trip.seats}`}
+                startLocation={trip.origin.city}
+                startTime={trip.origin.time}
+                endLocation={trip.destination.city}
+                endTime={trip.destination.time}
+              />
+            ))}
+          </section>
+        ))}
+      </section>
     </main>
-    )
+  );
 }
 
 export default Home
