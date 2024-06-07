@@ -32,7 +32,7 @@ const Navbar = ({isLoggedIn}) => {
           </button>
         </div>
       </div>
-      <Menu isActive={isActive} isLoggedIn={isLoggedIn}/>
+      <Menu isActive={isActive} isLoggedIn={isLoggedIn} setIsActive={setIsActive}/>
     </nav>
   );
 };
