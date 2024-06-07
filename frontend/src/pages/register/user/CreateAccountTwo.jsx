@@ -1,13 +1,27 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux";
+import { setPassword, acceptTerms } from "../../../store/slices/userSlice";
 import Input from "../../../components/Input"
 import PopupCreateAccount from "../../../components/PopupCreateAccount";
 
 const CreateAccountTwo = () => {
+  const dispatch = useDispatch();
   const [showPopup, setShowPopup] = useState(false);
+  const [passwordA, setPasswordA] = useState("");
+  const [passwordB, setPasswordB] = useState("");
+  const [ terms, setTerms ] = useState(false);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
   }
+
+  const handleNext = () => {
+    console.log('handle next-->', passwordA, passwordB);
+    dispatch(setPassword({passwordA, passwordB}));
+    dispatch(acceptTerms(terms));
+    togglePopup();
+  }
+
   
   return (
     <main className="mt-20">
@@ -21,6 +35,7 @@ const CreateAccountTwo = () => {
             id="password"
             type="password"
             placeholder="Contraseña"
+            onChange={(e) => setPasswordA(e.target.value)}
           />
         </section>
         <section className='m-4'>
@@ -29,15 +44,19 @@ const CreateAccountTwo = () => {
             id="password"
             type="password"
             placeholder="Contraseña"
+            onChange={(e) => setPasswordB(e.target.value)}
           />
         </section>
         <section className="m-4 flex items-center">
-          <input type="checkbox" className="w-[21px] h-[20px] border border-black" />
+          <input type="checkbox" className="w-[21px] h-[20px] border border-black" 
+          checked={terms}
+          onChange={() => setTerms(!terms)}
+          />
           <p className="m-3">He leído y acepto los <span className="text-customGreen">TÉRMINOS Y CONDICIONES</span></p>
         </section>
         <section className="flex items-center justify-center">
           <button 
-          onClick={togglePopup}
+          onClick={handleNext}
           className="w-[165px] h-14 bg-customGreen text-white rounded-full m-6 p-2">
             Registrarme
           </button>
