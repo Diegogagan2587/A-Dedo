@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import TripDetailsTop from "../trips/TripDetailsTop";
-import Date from '../../components/Date';
+import DateDisplay from '../../components/DateDisplay';
 import Time from '../../components/Time';
 import LocationBarIcons from '../../components/LocationBarIcons';
 import TripFeature from '../../components/TripFeature';
@@ -37,8 +37,8 @@ const TripDetails = () => {
       </div>
       <div className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
-        <div className="flex text-sm items-center justify-between w-full flex-wrap">
-          <Date date="Miercoles 21 de Mayo del 2024" />
+        <div className="flex text-sm items-center justify-between w-full">
+          <DateDisplay date="Miercoles 21 de Mayo del 2024" />
           <Time time="13:00 hrs"/>
           <CarModel text="EcoSport - Ford" />
         </div>
