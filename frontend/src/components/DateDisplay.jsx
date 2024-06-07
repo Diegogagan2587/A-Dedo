@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import calendar from '../assets/calendargreen.png'
 
-const Date = ({ date }) => {
+const DateDisplay = ({ date }) => {
   return (
     <div className='flex flex-row' >
         <img src={calendar} alt="calendar picture" />
@@ -10,8 +10,8 @@ const Date = ({ date }) => {
   )
 }
 
-Date.propTypes = {
+DateDisplay.propTypes = {
     date: PropTypes.string.isRequired
 }
 
-export default Date
+export default DateDisplay;
