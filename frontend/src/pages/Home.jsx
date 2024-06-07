@@ -1,15 +1,10 @@
 import { useSelector } from "react-redux";
+import formatDate from "../store/utils/formatDate";
 import CardTrip from "../components/CardTrip"
 import DriverButton from "../components/DriverButton";
 import mainProfilePicture from '../assets/main-profilepic.png'
 import auto from '../assets/auto.png'
 import DateDisplay from "../components/DateDisplay";
-
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleDateString('es-US', options);
-};
 
 const Home = () => {
   const trips = useSelector((state) => state.trips.list);
