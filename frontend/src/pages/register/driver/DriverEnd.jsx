@@ -1,5 +1,5 @@
-import tarjetaIdentificacionLista from '../../assets/documento.png'
-import { NextBtn } from '../../components/NextBtn'
+import tarjetaIdentificacionLista from '../../../assets/documento.png'
+import { NextBtn } from '../../../components/NextBtn'
 
 const DriverEnd = () => {
   return (
@@ -9,7 +9,7 @@ const DriverEnd = () => {
       <p className='text-center m-4 text-[20px]'>Tu documentación fue <br /> validada con exíto.</p>
 
       <NextBtn
-      href='CarRegister'
+      to='/register/vehicle'
       />
     </main>
   )

@@ -1,6 +1,7 @@
 //import libraries
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 
 //import local
 import { routes } from "./router/routes.js";
@@ -13,6 +14,7 @@ const server = express();
 server.use(morgan("dev"));
 server.use(express.json());
 server.use(express.urlencoded({extended:true}));
+server.use(cors());
 //router
 server.use(routes);
 

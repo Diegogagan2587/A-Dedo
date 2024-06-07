@@ -1,6 +1,6 @@
-import Input from "../../components/Input"
-import imagenAdjuntar from '../../assets/Imagen-adjuntar.png'
-import { NextBtn } from "../../components/NextBtn"
+import Input from "../../../components/Input"
+import imagenAdjuntar from '../../../assets/Imagen-adjuntar.png'
+import { NextBtn } from "../../../components/NextBtn"
 
 const CarRegister = () => {
   return (
@@ -27,7 +27,7 @@ const CarRegister = () => {
       </section>
       <section className="flex items-center justify-center">
         <NextBtn 
-        href="CarWait"
+        to="/register/vehicle-end"
         />
       </section>
     </main>

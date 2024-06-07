@@ -1,5 +1,5 @@
-import imagenAdjuntar from '../../assets/Imagen-adjuntar.png'
-import { NextBtn } from '../../components/NextBtn'
+import imagenAdjuntar from '../../../assets/Imagen-adjuntar.png'
+import { NextBtn } from '../../../components/NextBtn'
 
 const DriverDNI = () => {
   return (
@@ -23,7 +23,7 @@ const DriverDNI = () => {
 
         <section className='flex justify-center'>
           <NextBtn 
-          href="DriverWait"
+          to="/register/driver-end"
           />
         </section>
     </main>

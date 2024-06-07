@@ -1,16 +1,16 @@
-import TripDetailsTop from "./trip-details/TripDetailsTop";
-import Date from '../components/Date';
-import Time from '../components/Time';
-import LocationBarIcons from '../components/LocationBarIcons';
-import TripFeature from '../components/TripFeature';
-import ButtonGreen from '../components/ButtonGreen';
+import TripDetailsTop from "../trips/TripDetailsTop";
+import Date from '../../components/Date';
+import Time from '../../components/Time';
+import LocationBarIcons from '../../components/LocationBarIcons';
+import TripFeature from '../../components/TripFeature';
+import ButtonGreen from '../../components/ButtonGreen';
 
-import driverProfile from '../assets/navbar/driver-profile.png';
-import freeSeats from '../assets/free-seats.svg';
-import hand from '../assets/back_hand.svg';
-import kids from '../assets/kids.svg';
-import pets from '../assets/pets.svg';
-import food from '../assets/food.svg';
+import driverProfile from '../../assets/navbar/driver-profile.png';
+import freeSeats from '../../assets/free-seats.svg';
+import hand from '../../assets/back_hand.svg';
+import kids from '../../assets/kids.svg';
+import pets from '../../assets/pets.svg';
+import food from '../../assets/food.svg';
 
 const TripDetails = () => {
   return (
@@ -26,7 +26,7 @@ const TripDetails = () => {
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
           <Date date="Miercoles 21 de Mayo del 2024" />
-          <Time />
+          <Time time="13:00 hrs"/>
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
           <LocationBarIcons />
