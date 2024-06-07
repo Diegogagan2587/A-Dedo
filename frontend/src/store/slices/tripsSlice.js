@@ -1,29 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
+const initialTripForm = {
+  origin:{
+    address:"",
+    city:"",
+    postalCode:"",
+    startDate:"",
+    startTime:"",
+  },
+  destination: {
+    address:"",
+    city:"",
+    postalCode:"",
+    endDate:"",
+    endTime:"",
+  },
+  seats: 0,
+  price: 0,
+  stops:false,
+  pets:false,
+  childrens:false,
+  acceptFood:false,
+  notes:"",
+  passengers:[],
+};
+
 const trips = {
-  new: {
-    origin:{
-      address:"",
-      city:"",
-      postalCode:"",
-      startDate:"",
-      startTime:"",
-    },
-    destination: {
-      address:"",
-      city:"",
-      postalCode:"",
-      endDate:"",
-      endTime:"",
-    },
-    seats: 0,
-    price: 0,
-    stops:false,
-    pets:false,
-    childrens:false,
-    acceptFood:false,
-    notes:"",
-    passengers:[],
-  }
+  new: initialTripForm,
+  list: []
 }
 
 export const tripsSlice = createSlice({
@@ -42,7 +45,17 @@ export const tripsSlice = createSlice({
     setAdditionalOptions: (state,action) => {
       state.new = {...state.new, ...action.payload }
     }
-  }
+  },
+  extraReducers: (builder) => {
+    builder
+    .addCase('trip/create/fulfilled', (state, action) => {
+      state.new = initialTripForm;
+      state.list = [
+        ...state.list,
+        action.payload
+      ];
+    })
+  },
 });
 
 export const { setOrigin, setDestination, setAvailableSeats, setAdditionalOptions } = tripsSlice.actions;
