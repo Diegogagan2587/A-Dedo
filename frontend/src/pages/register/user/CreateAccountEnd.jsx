@@ -21,7 +21,7 @@ const CreateAccountEnd = () => {
       </section>
       <section className='m-5 flex justify-center'>
         <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2">
-          <Link to="/trips/new/step-1">Crear viaje</Link>
+          <Link to="/register/driver">Crear viaje</Link>
         </button>
         <button className='w-[103px] h-14 bg-customGreen text-white rounded-full m-6'>
           <Link to="/trips">Ver viajes</Link>
