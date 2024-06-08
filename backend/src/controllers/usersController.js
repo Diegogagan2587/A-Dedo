@@ -28,6 +28,7 @@ const userController = {
       await vehicle.save();
       // Add the new vehicle's ID to the user's vehicles array
       user.vehicle = vehicle._id;
+      user.rol.push("driver");
       await user.save();
       res.status(200).json({message:"Driver registered successfullly",vehicle})
     } catch (err) {
