@@ -10,6 +10,7 @@ import chat from '../../assets/navbar/chat.svg';
 
 const Menu = ({ isActive, setIsActive }) => {
   const user = useSelector((state) => state.user.data);
+  const isDriver = user && user.rol && user.rol.length > 1||false;
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     setIsLoggedIn(user?true:false);
@@ -36,7 +37,7 @@ const Menu = ({ isActive, setIsActive }) => {
           <Item text="Perfil" onClick={handleOnClick} icon={userIcon} to="#"/>
           <Item text="Chat" onClick={handleOnClick} icon={chat} to="#"/>
           <Item text="Mis viajes" onClick={handleOnClick} icon={car} to="#"/>
-          <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/driver"/>
+          { isDriver ? null : <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/driver"/> }
           <Item text="Ayuda" onClick={handleOnClick} icon={help} to="#" />
         </>
       ) : (
