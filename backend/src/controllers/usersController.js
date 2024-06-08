@@ -17,15 +17,14 @@ const userController = {
 
   registerDriver: async (req, res) => {
     const {driver, makeAndModel } = req.body;
-
     try {
       // Fin user by ID
-      const user = User.findByID(driver);
+      const user = await User.findOne({_id:driver});
       if(!user){
         return res.status(404).json({message: 'User not found'});
       }
       // Create a new vehicle
-      const vehicle = new Vehicle({ driver, makeAndModel })
+      const vehicle = new Vehicle({ driver, makeAndModel})
       await vehicle.save();
       // Add the new vehicle's ID to the user's vehicles array
       user.vehicle = vehicle._id;
