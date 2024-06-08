@@ -46,6 +46,10 @@ export const userSlice = createSlice({
       .addCase("user/register/fulfilled", (state, action) => {
         return { ...state, ...action.payload}
       })
+      .addCase("driver/register/fulfilled", (state, action) => {
+        state.data = { ...state.data, ...action.payload };
+      })
+      
   },
 });
 
