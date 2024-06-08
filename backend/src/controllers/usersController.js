@@ -20,7 +20,7 @@ const userController = {
 
     try {
       // Fin user by ID
-      const user = user.findByID(driver);
+      const user = User.findByID(driver);
       if(!user){
         return res.status(404).json({message: 'User not found'});
       }
