@@ -9,6 +9,8 @@ const initialState = {
     terms:false,
   }, 
   error:"",
+  data:{}
+  
 };
 
 export const userSlice = createSlice({
