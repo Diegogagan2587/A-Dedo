@@ -1,4 +1,5 @@
 import User from '../models/user.js';
+import Vehicle from '../models/vehicle.js';
 import bcrypt from 'bcrypt';
 
 const userController = {
@@ -13,6 +14,28 @@ const userController = {
       res.status(500).json({error: `ERROR AL REGISTRAR USUARIO  ${err.message}`});
     }
   },
+
+  registerDriver: async (req, res) => {
+    const {driver, makeAndModel } = req.body;
+
+    try {
+      // Fin user by ID
+      const user = user.findByID(driver);
+      if(!user){
+        return res.status(404).json({message: 'User not found'});
+      }
+      // Create a new vehicle
+      const vehicle = new Vehicle({ driver, makeAndModel })
+      await vehicle.save();
+      // Add the new vehicle's ID to the user's vehicles array
+      user.vehicle = vehicle._id;
+      await user.save();
+      res.status(200).json({message:"Driver registered successfullly",vehicle})
+    } catch (err) {
+      console.error('Error in registerDriver:',err);
+      res.status(500).json({error: "An error occurred while registerig the driver"})
+    }
+  };
 
   authenticate: async (req, res) => {
     const email = req.body.email;
