@@ -157,7 +157,11 @@ export const tripsSlice = createSlice({
     },
     setAdditionalOptions: (state,action) => {
       state.new = {...state.new, ...action.payload }
-    }
+    },
+    setSelectedTrip: (state, action) => {
+      const selectedTripId = action.payload;
+      return { ...state, selectedTripId }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -168,8 +172,11 @@ export const tripsSlice = createSlice({
         action.payload
       ];
     })
+    .addCase('trips/get/fulfilled', (state, action)=>{
+      state.list = [...state.list, ...action.payload ]
+    })
   },
 });
 
-export const { setOrigin, setDestination, setAvailableSeats, setAdditionalOptions } = tripsSlice.actions;
+export const { setOrigin, setDestination, setAvailableSeats, setAdditionalOptions, setSelectedTrip } = tripsSlice.actions;
 export default tripsSlice.reducer;
