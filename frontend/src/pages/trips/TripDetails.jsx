@@ -1,18 +1,26 @@
-import TripDetailsTop from "./trip-details/TripDetailsTop";
-import Date from '../components/Date';
-import Time from '../components/Time';
-import LocationBarIcons from '../components/LocationBarIcons';
-import TripFeature from '../components/TripFeature';
-import ButtonGreen from '../components/ButtonGreen';
-
-import driverProfile from '../assets/navbar/driver-profile.png';
-import freeSeats from '../assets/free-seats.svg';
-import hand from '../assets/back_hand.svg';
-import kids from '../assets/kids.svg';
-import pets from '../assets/pets.svg';
-import food from '../assets/food.svg';
+import { useNavigate } from 'react-router-dom';
+import TripDetailsTop from "../trips/TripDetailsTop";
+import DateDisplay from '../../components/DateDisplay';
+import Time from '../../components/Time';
+import LocationBarIcons from '../../components/LocationBarIcons';
+import TripFeature from '../../components/TripFeature';
+import ButtonGreen from '../../components/ButtonGreen';
+import driverProfile from '../../assets/navbar/driver-profile.png';
+import freeSeats from '../../assets/free-seats.svg';
+import hand from '../../assets/back_hand.svg';
+import kids from '../../assets/kids.svg';
+import pets from '../../assets/pets.svg';
+import food from '../../assets/food.svg';
+import whatsapp from '../../assets/whatsapp.png';
+import { Link } from "react-router-dom";
+import CarModel from "../../components/CarModel";
 
 const TripDetails = () => {
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate('/trips/:id/reserve')
+  }
+
   return (
     <div className="absolute top-0">
       <TripDetailsTop 
@@ -20,22 +28,23 @@ const TripDetails = () => {
       bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
       driverProfile={driverProfile}
       />
-      <div className="
-      pt-[10vw] mt-[10vw] sm:pt-[10vw] sm:mt-[20vw]
-      px-4 flex flex-col gap-8 items-center">
+      <div>
+        <button className="w-[50px] h-[50px] absolute z-20 right-10 inset-y-[118px]">
+          <Link>
+          <img src={whatsapp} alt="" />
+          </Link>
+        </button>
+      </div>
+      <div className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
-          <Date date="Miercoles 21 de Mayo del 2024" />
-          <Time />
+          <DateDisplay date="Miercoles 21 de Mayo del 2024" />
+          <Time time="13:00 hrs"/>
+          <CarModel text="EcoSport - Ford" />
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
           <LocationBarIcons />
-          <div
-            id="location-text-container"
-            className="min-h-[139px]
-        flex flex-col justify-between gap-4 p-1 w-full
-        "
-          >
+          <div id="location-text-container" className="min-h-[139px] flex flex-col justify-between gap-4 p-1 w-full">
             <p>
               Santa clara del mar, Provincia de Buenos Aires, Argentina
               <br />
@@ -59,6 +68,7 @@ const TripDetails = () => {
             >$890</span>
           </div>
           <ButtonGreen
+            onClick={handleRedirect}
             text="Reserva tu lugar"
             className="bg-[#00A66A] text-white"
           />

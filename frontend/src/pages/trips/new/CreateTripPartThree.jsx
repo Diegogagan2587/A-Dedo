@@ -1,9 +1,14 @@
-import volante from "../../assets/volante.png"
-import removeCricle from "../../assets/remove_circle.png"
-import addCricle from "../../assets/add_circle.png"
-import BtnNextIcon from "../../components/BtnNextIcon"
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import volante from "../../../assets/volante.png"
+import removeCricle from "../../../assets/remove_circle.png"
+import addCricle from "../../../assets/add_circle.png"
+import BtnNextIcon from "../../../components/BtnNextIcon"
+import { setAvailableSeats } from '../../../store/slices/tripsSlice';
 
 const CreateTripPartThree = () => {
+  const dispatch = useDispatch();
+  const [seats, setSeats] = useState(0);
   return (
     <main className="mt-20">
       <section className="m-4 flex items-center">
@@ -12,7 +17,12 @@ const CreateTripPartThree = () => {
 			</section>
       <section className="m-4 mt-2 py-3">
       <h2 className="text-[18px] font-semibold">Cantidad de pasajeros</h2>
-				<input type="number" placeholder="Pasajeros" className='border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] placeholder-[#49454F] placeholder:text-sm text-base'/>
+				<input 
+        type="number" 
+        placeholder="Pasajeros" 
+        className='border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] placeholder-[#49454F] placeholder:text-sm text-base'
+        onChange={(e) => setSeats(e.target.value)}
+        />
       </section>
       <section className="m-4 py-3">
         <h2 className="text-[18px] font-semibold">Selecciona el precio por pasajero</h2>
@@ -27,7 +37,8 @@ const CreateTripPartThree = () => {
       </section>
       <span className="absolute right-12 bottom-20">
         <BtnNextIcon
-        href="/create-trip-part-four"
+        to="/trips/new/step-4"
+        onClick={() => dispatch(setAvailableSeats(seats))}
         />
       </span>
     </main>

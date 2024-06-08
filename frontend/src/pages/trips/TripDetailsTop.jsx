@@ -24,7 +24,7 @@ const TripDetailsTop = ({ name, bio, driverProfile }) => {
         "
       >
         <div className="flex items-start">
-          <BackBtn to="/" />
+          <BackBtn to="/trips" />
         </div>
 
         <div className="flex flex-col items-center">

@@ -1,12 +1,17 @@
 import clock from "../assets/clock.svg";
+import { PropTypes } from 'prop-types';
 
-const Time = () => {
+const Time = ({ time }) => {
     return (
       <div className="flex gap-2 items-center">
         <img src={clock} alt="clock" className="w-[20px] " />
-        <span>13:00 hrs</span>
+        <span>{time}</span>
       </div>
     );
   };
+
+  Time.propTypes = {
+    time: PropTypes.string.isRequired,
+  }
 
   export default Time;

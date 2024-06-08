@@ -1,6 +1,14 @@
 import { PropTypes } from 'prop-types';
+import { Link } from "react-router-dom"
+import { useDispatch, useSelector } from 'react-redux';
+import registerUser from '../store/requests/registerUser';
 
 const PopupCreateAccount = ({ show, onClose }) => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.new);
+  const handleContinue = async () => {
+    dispatch(registerUser(user))
+  };
   if (!show) return null;
 
   return (
@@ -14,8 +22,10 @@ const PopupCreateAccount = ({ show, onClose }) => {
           className="px-4 py-2 text-[#5F5C5C] rounded-md">
             Cancelar
           </button>
-          <button className="px-4 py-2 text-customGreen rounded-md">
-            <a href="/create-account-part-end"> Continuar</a>
+          <button 
+            onClick={handleContinue}
+            className="px-4 py-2 text-customGreen rounded-md">
+            <Link to="/register/step-3"> Continuar</Link>
           </button>
         </div>
       </div>

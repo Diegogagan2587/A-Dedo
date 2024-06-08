@@ -1,56 +1,49 @@
 import mongoose from "mongoose";
 
 const tripSchema = new mongoose.Schema({
-    destination_point: {
-        type: String,
-        require: true
+    driver: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     },
-
-    starting_point: {
-        type: String,
-        require: true
-
+    origin: {
+        address: { type: String, required: true },
+        city: { type: String, required: true },
+        postalCode: { type: String, required: true },
+        date: { type: Date, required: true },
+        time: { type: String, required: true }
     },
-
-    description: {
-        type: String,
-        require: false
+    destination: {
+        address: { type: String, required: true },
+        city: { type: String, required: true },
+        postalCode: { type: String, required: true },
+        date: { type: Date, required: true },
+        time: { type: String, required: true }
     },
-
-    date_publication: {
-        type: Date,
-        require: true
-    },
-
-    date_start_trip: {
-        type: Date,
-        require: true
-    },
-
-    ocupation: [
+    seats: { type: Number, required: true },
+    price: { type: Number, required: true },
+    stops: { type: Boolean, required: true },
+    pets: { type: Boolean, required: true },
+    childrens: { type: Boolean, required: true },
+    acceptFood: { type: Boolean, required: true },
+    notes: { type: String, required: false },
+    passengers: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            require:false,
             ref: "User"
         }
     ],
-
     messages_trip: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Message"
         }
-
     ],
-
-    calification:[
+    calification: [
         {
             type: Number
         }
     ]
-
-    
-    
 });
 
 export default mongoose.model("Trip", tripSchema);
