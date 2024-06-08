@@ -33,7 +33,7 @@ const Home = () => {
 
       <section className="flex flex-col items-center">
         {sortedDates.map((date) => (
-          <section key={date} className="flex flex-col items-center">
+          <section key={date} className="flex flex-col py-3">
             <DateDisplay date={formatDate(date)} />
             {tripsByDate[date].map((trip) => (
               <CardTrip
