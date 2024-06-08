@@ -1,5 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { setSelectedTrip } from '../store/slices/tripsSlice';
 import location from '../assets/location.png';
 import petsIcon from '../assets/pets.png'
 import handIcon from '../assets/hand.png'
@@ -7,8 +9,11 @@ import kidsIcon from '../assets/family.png'
 
 const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleClick = (e) => {
     e.preventDefault();
+    dispatch(setSelectedTrip(id));
     navigate(`/trips/${id}/details`);
   };
 
