@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const vehicleSchema = new mongoose.Schema({
     driver: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
       },
@@ -12,4 +12,5 @@ const vehicleSchema = new mongoose.Schema({
       }
 })
 
-export default mongoose.model("Vehicle", vehicleSchema);
+const Vehicle = mongoose.model("Vehicle", vehicleSchema);
+export default Vehicle;
