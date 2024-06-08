@@ -35,7 +35,7 @@ const userController = {
       console.error('Error in registerDriver:',err);
       res.status(500).json({error: "An error occurred while registerig the driver"})
     }
-  };
+  },
 
   authenticate: async (req, res) => {
     const email = req.body.email;
