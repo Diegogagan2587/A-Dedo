@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 
-const Switch = (checked,onChange) => {
+const Switch = ({checked,onChange}) => {
   return (
     <label className="relative inline-flex items-center cursor-pointer mr-4">
     <input type="checkbox" value="" className="sr-only peer"
