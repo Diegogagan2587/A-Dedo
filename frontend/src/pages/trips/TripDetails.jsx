@@ -59,7 +59,7 @@ const TripDetails = () => {
         <ul className="w-full flex justify-between text-xs">
           <TripFeature text="Asientos libres 3" icon={freeSeats} />
           <TripFeature text="Acepta paradas" icon={hand} />
-          <TripFeature text="Viaja con ninos " icon={kids} />
+          <TripFeature text="Viaja con niños" icon={kids} />
           <TripFeature text="Mascotas" icon={pets} />
           <TripFeature text="Comida" icon={food} />
         </ul>
