@@ -1,6 +1,15 @@
 import Trip from '../models/trip.js'
 
 const tripsController = {
+    index: async (req, res) => {
+        try {
+            const trips = await Trip.find().populate('driver passengers messages_trip');
+            res.status(200).json(trips);
+        } catch (err) {
+            console.log("Error fetching trips: ", err);
+            res.status(500).json({ error: 'Error fetching trips' });
+        }
+    },
     create: async (req, res) => {
         const {
             driver,
@@ -52,6 +61,7 @@ const tripsController = {
             res.status(500).json({ error: 'ERROR AL CREAR VIAJE ' });
         }
     }
+
 
 }
 export default tripsController;
