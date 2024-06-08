@@ -26,6 +26,12 @@ const initialTripForm = {
 
 const trips = {
   new: initialTripForm,
+  reserve:{
+    userId:"",
+    tripId:"",
+    cash:false,
+    coordinateWithDriver:false
+  },
   list: [
     {
       origin: {
@@ -162,6 +168,9 @@ export const tripsSlice = createSlice({
       const selectedTripId = action.payload;
       return { ...state, selectedTripId }
     },
+    setReserve: (state, action)=>{
+      state.reserve = action.payload
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -178,5 +187,12 @@ export const tripsSlice = createSlice({
   },
 });
 
-export const { setOrigin, setDestination, setAvailableSeats, setAdditionalOptions, setSelectedTrip } = tripsSlice.actions;
+export const {
+  setOrigin,
+  setDestination,
+  setAvailableSeats,
+  setAdditionalOptions,
+  setSelectedTrip,
+  setReserve,
+} = tripsSlice.actions;
 export default tripsSlice.reducer;
