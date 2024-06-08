@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import getTrips from './store/requests/getTrips';
 import Navbar from './components/navbar/Navbar';
 import Main from './pages/Main';
 import Login from './pages/Login';
@@ -26,8 +28,13 @@ import ReserveConfirmation from './pages/trips/ReserveConfirmation';
 import ReserveTrip from './pages/trips/ReserveTrip';
 
 function App() {
+  const dispatch = useDispatch();
   //trigger render when user logs in for demo purposes
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    dispatch(getTrips());
+  }, []);
+  
 
   return (
     <Router>

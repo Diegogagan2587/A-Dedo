@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 import Menu from './Menu';
 import logo from '../../assets/logo.png';
 import bgNavCurve from '../../assets/nav-background.svg';
@@ -17,7 +18,7 @@ const Navbar = ({isLoggedIn}) => {
         w-full top-0"
       />
       <div className="flex items-center justify-center z-30 relative top-0 pt-2 w-full">
-        <div className="flex items-center border-white w-3/4 justify-center">
+        <Link to="/trips" className="flex items-center border-white w-3/4 justify-center">
           <div className="flex flex-col">
             <h1 className="font-title text-white text-4xl">a dedo</h1>
             <p className="text-white text-sm text-center ml-8">
@@ -25,7 +26,7 @@ const Navbar = ({isLoggedIn}) => {
             </p>
           </div>
           <img src={logo} alt="logo" className="h-12 w-12" />
-        </div>
+        </Link>
         <div className="flex justify-center w-1/4 border-white">
           <button className="z-10 w-[24px]" onClick={() => setIsActive(!isActive)}>
             <img src={menuIcon} alt="menu" className="h-8 w-8" />

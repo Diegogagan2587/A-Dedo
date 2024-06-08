@@ -11,15 +11,16 @@ const Home = () => {
   const trips = useSelector((state) => state.trips.list);
   const tripsByDate = sortTripsByDate(trips);
   const sortedDates = Object.keys(tripsByDate).sort((a, b) => new Date(a) - new Date(b));
+  const {fullName, rol} = useSelector((state) => state.user.data || {});
   return (
     <main className="mt-10">
       <section className="flex flex-row items-center justify-center">
         <img src={mainProfilePicture} alt="" />
         <div className="m-4">
           <h1 className="text-center text-2xl font-extrabold text-mainTitle text-textColor mb-2">
-            Hola Marcos
+            {`¡Hola, ${fullName || 'invitado'}!`}
           </h1>
-          <DriverButton />
+          {rol === "driver" ? null : <DriverButton />}
         </div>
       </section>
 
