@@ -27,7 +27,7 @@ const tripsController = {
 
         try {
             const newTrip = new Trip({
-                driver: mongoose.Types.ObjectId(driverId),
+                driver: driver,
                 origin: {
                     address: origin.address,
                     city: origin.city,
@@ -56,8 +56,8 @@ const tripsController = {
             res.status(200).json(newTrip);
 
         } catch (err) {
-            console.log("----error in trips controller below");
-            console.log(err);
+            console.error("----error in trips controller below");
+            console.error(err);
             res.status(500).json({ error: 'ERROR AL CREAR VIAJE ' });
         }
     }
