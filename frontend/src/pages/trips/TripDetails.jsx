@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import TripDetailsTop from "../trips/TripDetailsTop";
 import DateDisplay from '../../components/DateDisplay';
 import Time from '../../components/Time';
@@ -17,6 +18,8 @@ import CarModel from "../../components/CarModel";
 
 const TripDetails = () => {
   const navigate = useNavigate();
+  const tripId = useSelector((state) => state.trips.selectedTripId);
+  const trip = useSelector((state) => state.trips.list.find((trip) => trip._id === tripId));
   const handleRedirect = () => {
     navigate('/trips/:id/reserve')
   }
@@ -38,19 +41,19 @@ const TripDetails = () => {
       <div className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
-          <DateDisplay date="Miercoles 21 de Mayo del 2024" />
-          <Time time="13:00 hrs"/>
+          <DateDisplay date={trip.origin.date} />
+          <Time time={trip.origin.time}/>
           <CarModel text="EcoSport - Ford" />
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
           <LocationBarIcons />
           <div id="location-text-container" className="min-h-[139px] flex flex-col justify-between gap-4 p-1 w-full">
             <p>
-              Santa clara del mar, Provincia de Buenos Aires, Argentina
+              {trip.origin.address+", "+trip.origin.city}
               <br />
               <a className="text-[#00A66A]">Ver punto de encuentro</a>
             </p>
-            <p>Mar del Plata, Provincia de Buenos Aires, Argentina</p>
+            <p>{trip.destination.address+", "+trip.destination.city}</p>
           </div>
         </div>
         <ul className="w-full flex justify-between text-xs">
@@ -65,7 +68,7 @@ const TripDetails = () => {
             <p>Precio por pasajero</p>
             <span
             className="font-bold text-[#00A66A] text-2xl"
-            >$890</span>
+            >{trip.price}</span>
           </div>
           <ButtonGreen
             onClick={handleRedirect}
