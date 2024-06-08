@@ -10,7 +10,7 @@ const LoginWGoogleBtn = ({text}) => {
     <RoundedBtn
         text={text}
         onClick={handleLogin}
-        className="bg-[#E6E6E6] text-[#49454F] text-xs"
+        className="w-[300px] h-[48px] bg-[#E6E6E6] text-[#49454F] text-xs"
         logo={googleSVG}
         alt="google logo"
     />

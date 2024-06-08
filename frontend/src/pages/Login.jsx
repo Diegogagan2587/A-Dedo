@@ -30,14 +30,14 @@ const Login = ({setIsLoggedIn}) => {
   };
   return (
     <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
-      <h1 className="my-2 text-xl text-black">Iniciar sesion</h1>
+      <h1 className="my-2 text-[22px] font-medium">Iniciar sesión</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input 
         type="email" 
         value={user.email}
         onChange={(e) => setUser({...user, email: e.target.value})}
         placeholder="e-mail"
-      required={true}
+        required={true}
         />
         <Input 
         type="password" 
@@ -47,13 +47,13 @@ const Login = ({setIsLoggedIn}) => {
         required={true} 
         />
         <div className="flex gap-2 items-center my-2 w-full">
-          <ButtonGreen onClick={handleCreateAccount} text={'Crear Cuenta'} className={"text-lg w-1/2"}/>
-          <ButtonGreen onClick={handleLogin} text={'Ingresar'} className={"text-sm w-1/2"}/>
+          <ButtonGreen onClick={handleCreateAccount} text={'Crear Cuenta'} className={"text-base w-1/2"}/>
+          <ButtonGreen onClick={handleLogin} text={'Ingresar'} className={"text-sm w-[113px] h-[41px] bg-customGreen text-white"}/>
         </div>
       </form>
-      <div className='flex flex-col gap-2 w-full items-center my-2'>
-        <p className='text-sm'>Olvidaste tu contrasena?</p>
-        <LoginWithFacebook onClick={handleClick} text={'Ingresar con facebook'} />
+      <div className='flex flex-col gap-7 w-full items-center my-2'>
+        <p className='text-sm font-medium'>¿Olvidaste tu contraseña?</p>
+        <LoginWithFacebook onClick={handleClick} text={'Ingresar con facebook'}/>
         <LoginWGoogleBtn onClick={handleClick} text={'Ingresar con Google'} />
       </div>
     </section>
