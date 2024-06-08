@@ -4,12 +4,12 @@ import bcrypt from 'bcrypt';
 
 const userController = {
   register: async (req, res) => {
-    const { fullName, email, password, rol, phone } = req.body;
+    const { fullName, email, password, rol = 'passenger', phone } = req.body;
     const user = new User({ fullName, email, password, rol, phone });
 
     try {
       await user.save();
-      res.status(200).json({message:'USUARIO REGISTRADO'});
+      res.status(200).json({message:'USUARIO REGISTRADO', data: user});
     } catch (err) {
       res.status(500).json({error: `ERROR AL REGISTRAR USUARIO  ${err.message}`});
     }
@@ -45,8 +45,8 @@ const userController = {
     if(!currentUser){ return res.status(404).json({error:'User Not Found!'}); }// stop execution if user not found
     const userValidated = await isCorrectPassword( password, currentUser.password );
     if (userValidated) {
-      const { _id, fullName, calification, history_trip, messages ,  phone, rol  } = currentUser;
-      const data = { _id, fullName, calification, history_trip, messages ,  phone, rol  };
+      const { _id, fullName,  calification, history_trip, messages ,  phone, rol  } = currentUser;
+      const data = { _id, fullName,  calification, history_trip, messages ,  phone, rol  };
       res.status(200).json({message: 'USUARIO AUTENTICADO CORRECTAMENTE' , data: data });
     } else {
       const response = `ERROR AL AUTENTICAR: LA CONTRASEÑA ES INCORRECTA`;
