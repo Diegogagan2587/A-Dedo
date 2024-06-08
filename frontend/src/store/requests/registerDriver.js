@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { VITE_API_URL_BASE as API_URL_BASE} from "../../config";
 
-const registerUser = createAsyncThunk('user/register', async (user,{ rejectWithValue })=>{
+const registerUser = createAsyncThunk('driver/register', async (user,{ rejectWithValue })=>{
     try{
       const response = await fetch(`${API_URL_BASE}/register/driver`, {
         method: 'POST',
