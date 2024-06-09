@@ -38,10 +38,10 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className='max-w-[400px] m-auto'>
         <Navbar isLoggedIn={isLoggedIn} />
         <main className='
-        relative top-[25vw]
+        relative top-[75px]
         sm:top-60
         '>
           <Routes>

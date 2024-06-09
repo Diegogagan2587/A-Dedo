@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 const ProfileDriver = () => {
   const myDriverID = useSelector((state)=>state.user.data._id)
   const trips = useSelector((state)=>state.trips.list)
-  const myTrips = trips.filter((trip) => trip.driver._id === myDriverID);
+  const myTrips = trips.filter((trip) => trip.driver && trip.driver._id === myDriverID) || [];
 
   return (
     <div className="flex flex-col ">
