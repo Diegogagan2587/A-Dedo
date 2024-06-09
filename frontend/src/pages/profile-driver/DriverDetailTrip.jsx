@@ -31,8 +31,8 @@ const DriverDetailTrip = () => {
   }
 
   return (
-    <main>
-      <div className="absolute top-[-25vw] z-40 bg-white">
+    <main className='absolute top-[-75px] sm:top-[-250px] z-40 bg-white'>
+      <div className="relative top-0 max-w-[400px]">
         <NavDetailsTrip name="Marcos" />
       <section className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>

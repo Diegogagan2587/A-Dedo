@@ -25,7 +25,7 @@ const TripDetails = () => {
   }
 
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white">
+    <div className="absolute top-[-25vw] sm:top-[-250px] z-40 bg-white">
       <TripDetailsTop 
       name="Elena"
       bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
@@ -38,7 +38,7 @@ const TripDetails = () => {
           </Link>
         </button>
       </div>
-      <div className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
+      <div className="mt-[10vw] sm:mt-[25px] sm:pt-[10vw]  px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full flex-wrap">
           <DateDisplay date={trip.origin.date} />
