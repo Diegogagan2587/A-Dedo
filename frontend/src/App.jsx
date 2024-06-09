@@ -42,7 +42,6 @@ function App() {
         <Navbar isLoggedIn={isLoggedIn} />
         <main className='
         relative top-[75px]
-        sm:top-60
         '>
           <Routes>
             <Route path="/" element={<Main />} />
