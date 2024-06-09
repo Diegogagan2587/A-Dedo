@@ -5,7 +5,7 @@ import driverProfile from '../../assets/main-profilepic.png'
 
 const NavDetailsTrip = ({ name }) => {
   return (
-    <section className="w-screen relative text-white">
+    <section className="w-full relative text-white">
       <img src={curve} alt="curve" className="w-full z-10 absolute"/>
       <div className="relative z-20 flex pt-4">
         <div className="flex items-start">
