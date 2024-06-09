@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import  authenticateUser  from '../store/requests/authenticateUser';
-import LoginWithFacebook from '../components/LoginWithFacebook';
 import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
 import ButtonGreen from '../components/ButtonGreen';
 import Input from '../components/Input';
@@ -53,7 +52,6 @@ const Login = ({setIsLoggedIn}) => {
       </form>
       <div className='flex flex-col gap-7 w-full items-center my-2'>
         <p className='text-sm font-medium'>¿Olvidaste tu contraseña?</p>
-        <LoginWithFacebook onClick={handleClick} text={'Ingresar con facebook'}/>
         <LoginWGoogleBtn onClick={handleClick} text={'Ingresar con Google'} />
       </div>
     </section>
