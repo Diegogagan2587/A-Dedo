@@ -43,7 +43,6 @@ function App() {
         <main className='
         relative top-[25vw]
         sm:top-60
-        z-0
         '>
           <Routes>
             <Route path="/" element={<Main />} />
