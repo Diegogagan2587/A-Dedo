@@ -1,18 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    currentPath: "",
+    navigationLayout: "main-nav",
 };
 
 export const navigationSlice = createSlice({
   name:'navigation',
   initialState: initialState,
   reducers: {
-    setCurrentPath: (state, action)=>{
+    setNavigationLayout: (state, action)=>{
         state.currentPath = action.payload;
     }
   }
 });
 
-export const { setCurrentPath } = navigationSlice.actions;
+export const { setNavigationLayout } = navigationSlice.actions;
 export default navigationSlice.reducer;
