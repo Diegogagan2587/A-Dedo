@@ -1,17 +1,27 @@
-import { useSelector } from "react-redux";
-import formatDate from "../store/utils/formatDate";
-import sortTripsByDate from "../store/utils/sortTripsByDate";
-import CardTrip from "../components/CardTrip"
-import DriverButton from "../components/DriverButton";
-import mainProfilePicture from '../assets/main-profilepic.png'
-import auto from '../assets/auto.png'
-import DateDisplay from "../components/DateDisplay";
+import { useSelector } from 'react-redux';
+import formatDate from '../store/utils/formatDate';
+import sortTripsByDate from '../store/utils/sortTripsByDate';
+import CardTrip from '../components/CardTrip';
+import DriverButton from '../components/DriverButton';
+import mainProfilePicture from '../assets/main-profilepic.png';
+import auto from '../assets/auto.png';
+import DateDisplay from '../components/DateDisplay';
+import PassengerDriverBtn from '../components/PassengerDriverBtn';
+import ProfileDriver from './profile-driver/ProfileDriver';
+import { useState } from 'react';
 
 const Home = () => {
+  const { fullName, rol } = useSelector((state) => state.user.data || {});
+  const isDriver = rol && rol.length > 1 ? true : false;
+  const [driverIsActive, setDriverIsActive] = useState(false);
+  console.log('si driver active?', driverIsActive);
   const trips = useSelector((state) => state.trips.list);
   const tripsByDate = sortTripsByDate(trips);
-  const sortedDates = Object.keys(tripsByDate).sort((a, b) => new Date(a) - new Date(b));
-  const {fullName, rol} = useSelector((state) => state.user.data || {});
+  const sortedDates = Object.keys(tripsByDate).sort(
+    (a, b) => new Date(a) - new Date(b)
+  );
+  
+
   return (
     <main className="mt-10">
       <section className="flex flex-row items-center justify-center">
@@ -20,11 +30,15 @@ const Home = () => {
           <h1 className="text-center text-2xl font-extrabold text-mainTitle text-textColor mb-2">
             {`¡Hola, ${fullName || 'invitado'}!`}
           </h1>
-          {rol&&rol[1] === "driver" ? null : <DriverButton />}
+          {rol && rol[1] === 'driver' ? null : <DriverButton />}
+          { isDriver && <PassengerDriverBtn setDriverIsActive={setDriverIsActive} />}
         </div>
       </section>
-
+      {driverIsActive && <ProfileDriver />}
+      {!driverIsActive && <>
       <div className="flex flex-row items-center justify-center">
+        
+
         <h1 className="text-customGreen font-extrabold text-mainTitle text-xl m-2">
           Viajes disponibles
         </h1>
@@ -51,8 +65,10 @@ const Home = () => {
           </section>
         ))}
       </section>
+      </>
+      }
     </main>
   );
-}
+};
 
-export default Home
+export default Home;
