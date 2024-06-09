@@ -43,6 +43,7 @@ const Menu = ({ isActive, setIsActive }) => {
       ) : (
         <>
           <Item text="Crear cuenta" onClick={handleOnClick} icon={userIcon} to="/register/step-1" />
+          <Item text="Ingresar" onClick={handleOnClick} icon={userIcon} to="/login" />
           <Item text="Nosotros" onClick={handleOnClick} icon={car} to="/"/>
           <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/step-1"/>
           <Item text="Ayuda" onClick={handleOnClick} icon={help} to="#"/>
