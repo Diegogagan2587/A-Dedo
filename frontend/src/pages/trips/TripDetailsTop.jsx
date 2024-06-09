@@ -33,7 +33,7 @@ const TripDetailsTop = ({ name, bio, driverProfile }) => {
         </div>
         <div className="w-2/3 p-2">
           <h2 className='text-xl font-bold'>{name}</h2>
-          <p >{bio}</p>
+          <p>{bio}</p>
         </div>
       </div>
     </section>

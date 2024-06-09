@@ -40,9 +40,9 @@ const TripDetails = () => {
       </div>
       <div className="mt-[10vw] sm:mt-[25px] sm:pt-[10vw]  px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
-        <div className="flex text-sm items-center justify-between w-full">
+        <div className="flex text-sm items-center justify-between w-full flex-wrap">
           <DateDisplay date={trip.origin.date} />
-          <Time time={trip.origin.time}/>
+          <Time time={trip.origin.time} />
           <CarModel text="EcoSport - Ford" />
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
@@ -59,7 +59,7 @@ const TripDetails = () => {
         <ul className="w-full flex justify-between text-xs">
           <TripFeature text="Asientos libres 3" icon={freeSeats} />
           <TripFeature text="Acepta paradas" icon={hand} />
-          <TripFeature text="Viaja con ninos " icon={kids} />
+          <TripFeature text="Viaja con niños" icon={kids} />
           <TripFeature text="Mascotas" icon={pets} />
           <TripFeature text="Comida" icon={food} />
         </ul>

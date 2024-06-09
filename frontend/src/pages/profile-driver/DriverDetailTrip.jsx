@@ -1,4 +1,3 @@
-
 import TripFeature from '../../components/TripFeature'
 import LocationBarIcons from '../../components/LocationBarIcons'
 import Time from '../../components/Time'
@@ -68,7 +67,7 @@ const DriverDetailTrip = () => {
         </section>
         <button 
         onClick={togglePopupDelete}
-        className="w-[122px] h-[50px] border border-customGreen text-customGreen rounded-full m-6 p-2">
+        className="w-[122px] h-[50px] border border-customGreen text-customGreen rounded-full m-4 p-2">
           <Link>Eliminar viaje</Link>
         </button>
       </section>

@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 
 const Time = ({ time }) => {
     return (
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center mr-4">
         <img src={clock} alt="clock" className="w-[20px] " />
         <span>{time}</span>
       </div>
