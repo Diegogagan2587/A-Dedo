@@ -11,7 +11,7 @@ const CreateTripPartThree = () => {
   const dispatch = useDispatch();
   const [seats, setSeats] = useState(0);
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white">
+    <div className="absolute top-[-25vw] z-40 bg-white w-full">
       <BackNav
       text="Crear viaje"
       to="/trips/new/step-2"
