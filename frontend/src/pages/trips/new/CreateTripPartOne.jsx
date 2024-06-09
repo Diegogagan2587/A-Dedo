@@ -15,7 +15,7 @@ const CreateTripPartOne = () => {
   const [time, setTime] = useState('');
 
   return (
-    <div>
+    <div className="absolute top-[-25vw] z-40 bg-white">
       <BackNav 
       text="Crear viaje"
       to="/register/vehicle-end"
