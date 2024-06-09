@@ -25,7 +25,7 @@ const TripDetails = () => {
   }
 
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white">
+    <div className="absolute top-[-25vw] sm:top-[-250px] z-40 bg-white">
       <TripDetailsTop 
       name="Elena"
       bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
