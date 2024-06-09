@@ -7,6 +7,7 @@ import petsIcon from '../assets/pets.png'
 import handIcon from '../assets/hand.png'
 import kidsIcon from '../assets/family.png'
 
+
 const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
