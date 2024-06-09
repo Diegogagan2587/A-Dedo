@@ -6,7 +6,7 @@ const TripDetailsTop = ({ name, bio, driverProfile }) => {
   return (
     <section
       className="
-    w-screen  
+    w-full  
     relative
     text-white"
     >
