@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const BackNav = ({text, to}) => {
   return (
-    <nav className="relative z-20 top-1">
+    <nav className="relative z-20 top-0">
     <img src={navbg} alt="background" className="z-10 absolute w-full" />
     <div className="flex items-center z-10 relative top-0 w-full">
       <Link to={to}><img src={arrow} alt="arrow" /></Link> 
