@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Item from './Item';
 import help from '../../assets/navbar/help.svg';
 import userIcon from '../../assets/navbar/user.svg';
@@ -11,10 +11,10 @@ import chat from '../../assets/navbar/chat.svg';
 const Menu = ({ isActive, setIsActive }) => {
   const user = useSelector((state) => state.user.data);
   const isDriver = user && user.rol && user.rol.length > 1||false;
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
   useEffect(() => {
-    setIsLoggedIn(user?true:false);
   }, [user]);
+
   const handleOnClick = () => {
     setIsActive(false);
   };
@@ -32,9 +32,9 @@ const Menu = ({ isActive, setIsActive }) => {
          bg-white px-2 py-8
          `}
     >
-      {isLoggedIn ? (
+      {user._id ? (
         <>
-          <Item text="Perfil" onClick={handleOnClick} icon={userIcon} to="#"/>
+          <Item text="Perfil" onClick={handleOnClick} icon={userIcon} to={user}/>
           <Item text="Chat" onClick={handleOnClick} icon={chat} to="#"/>
           <Item text="Mis viajes" onClick={handleOnClick} icon={car} to="#"/>
           { isDriver ? null : <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/driver"/> }
@@ -55,7 +55,6 @@ const Menu = ({ isActive, setIsActive }) => {
 Menu.propTypes = {
   isActive: PropTypes.bool.isRequired,
   setIsActive: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.bool.isRequired,
 };
 
 export default Menu;
