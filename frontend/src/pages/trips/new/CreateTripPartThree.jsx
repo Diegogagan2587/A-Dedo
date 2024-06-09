@@ -41,7 +41,7 @@ const CreateTripPartThree = () => {
             <em className="text-[14px] py-4">Valor recomendado por persona</em>
           </p>
         </section>
-        <span className="absolute right-12 bottom-30">
+        <span className="absolute right-4 bottom-30">
           <BtnNextIcon
           to="/trips/new/step-4"
           onClick={() => dispatch(setAvailableSeats(seats))}
