@@ -20,7 +20,7 @@ const Home = () => {
           <h1 className="text-center text-2xl font-extrabold text-mainTitle text-textColor mb-2">
             {`¡Hola, ${fullName || 'invitado'}!`}
           </h1>
-          {rol === "driver" ? null : <DriverButton />}
+          {rol&&rol[1] === "driver" ? null : <DriverButton />}
         </div>
       </section>
 
