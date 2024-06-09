@@ -28,7 +28,7 @@ const ReserveTrip = () => {
   }
 
   return (
-    <div className="absolute top-0">
+    <div className="absolute top-[-25vw] z-40 bg-white">
       <BackNav 
       text="Reservar viaje"
       to={"/trips/:id/details"}
