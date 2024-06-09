@@ -29,7 +29,7 @@ const Login = ({setIsLoggedIn}) => {
     navigate('/register/step-1');
   };
   return (
-    <section className="flex flex-col w-screen h-screen m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
+    <section className="flex flex-col w-full h-full m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
       <h1 className="my-2 text-[22px] font-medium">Iniciar sesión</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input 
