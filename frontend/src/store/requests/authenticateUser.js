@@ -2,7 +2,6 @@ import { createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
 import { VITE_API_URL_BASE as API_URL_BASE } from '../../config';
 
 const postAuthData = async (data) => {
-  console.log('running postAuthData')
   const response = await fetch(`${API_URL_BASE}/authenticate`, {
     method: 'POST',
     headers: {

@@ -7,7 +7,7 @@ const LoginWithFacebook = ({ text, handleLogin }) => {
     <RoundedBtn
       text={text}
       onClick={handleLogin}
-      className="bg-[#1877F2] text-white text-xs"
+      className="w-[300px] h-[48px] bg-[#1877F2] text-white text-xs"
       logo={facebookSVG}
       alt="facebook logo"
     />

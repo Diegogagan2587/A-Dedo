@@ -9,6 +9,8 @@ const initialState = {
     terms:false,
   }, 
   error:"",
+  data:{}
+  
 };
 
 export const userSlice = createSlice({
@@ -41,6 +43,13 @@ export const userSlice = createSlice({
       .addCase("user/authenticate/fulfilled", (state, action)=> {
         return { ...state, ...action.payload }
       }) 
+      .addCase("user/register/fulfilled", (state, action) => {
+        return { ...state, ...action.payload}
+      })
+      .addCase("driver/register/fulfilled", (state, action) => {
+        state.data = { ...state.data, ...action.payload };
+      })
+      
   },
 });
 

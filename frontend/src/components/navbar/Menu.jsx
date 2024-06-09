@@ -1,12 +1,20 @@
 import { PropTypes } from 'prop-types';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import Item from './Item';
 import help from '../../assets/navbar/help.svg';
-import user from '../../assets/navbar/user.svg';
+import userIcon from '../../assets/navbar/user.svg';
 import car from '../../assets/navbar/car.svg';
 import driving from '../../assets/navbar/driving-hands.svg';
 import chat from '../../assets/navbar/chat.svg';
 
-const Menu = ({ isActive, setIsActive, isLoggedIn }) => {
+const Menu = ({ isActive, setIsActive }) => {
+  const user = useSelector((state) => state.user.data);
+  const isDriver = user && user.rol && user.rol.length > 1||false;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    setIsLoggedIn(user?true:false);
+  }, [user]);
   const handleOnClick = () => {
     setIsActive(false);
   };
@@ -26,18 +34,18 @@ const Menu = ({ isActive, setIsActive, isLoggedIn }) => {
     >
       {isLoggedIn ? (
         <>
-          <Item text="Perfil" onClick={handleOnClick}/>
-          <Item text="Chat" onClick={handleOnClick} icon={chat} />
-          <Item text="Mis viajes" onClick={handleOnClick} icon={car} />
-          <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} />
-          <Item text="Ayuda" onClick={handleOnClick} icon={help} />
+          <Item text="Perfil" onClick={handleOnClick} icon={userIcon} to="#"/>
+          <Item text="Chat" onClick={handleOnClick} icon={chat} to="#"/>
+          <Item text="Mis viajes" onClick={handleOnClick} icon={car} to="#"/>
+          { isDriver ? null : <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/driver"/> }
+          <Item text="Ayuda" onClick={handleOnClick} icon={help} to="#" />
         </>
       ) : (
         <>
-          <Item text="Crear cuenta" onClick={handleOnClick} icon={user} to="/register/step-1" />
-          <Item text="Nosotros" onClick={handleOnClick} icon={car} />
-          <Item text="Quiero ser conductor" icon={driving} />
-          <Item text="Ayuda" onClick={handleOnClick} icon={help} />
+          <Item text="Crear cuenta" onClick={handleOnClick} icon={userIcon} to="/register/step-1" />
+          <Item text="Nosotros" onClick={handleOnClick} icon={car} to="/"/>
+          <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/step-1"/>
+          <Item text="Ayuda" onClick={handleOnClick} icon={help} to="#"/>
         </>
       )}
     </ul>
