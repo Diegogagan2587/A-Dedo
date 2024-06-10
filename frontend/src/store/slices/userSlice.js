@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+  status:"idle",
   new:{
     fullName:"",
     email:"",
@@ -40,9 +41,15 @@ export const userSlice = createSlice({
   },
   extraReducers: (builder) => {
       builder
-      .addCase("user/authenticate/fulfilled", (state, action)=> {
-        return { ...state, ...action.payload }
+      .addCase("user/authenticate/pending", (state)=> {
+        state.status = "loading"
       }) 
+      .addCase("user/authenticate/rejected", (state, action)=> {
+        return { ...state, ...action.payload, status: "rejected" }
+      }) 
+      .addCase("user/authenticate/fulfilled", (state, action)=> {
+        return { ...state, ...action.payload, status:"logged" }
+      })
       .addCase("user/register/fulfilled", (state, action) => {
         return { ...state, ...action.payload}
       })

@@ -1,22 +1,24 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { setNavigationLayout } from '../../../store/slices/navigationSlice';
 import volante from "../../../assets/volante.png"
 import removeCricle from "../../../assets/remove_circle.png"
 import addCricle from "../../../assets/add_circle.png"
 import BtnNextIcon from "../../../components/BtnNextIcon"
 import { setAvailableSeats } from '../../../store/slices/tripsSlice';
-import BackNav from '../../../components/BackNav';
 
 const CreateTripPartThree = () => {
   const dispatch = useDispatch();
   const [seats, setSeats] = useState(0);
+
+  useEffect(() => {
+    dispatch(setNavigationLayout("create-trip-3"));
+    return () => dispatch(setNavigationLayout("main-nav"));
+  }, [dispatch]);
+
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white w-full">
-      <BackNav
-      text="Crear viaje"
-      to="/trips/new/step-2"
-      />
-      <main className="mt-20">
+    <div className="w-full">
+      <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
           <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Acompañantes</h2>

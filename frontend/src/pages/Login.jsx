@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import  authenticateUser  from '../store/requests/authenticateUser';
 import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
@@ -9,6 +9,7 @@ import Input from '../components/Input';
 
 const Login = ({setIsLoggedIn}) => {
   const [user, setUser] = useState({email: '', password: ''});
+  const userStatus = useSelector((state)=>state.user.status)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleClick = (e) => {
@@ -17,18 +18,21 @@ const Login = ({setIsLoggedIn}) => {
     setIsLoggedIn(true);
   }
 
+  useEffect(()=>{
+    userStatus==="logged" && navigate('/trips');
+  },[navigate,userStatus]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
     dispatch(authenticateUser(user));
     setIsLoggedIn(true);
-    navigate('/trips');
   };
   const handleCreateAccount = (e) => {
     e.preventDefault();
     navigate('/register/step-1');
   };
   return (
-    <section className="flex flex-col w-full h-full m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw]">
+    <section className="flex flex-col w-full h-full m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw] sm:pt-20">
       <h1 className="my-2 text-[22px] font-medium">Iniciar sesión</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input 

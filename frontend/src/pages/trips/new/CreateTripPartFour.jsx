@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { setNavigationLayout } from '../../../store/slices/navigationSlice';
 import {setAdditionalOptions} from '../../../store/slices/tripsSlice';
 import volante from "../../../assets/volante.png"
 import Input from "../../../components/Input"
@@ -8,7 +9,6 @@ import petsImg from "../../../assets/pets.png"
 import family from "../../../assets/family.png"
 import fastFood from "../../../assets/fastfood.png"
 import PopupCreateTrip from "../../../components/PopupCreateTrip"
-import BackNav from '../../../components/BackNav';
 
 const CreateTripPartFour = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,11 @@ const CreateTripPartFour = () => {
   const [childrens, setchildrens] = useState(false);
   const [acceptFood, setAcceptFood] = useState(false);
   const [notes, setNotes] = useState('');
+
+  useEffect(() => {
+    dispatch(setNavigationLayout("create-trip-4"));
+    return () => dispatch(setNavigationLayout("main-nav"));
+  }, [dispatch]);
 
   const handleCreateTrip = () => {
     setShowPopup(!showPopup);
@@ -29,12 +34,8 @@ const CreateTripPartFour = () => {
   };
   
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white w-full">
-      <BackNav
-      text="Crear viaje"
-      to="/trips/new/step-3"
-      />
-      <main className="mt-20">
+    <div className="">
+      <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
           <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Observaciones</h2>

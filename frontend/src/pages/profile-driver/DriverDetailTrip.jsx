@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setNavigationLayout } from '../../store/slices/navigationSlice'
 import TripFeature from '../../components/TripFeature'
 import LocationBarIcons from '../../components/LocationBarIcons'
 import Time from '../../components/Time'
@@ -7,15 +10,19 @@ import hand from '../../assets/back_hand.svg';
 import kids from '../../assets/kids.svg';
 import pets from '../../assets/pets.svg';
 import food from '../../assets/food.svg';
-import NavDetailsTrip from './NavDetailsTrip'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import PopupDeleteTrip from '../../components/PopupDeleteTrip';
 import PopupConfirmDelete from '../../components/PopupConfirmDelete';
 
 const DriverDetailTrip = () => {
+  const dispatch = useDispatch();
   const [showPopupDelete, setShowPopupDelete] = useState(false);
   const [showPopupConfirm, setShowPopupConfirm] = useState(false);
+
+  useEffect(()=>{
+    dispatch( setNavigationLayout("details-driver-nav") )
+    return ()=> dispatch( setNavigationLayout("main-nav") )
+  },[dispatch]);
 
   const togglePopupDelete = () => {
     setShowPopupDelete(!showPopupDelete);
@@ -33,7 +40,6 @@ const DriverDetailTrip = () => {
   return (
     <main className='absolute top-[-75px] sm:top-[-250px] z-40 bg-white'>
       <div className="relative top-0 max-w-[400px]">
-        <NavDetailsTrip name="Marcos" />
       <section className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
