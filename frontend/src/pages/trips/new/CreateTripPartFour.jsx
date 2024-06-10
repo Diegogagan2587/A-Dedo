@@ -9,7 +9,6 @@ import petsImg from "../../../assets/pets.png"
 import family from "../../../assets/family.png"
 import fastFood from "../../../assets/fastfood.png"
 import PopupCreateTrip from "../../../components/PopupCreateTrip"
-import BackNav from '../../../components/BackNav';
 
 const CreateTripPartFour = () => {
   const dispatch = useDispatch();

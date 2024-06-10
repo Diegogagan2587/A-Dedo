@@ -41,7 +41,7 @@ export const userSlice = createSlice({
   },
   extraReducers: (builder) => {
       builder
-      .addCase("user/authenticate/pending", (state, action)=> {
+      .addCase("user/authenticate/pending", (state)=> {
         state.status = "loading"
       }) 
       .addCase("user/authenticate/rejected", (state, action)=> {

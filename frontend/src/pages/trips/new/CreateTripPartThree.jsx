@@ -6,7 +6,6 @@ import removeCricle from "../../../assets/remove_circle.png"
 import addCricle from "../../../assets/add_circle.png"
 import BtnNextIcon from "../../../components/BtnNextIcon"
 import { setAvailableSeats } from '../../../store/slices/tripsSlice';
-import BackNav from '../../../components/BackNav';
 
 const CreateTripPartThree = () => {
   const dispatch = useDispatch();
