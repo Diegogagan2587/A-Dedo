@@ -12,5 +12,6 @@ export const NextBtn = ({ to, onClick }) => {
 }
 
 NextBtn.propTypes = {
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 }

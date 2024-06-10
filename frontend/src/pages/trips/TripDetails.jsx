@@ -1,48 +1,42 @@
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import TripDetailsTop from "../trips/TripDetailsTop";
 import DateDisplay from '../../components/DateDisplay';
 import Time from '../../components/Time';
 import LocationBarIcons from '../../components/LocationBarIcons';
 import TripFeature from '../../components/TripFeature';
 import ButtonGreen from '../../components/ButtonGreen';
-import driverProfile from '../../assets/navbar/driver-profile.png';
 import freeSeats from '../../assets/free-seats.svg';
 import hand from '../../assets/back_hand.svg';
 import kids from '../../assets/kids.svg';
 import pets from '../../assets/pets.svg';
 import food from '../../assets/food.svg';
-import whatsapp from '../../assets/whatsapp.png';
-import { Link } from "react-router-dom";
 import CarModel from "../../components/CarModel";
+import { setNavigationLayout } from "../../store/slices/navigationSlice"
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const TripDetails = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const tripId = useSelector((state) => state.trips.selectedTripId);
   const trip = useSelector((state) => state.trips.list.find((trip) => trip._id === tripId));
+  
+  useEffect(()=>{
+    dispatch( setNavigationLayout("trip-details-nav") )
+    return ()=> dispatch( setNavigationLayout("main-nav") )
+  },[dispatch]);
+  
   const handleRedirect = () => {
     navigate('/trips/:id/reserve')
   }
 
   return (
-    <div className="absolute top-[-25vw] sm:top-[-250px] z-40 bg-white">
-      <TripDetailsTop 
-      name="Elena"
-      bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
-      driverProfile={driverProfile}
-      />
-      <div>
-        <button className="w-[50px] h-[50px] absolute z-20 right-10 inset-y-[118px]">
-          <Link>
-          <img src={whatsapp} alt="" />
-          </Link>
-        </button>
-      </div>
-      <div className="mt-[10vw] sm:mt-[25px] sm:pt-[10vw]  px-4 flex flex-col gap-8 items-center">
+    <div className="">
+      <div className=" px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969]">Detalle del Viaje</h1>
-        <div className="flex text-sm items-center justify-between w-full">
+        <div className="flex text-sm items-center justify-between w-full flex-wrap">
           <DateDisplay date={trip.origin.date} />
-          <Time time={trip.origin.time}/>
+          <Time time={trip.origin.time} />
           <CarModel text="EcoSport - Ford" />
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
@@ -59,7 +53,7 @@ const TripDetails = () => {
         <ul className="w-full flex justify-between text-xs">
           <TripFeature text="Asientos libres 3" icon={freeSeats} />
           <TripFeature text="Acepta paradas" icon={hand} />
-          <TripFeature text="Viaja con ninos " icon={kids} />
+          <TripFeature text="Viaja con niños" icon={kids} />
           <TripFeature text="Mascotas" icon={pets} />
           <TripFeature text="Comida" icon={food} />
         </ul>

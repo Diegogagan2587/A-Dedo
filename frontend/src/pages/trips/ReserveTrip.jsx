@@ -1,5 +1,7 @@
+import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { setReserve } from "../../store/slices/tripsSlice"
+import { setNavigationLayout } from "../../store/slices/navigationSlice"
 import DateDisplay from "../../components/DateDisplay"
 import Time from "../../components/Time"
 import LocationBarIcons from "../../components/LocationBarIcons"
@@ -18,21 +20,23 @@ const ReserveTrip = () => {
   const userId = useSelector((state) => state.user.data._id);
   const trip = useSelector((state) => state.trips.list.find((trip) => trip._id === tripId));
   const dispatch = useDispatch();
+
   const handleReserve = () => {
     dispatch(setReserve({userId, tripId, cash, coordinateWithDriver }));
     togglePopup();
   };
+
+  useEffect(()=>{
+    dispatch( setNavigationLayout("back-nav") )
+    return ()=> dispatch( setNavigationLayout("main-nav") )
+  },[dispatch]);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
   }
 
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white">
-      <BackNav 
-      text="Reservar viaje"
-      to={"/trips/:id/details"}
-      />
+    <div className="">
       <main className="mt-10 p-4">
         <section className="min-h-[139px] flex flex-col justify-between gap-4 p-1 w-full">
           <h2 className='text-textColor font-extrabold text-mainTitle text-center text-[26px]'>Reserva de viaje</h2>
