@@ -9,7 +9,6 @@ import ButtonGreen from "../../components/ButtonGreen"
 import { useState } from "react"
 import PopupReserveTrip from "../../components/PopupReserveTrip"
 import Switch from "../../components/Switch"
-import BackNav from "../../components/BackNav"
 import CarModel from "../../components/CarModel"
 
 const ReserveTrip = () => {
