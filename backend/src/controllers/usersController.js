@@ -50,7 +50,7 @@ const userController = {
       res.status(200).json({message: 'USUARIO AUTENTICADO CORRECTAMENTE' , data: data });
     } else {
       const response = `ERROR AL AUTENTICAR: LA CONTRASEÑA ES INCORRECTA`;
-      res.status(500).json({message: response});
+      res.status(401).json({message: response});
     }
   },
 
