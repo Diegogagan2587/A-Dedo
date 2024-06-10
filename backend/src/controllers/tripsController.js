@@ -53,12 +53,18 @@ const tripsController = {
             });
             await newTrip.save();
             console.log("viaje guradado");
-            res.status(200).json(newTrip);
+            res.status(201).json(newTrip); // 201 created
 
         } catch (err) {
-            console.error("----error in trips controller below");
-            console.error(err);
-            res.status(500).json({ error: 'ERROR AL CREAR VIAJE ' });
+            console.error("----error in trips controller below----");
+            console.error("Error creating a trip: ", err)
+            if(err.name === 'ValidationError'){
+              res.status(400).json({ error: 'Validation Error', details: err.errors });
+            } else {
+              console.error(err.name);
+              res.status(500).json({ error: 'ERROR AL CREAR VIAJE ' });
+            }
+
         }
     }
 
