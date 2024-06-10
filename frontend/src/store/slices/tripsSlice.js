@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialTripForm = {
+  status:{},
   origin:{
     address:"",
     city:"",
@@ -174,6 +175,9 @@ export const tripsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+    .addCase('trip/create/rejected', (state, action) => {
+      state.new.status = action.payload.error;
+    })
     .addCase('trip/create/fulfilled', (state, action) => {
       state.new = initialTripForm;
       state.list = [
