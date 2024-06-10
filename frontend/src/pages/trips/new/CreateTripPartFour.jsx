@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { setNavigationLayout } from '../../../store/slices/navigationSlice';
 import {setAdditionalOptions} from '../../../store/slices/tripsSlice';
 import volante from "../../../assets/volante.png"
 import Input from "../../../components/Input"
@@ -19,6 +20,11 @@ const CreateTripPartFour = () => {
   const [acceptFood, setAcceptFood] = useState(false);
   const [notes, setNotes] = useState('');
 
+  useEffect(() => {
+    dispatch(setNavigationLayout("create-trip-4"));
+    return () => dispatch(setNavigationLayout("main-nav"));
+  }, [dispatch]);
+
   const handleCreateTrip = () => {
     setShowPopup(!showPopup);
     dispatch(setAdditionalOptions({stops, pets, childrens, acceptFood, notes}));
@@ -29,12 +35,8 @@ const CreateTripPartFour = () => {
   };
   
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white w-full">
-      <BackNav
-      text="Crear viaje"
-      to="/trips/new/step-3"
-      />
-      <main className="mt-20">
+    <div className="">
+      <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
           <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Observaciones</h2>

@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { setNavigationLayout } from '../../../store/slices/navigationSlice';
 import { setOrigin } from '../../../store/slices/tripsSlice';
 import Input from "../../../components/Input"
 import volante from "../../../assets/volante.png"
 import BtnNextIcon from "../../../components/BtnNextIcon"
-import BackNav from '../../../components/BackNav';
 
 const CreateTripPartOne = () => {
   const dispatch = useDispatch();
@@ -14,13 +14,14 @@ const CreateTripPartOne = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
 
+  useEffect(()=>{
+    dispatch( setNavigationLayout("create-trip-1") )
+    return ()=> dispatch( setNavigationLayout("main-nav") )
+  },[dispatch]);
+
   return (
-    <div className="absolute top-[-25vw] z-40 bg-white w-full">
-      <BackNav 
-      text="Crear viaje"
-      to="/register/vehicle-end"
-      />
-      <main className="mt-20">
+    <div className="w-full">
+      <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
           <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Punto de partida</h2>
