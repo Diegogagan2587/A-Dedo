@@ -51,6 +51,7 @@ const Navbar = ({isLoggedIn}) => {
       driverProfile={driverProfile} />}
     {navigationLayout === "details-driver-nav" && <NavDetailsTrip name="marcos"/>}
     {navigationLayout === "back-nav" && <BackNav text="Reservar viaje" to={"/trips/:id/details"}/>}
+    {navigationLayout === "create-trip-1" && <BackNav text="Crear viaje" to="/trips" /> }
     </>
   );
 };
