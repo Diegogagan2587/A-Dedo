@@ -35,8 +35,7 @@ const ReserveTrip = () => {
   }
 
   return (
-    <div className="">
-      <main className="mt-10 p-4">
+      <main className="p-4">
         <section className="min-h-[139px] flex flex-col justify-between gap-4 p-1 w-full">
           <h2 className='text-textColor font-extrabold text-mainTitle text-center text-[26px]'>Reserva de viaje</h2>
           <div className="flex text-sm items-center justify-between w-full mt-2 flex-wrap">
@@ -81,7 +80,6 @@ const ReserveTrip = () => {
         </section>
         <PopupReserveTrip show={showPopup} onClose={togglePopup} />
       </main>
-    </div>
   )
 }
 
