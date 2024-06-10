@@ -9,7 +9,7 @@ export const navigationSlice = createSlice({
   initialState: initialState,
   reducers: {
     setNavigationLayout: (state, action)=>{
-        state.currentPath = action.payload;
+        state.navigationLayout = action.payload;
     }
   }
 });
