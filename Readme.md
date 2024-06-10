@@ -233,6 +233,13 @@ npm run start
 - LinkedIn: [Diego Vidal](https://www.linkedin.com/in/diego-vidal-lopez/)
 - Portfolio: [https://dvloper-z.com/](https://dvloper-z.com/)
 
+
+👤 **José Martinez - Back End Developer**
+
+- GitHub: [@josent19](https://github.com/josent19)
+- LinkedIn: [José Martinez](https://www.linkedin.com/in/josegregoriomartinez/)
+- Portfolio: [https://dvloper-z.com/](https://dvloper-z.com/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
