@@ -24,6 +24,8 @@
     "@babel/eslint-parser": "^7.24.5",
     "@babel/plugin-syntax-jsx": "^7.24.1",
     "@babel/preset-react": "^7.24.1",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^16.0.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
