@@ -22,8 +22,7 @@ const Menu = ({ isActive, setIsActive }) => {
     <ul
       className={`
          z-10 fixed  
-         border-2 rounded-3xl
-         pt-[17vw] sm:pt-[25vw]
+         border-2 rounded-3xl 
          w-full max-w-[400px] h-screen
          transition-all duration-500 ease-in-out ${
            isActive ? 'top-0' : 'top-[-100%]'
