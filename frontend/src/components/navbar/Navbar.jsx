@@ -1,15 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import TripDetailsTop from '../../pages/trips/TripDetailsTop';
+import NavDetailsTrip from '../../pages/profile-driver/NavDetailsTrip';
+import BackNav from "../../components/BackNav"
 import Menu from './Menu';
 import logo from '../../assets/logo.png';
 import bgNavCurve from '../../assets/nav-background.svg';
 import menuIcon from '../../assets/menu-icon-hamb.svg';
+import driverProfile from "../../assets/navbar/driver-profile.png"
 
 const Navbar = ({isLoggedIn}) => {
   const [isActive, setIsActive] = useState(false);
+  const navigationLayout = useSelector((state)=>state.navigation.navigationLayout); // trip-details-nav, details-driver-nav, back-nav
+  
+  useEffect(()=>{},[navigationLayout]);
+
   return (
-    <nav className="fixed z-30 w-full max-w-[400px] top-0">
+    <>
+    {navigationLayout === "main-nav" && <nav className="fixed z-30 w-full max-w-[400px] top-0">
       <img
         src={bgNavCurve}
         alt="background"
@@ -34,7 +44,14 @@ const Navbar = ({isLoggedIn}) => {
         </div>
       </div>
       <Menu isActive={isActive} isLoggedIn={isLoggedIn} setIsActive={setIsActive}/>
-    </nav>
+    </nav> }
+    {navigationLayout === "trip-details-nav" && <TripDetailsTop       
+      name="Elena"
+      bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
+      driverProfile={driverProfile} />}
+    {navigationLayout === "details-driver-nav" && <NavDetailsTrip/>}
+    {navigationLayout === "back-nav" && <BackNav/>}
+    </>
   );
 };
 
