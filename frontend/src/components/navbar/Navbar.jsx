@@ -53,6 +53,7 @@ const Navbar = ({isLoggedIn}) => {
     {navigationLayout === "back-nav" && <BackNav text="Reservar viaje" to={"/trips/:id/details"}/>}
     {navigationLayout === "create-trip-1" && <BackNav text="Crear viaje" to="/trips" /> }
     {navigationLayout === "create-trip-2" && <BackNav text="Crear viaje" to="/trips/new/step-1" /> }
+    {navigationLayout === "create-trip-3" && <BackNav text="Crear viaje" to="/trips/new/step-2" /> }
     </>
   );
 };
