@@ -49,8 +49,8 @@ const Navbar = ({isLoggedIn}) => {
       name="Elena"
       bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
       driverProfile={driverProfile} />}
-    {navigationLayout === "details-driver-nav" && <NavDetailsTrip/>}
-    {navigationLayout === "back-nav" && <BackNav/>}
+    {navigationLayout === "details-driver-nav" && <NavDetailsTrip name="marcos"/>}
+    {navigationLayout === "back-nav" && <BackNav text="Reservar viaje" to={"/trips/:id/details"}/>}
     </>
   );
 };
