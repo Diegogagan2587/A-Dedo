@@ -12,9 +12,7 @@ const Login = ({setIsLoggedIn}) => {
   const userStatus = useSelector((state)=>state.user.status)
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handleClick = (e) => {
-    //place holder to prevent default
-    e.preventDefault();
+  const handleClick = () => {
     setIsLoggedIn(true);
   }
 
