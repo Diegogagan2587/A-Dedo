@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { PropTypes } from 'prop-types';
 
 const PassengerDriverBtn = ({ setDriverIsActive }) => {
-  const [active, setActive] = useState('Driver');
+  const [active, setActive] = useState('Passenger');
 
   const handlePassengerClick = () => {
     setActive('Passenger');
