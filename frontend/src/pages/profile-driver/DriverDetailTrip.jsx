@@ -20,7 +20,7 @@ const DriverDetailTrip = () => {
   const [showPopupConfirm, setShowPopupConfirm] = useState(false);
 
   useEffect(()=>{
-    dispatch( setNavigationLayout("details-driver-nav") )
+    dispatch( setNavigationLayout("driver-details-trip") )
     return ()=> dispatch( setNavigationLayout("main-nav") )
   },[dispatch]);
 
