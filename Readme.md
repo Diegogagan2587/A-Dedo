@@ -233,6 +233,11 @@ npm run start
 - LinkedIn: [Diego Vidal](https://www.linkedin.com/in/diego-vidal-lopez/)
 - Portfolio: [https://dvloper-z.com/](https://dvloper-z.com/)
 
+👤 **Celina Garcés - Front End Developer**
+
+- GitHub: [@celinagrcs](https://github.com/celinagrcs)
+- LinkedIn: [Celina Garcés](https://www.linkedin.com/in/celina-garc%C3%A9s/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
