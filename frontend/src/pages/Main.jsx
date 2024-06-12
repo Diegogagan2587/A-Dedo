@@ -10,14 +10,22 @@ import ahorroTiempo from '../assets/ahorrar-tiempo.png'
 import amigos from '../assets/convencion.png'
 import medioAmbiente from '../assets/medioambiente.png'
 import imageEnd from '../assets/image-end.png'
+import { useNavigate } from "react-router-dom"
 
 function Main() {
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate('/login');
+  }
+
   return (
     <div>
         <main className="h-screen bg-main-image flex items-center flex-col justify-center ">
               <h1 className="font-baloo text-white text-center text-5xl font-extrabold mb-4">Viaja <br /> ahorrando</h1>
               <p className="font-roboto-flex text-white w-1/2 text-1xl mb-4 ">Conectate con personas que van al mismo lugar que vos y ahorra dinero.</p>
-              <GreenButton />
+              <GreenButton 
+              onClick={handleRedirect}
+              />
         </main>
     <section className="flex flex-col">
         <h2 className="mt-3 p-4 text-center text-2xl">¿Qué es <span className="text-customGreen font-title">a dedo</span>?</h2>

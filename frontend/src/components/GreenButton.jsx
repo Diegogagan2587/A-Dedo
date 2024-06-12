@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom'
+import { PropTypes } from "prop-types";
 
-const GreenButton = () => {
+const GreenButton = ({onClick}) => {
   return (
-    <button className="w-36 h-14 bg-customGreen text-white rounded-full m-6">
-        <Link to="/login">Ingresar</Link>
+    <button onClick={onClick} className="w-36 h-14 bg-customGreen text-white rounded-full m-6">
+      Ingresar
     </button>
   )
 }
 
+GreenButton.propTypes = {
+  onClick: PropTypes.func
+};
 export default GreenButton
