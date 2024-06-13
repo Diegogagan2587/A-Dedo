@@ -4,7 +4,7 @@ function LastTripCard() {
   return (
     <article className='min-w-[328px] min-h-[140px] border border-gray-400 rounded-lg flex p-4 items-center space-x-4 shadow-lg m-4'>
       <section>
-        <h2 className='text-customGreen font-semibold text-[14px] p-2'>Pasajero</h2>
+        <h2 className='text-customGreen font-semibold text-[14px] p-2 font-roboto-flex'>Pasajero</h2>
         <p className='text-customGreen text-[12px] text-center'>21/05/2024</p>
         <p className='text-customGreen text-[12px] text-center'>13:00hs</p>
         <p className='text-customGreen text-[12px] text-center'>Valor: $890</p>

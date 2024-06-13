@@ -12,7 +12,7 @@ function CardDriverTrip({date, origin, destination, startTime, endTime}) {
         <img src={passenger} alt="" />
         <p className='text-customGreen font-bold'>x1</p>
       </div>
-      <h2>{date}</h2>
+      <h2 className='font-roboto-flex'>{date}</h2>
       <section id="locations" className="flex items-center justify-center w-full mt-4">
             <div id="location-bar-icon" className="flex flex-col justify-center items-center gap-1 p-2">
               <img src={location} alt="location" className="w-[24px] h-[27px]" />
@@ -31,14 +31,14 @@ function CardDriverTrip({date, origin, destination, startTime, endTime}) {
             </div>
           </section>
       <section>
-        <h2 className='text-customGreen text-[14px] font-semibold'>Pasajeros confirmados</h2>
+        <h2 className='text-customGreen text-[14px] font-semibold font-roboto-flex'>Pasajeros confirmados</h2>
         <div className='flex mt-2 '>
           <img src={passengerOne} alt="" className='px-2' />
           <img src={passengerTwo} alt="" className='px-2'/>
         </div>
       </section>
       <section>
-        <button className='w-[110px] h-[43px] text-[14px] bg-customGreen rounded-full text-white relative left-40'>
+        <button className='w-[110px] h-[43px] text-[14px] bg-customGreen rounded-full text-white relative left-40 font-roboto-flex'>
           <Link to={"/trips/:id/details-driver"}>Ver mas</Link>
         </button>
       </section>

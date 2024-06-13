@@ -31,7 +31,7 @@ const Navbar = ({isLoggedIn}) => {
         <Link to="/trips" className="flex items-center border-white w-3/4 justify-center">
           <div className="flex flex-col">
             <h2 className="font-title text-white text-4xl">a dedo</h2>
-            <p className="text-white text-sm text-center ml-8">
+            <p className="text-white text-sm text-center ml-8 font-roboto-flex">
               viajes compartidos
             </p>
           </div>
