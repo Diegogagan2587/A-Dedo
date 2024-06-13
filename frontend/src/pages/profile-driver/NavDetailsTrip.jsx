@@ -16,7 +16,7 @@ const NavDetailsTrip = ({ name }) => {
             <img src={driverProfile} alt="driver profile picture" />
           </div>
           <div className="flex items-center justify-center m-8">
-            <h2 className='text-xl font-bold'>{name}</h2>
+            <h2 className='text-xl font-bold font-baloo'>{name}</h2>
           </div>
         </div>
       </div>
