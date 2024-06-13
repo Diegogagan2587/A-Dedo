@@ -6,6 +6,7 @@ import location from '../assets/location.png';
 import petsIcon from '../assets/pets.png'
 import handIcon from '../assets/hand.png'
 import kidsIcon from '../assets/family.png'
+import profilePicturePlaceHolder from '../assets/profile1.png'
 
 
 const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
@@ -20,7 +21,7 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
 
   return (
     <article id={id} onClick={handleClick} className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
-      <img src={profilePicture} alt={name} className="w-[68px] h-[64px] rounded-full" />
+      <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
       <section>
         <h2 className="text-base font-bold text-center font-baloo">{name}</h2>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
@@ -56,7 +57,7 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
 CardTrip.propTypes = {
     id: PropTypes.string.isRequired,  
     name: PropTypes.string.isRequired,
-    profilePicture: PropTypes.string.isRequired,
+    profilePicture: PropTypes.string,
     seatsAvailable: PropTypes.string.isRequired,
     startLocation: PropTypes.string.isRequired,
     startTime: PropTypes.string.isRequired,

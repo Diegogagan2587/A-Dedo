@@ -52,7 +52,6 @@ const Home = () => {
               <CardTrip
                 key={trip._id}
                 id={`${trip._id}`}
-                profilePicture="src/assets/profile1.png"
                 name="Elena"
                 seatsAvailable={`${trip.seats}`}
                 startLocation={trip.origin.city}
