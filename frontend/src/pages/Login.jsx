@@ -20,15 +20,14 @@ const Login = ({ setIsLoggedIn }) => {
 
   useEffect(() => {
     userStatus === "logged" && navigate("/trips");
-  }, [navigate, userStatus]);
+  }, [navigate, userStatus, dispatch]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     dispatch(authenticateUser(user));
     setIsLoggedIn(true);
   };
-  const handleCreateAccount = (e) => {
-    // e.preventDefault();
+  const handleCreateAccount = () => {
     navigate("/register/step-1");
   };
   return (
