@@ -7,9 +7,9 @@ const NavDetailsTrip = ({ name }) => {
   return (
     <section className="w-full relative text-white">
       <img src={curve} alt="curve" className="w-full z-10 absolute"/>
-      <div className="relative z-20 flex pt-4">
+      <div className="relative z-20 flex pt-4 top-0">
         <div className="flex items-start">
-        <BackBtn to="/profile/driver" />
+        <BackBtn to="/trips" />
         </div>
         <div className='flex justify-center m-3'>
           <div className="flex flex-col items-center justify-around">

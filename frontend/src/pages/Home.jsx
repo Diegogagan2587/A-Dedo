@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import formatDate from '../store/utils/formatDate';
 import sortTripsByDate from '../store/utils/sortTripsByDate';
 import CardTrip from '../components/CardTrip';
 import DriverButton from '../components/DriverButton';
@@ -48,7 +47,7 @@ const Home = () => {
       <section className="flex flex-col items-center">
         {sortedDates.map((date) => (
           <section key={date} className="flex flex-col py-3">
-            <DateDisplay date={formatDate(date)} />
+            <DateDisplay date={date} />
             {tripsByDate[date].map((trip) => (
               <CardTrip
                 key={trip._id}
