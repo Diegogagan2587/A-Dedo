@@ -8,7 +8,7 @@ const CreateAccountEnd = () => {
   return (
     <main className="mt-20">
       <section className="m-4 flex flex-col items-center">
-        <h2 className="text-textColor font-extrabold text-mainTitle text-[26px]">¡Felicitaciones!</h2>
+        <h2 className="text-textColor font-extrabold font-baloo text-[26px]">¡Felicitaciones!</h2>
         <p>Que alegría que seas parte de <span className="text-customGreen font-title">a dedo</span></p>
       </section>
       <section className='flex items-center justify-center m-5'>
@@ -20,10 +20,10 @@ const CreateAccountEnd = () => {
         <img src={createaccountIMG} alt="" />
       </section>
       <section className='m-5 flex justify-center'>
-        <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2">
+        <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2 font-roboto-flex">
           <Link to="/register/driver">Crear viaje</Link>
         </button>
-        <button className='w-[103px] h-14 bg-customGreen text-white rounded-full m-6'>
+        <button className='w-[103px] h-14 bg-customGreen text-white rounded-full m-6 font-roboto-flex'>
           <Link to="/trips">Ver viajes</Link>
         </button>
       </section>

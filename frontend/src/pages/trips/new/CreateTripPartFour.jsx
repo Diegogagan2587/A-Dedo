@@ -38,10 +38,10 @@ const CreateTripPartFour = () => {
       <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
-          <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Observaciones</h2>
+          <h2 className='text-textColor font-extrabold font-baloo text-[26px] m-2'>Observaciones</h2>
         </section>
         <section>
-          <h2 className="text-[18px] font-semibold m-4">Selecciona la opción que prefieras</h2>
+          <h2 className="text-[18px] font-semibold m-4 font-roboto-flex">Selecciona la opción que prefieras</h2>
           <article className="flex items-center gap-4 m-7">
             <img src={paradas} alt="" />
             <p>Aceptas paradas intermedias</p>
@@ -49,7 +49,7 @@ const CreateTripPartFour = () => {
             type="checkbox" 
             checked={stops}
             onChange={() => setStops(!stops)}
-            className="w-[20px] h-[20px]"/>
+            className="w-[20px] h-[20px] font-roboto-flex"/>
           </article>
           <article className="flex items-center gap-4 m-7">
           <img src={petsImg} alt="" className="w-[23px] h-[25px]" />
@@ -58,7 +58,7 @@ const CreateTripPartFour = () => {
             type="checkbox"
             checked={pets}
             onChange={() => setPets(!pets)} 
-            className="w-[20px] h-[20px]"/>
+            className="w-[20px] h-[20px] font-roboto-flex"/>
           </article>
           <article className="flex items-center gap-4 m-7">
           <img src={family} alt="" className="w-[23px] h-[25px]" />
@@ -67,7 +67,7 @@ const CreateTripPartFour = () => {
             type="checkbox" 
             checked={childrens}
             onChange={() => setchildrens(!childrens)}
-            className="w-[20px] h-[20px]"/>
+            className="w-[20px] h-[20px] font-roboto-flex"/>
           </article>
           <article className="flex items-center gap-4 m-7">
           <img src={fastFood} alt="" />
@@ -76,11 +76,11 @@ const CreateTripPartFour = () => {
             type="checkbox"
             checked={acceptFood}
             onChange={() => setAcceptFood(!acceptFood)} 
-            className="w-[20px] h-[20px]"/>
+            className="w-[20px] h-[20px] font-roboto-flex"/>
           </article>
         </section>
         <section className="m-4 mt-10">
-          <h2 className="text-[18px] font-semibold mb-3">¿Queres informar algo más?</h2>
+          <h2 className="text-[18px] font-semibold mb-3 font-roboto-flex">¿Queres informar algo más?</h2>
           <Input 
           onChange={(e) => setNotes(e.target.value)}
           />
@@ -89,7 +89,7 @@ const CreateTripPartFour = () => {
         <section className="absolute right-3">
           <button 
             onClick={handleCreateTrip}
-            className="w-36 h-14 bg-customGreen text-white rounded-full m-6">
+            className="w-36 h-14 bg-customGreen text-white rounded-full m-6 font-roboto-flex">
             Crear Viaje
           </button>
         </section>

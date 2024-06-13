@@ -37,7 +37,7 @@ const ReserveTrip = () => {
   return (
       <main className="p-4">
         <section className="min-h-[139px] flex flex-col justify-between gap-4 p-1 w-full">
-          <h2 className='text-textColor font-extrabold text-mainTitle text-center text-[26px]'>Reserva de viaje</h2>
+          <h2 className='text-textColor font-extrabold font-baloo text-center text-[26px]'>Reserva de viaje</h2>
           <div className="flex text-sm items-center justify-between w-full mt-2 flex-wrap">
             <DateDisplay date={trip.origin.date} />
             <Time time={trip.origin.time} />
@@ -55,7 +55,7 @@ const ReserveTrip = () => {
             </div>
           </section>
         <section className="mt-10">
-          <h2 className="font-semibold text-[18px]">Medios de pago</h2>
+          <h2 className="font-semibold text-[18px] font-roboto-flex">Medios de pago</h2>
           <div className="flex items-center justify-between py-3">
             <p className="text-[15px]">Efectivo</p>
             <Switch 
@@ -75,7 +75,7 @@ const ReserveTrip = () => {
         <ButtonGreen
               onClick={handleReserve}
               text="Reservar viaje"
-              className="bg-[#00A66A] text-white"
+              className="bg-[#00A66A] text-white font-roboto-flex"
             />
         </section>
         <PopupReserveTrip show={showPopup} onClose={togglePopup} />
