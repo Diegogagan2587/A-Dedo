@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import formatDate from '../store/utils/formatDate';
 import sortTripsByDate from '../store/utils/sortTripsByDate';
 import CardTrip from '../components/CardTrip';
 import DriverButton from '../components/DriverButton';
