@@ -6,7 +6,7 @@ const DateDisplay = ({ date }) => {
   return (
     <div className='flex flex-row' >
         <img src={calendar} alt="calendar picture" />
-        <h2 className='ml-2'>{formatDate(date)}</h2>
+        <h2 className='ml-2 font-roboto-flex'>{formatDate(date)}</h2>
     </div>
   )
 }

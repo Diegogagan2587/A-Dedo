@@ -33,7 +33,7 @@ const Login = ({setIsLoggedIn}) => {
   };
   return (
     <section className="flex flex-col w-full h-full m-0 items-center gap-4 pl-[48px] pr-[40px] pt-[20vw] sm:pt-20">
-      <h1 className="my-2 text-[22px] font-medium">Iniciar sesión</h1>
+      <h1 className="my-2 text-[22px] font-medium font-roboto-flex">Iniciar sesión</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input 
         type="email" 
