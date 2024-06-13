@@ -33,7 +33,7 @@ const TripDetails = () => {
   return (
     <div className="">
       <div className=" px-4 flex flex-col gap-8 items-center">
-        <h1 className="text-[#696969]">Detalle del Viaje</h1>
+        <h1 className="text-[#696969] font-roboto-flex">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full flex-wrap">
           <DateDisplay date={trip.origin.date} />
           <Time time={trip.origin.time} />
@@ -61,13 +61,13 @@ const TripDetails = () => {
           <div className="flex flex-col items-center">
             <p>Precio por pasajero</p>
             <span
-            className="font-bold text-[#00A66A] text-2xl"
+            className="font-bold text-[#00A66A] text-2xl font-roboto-flex"
             >{trip.price}</span>
           </div>
           <ButtonGreen
             onClick={handleRedirect}
             text="Reserva tu lugar"
-            className="bg-[#00A66A] text-white"
+            className="bg-[#00A66A] text-white font-roboto-flex"
           />
         </section>
       </div>

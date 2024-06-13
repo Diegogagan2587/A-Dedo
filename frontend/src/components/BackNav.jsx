@@ -9,7 +9,7 @@ const BackNav = ({text, to}) => {
     <img src={navbg} alt="background" className="z-10 absolute w-full" />
     <div className="flex items-center z-10 relative top-0 w-full">
       <Link to={to}><img src={arrow} alt="arrow" /></Link> 
-      <h2 className="text-white text-[20px] py-6">{text}</h2>
+      <h2 className="text-white text-[20px] py-6 font-roboto-flex">{text}</h2>
     </div>
   </nav>
   )

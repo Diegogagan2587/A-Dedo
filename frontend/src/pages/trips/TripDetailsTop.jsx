@@ -41,10 +41,10 @@ const TripDetailsTop = ({ name, bio, driverProfile }) => {
 
         <div className="flex flex-col items-center">
           <img src={driverProfile} alt="driver profile picture" />
-          <a className="underline">Ver perfil</a>
+          <a className="underline font-roboto-flex">Ver perfil</a>
         </div>
         <div className="w-2/3 p-2">
-          <h2 className="text-xl font-bold">{name}</h2>
+          <h2 className="text-xl font-bold font-baloo">{name}</h2>
           <p>{bio}</p>
         </div>
       </div>

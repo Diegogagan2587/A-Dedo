@@ -17,14 +17,14 @@ const PopupConfirmDelete = ({ show }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50">
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h2 className="mb-4 text-lg">Tu viaje ha sido <br /> eliminado con exito.</h2>
+        <h2 className="mb-4 text-lg font-roboto-flex">Tu viaje ha sido <br /> eliminado con exito.</h2>
         <div className="flex justify-around">
           <button 
-          className="px-4 py-2 text-[#5F5C5C] rounded-md"
+          className="px-4 py-2 text-[#5F5C5C] rounded-md font-roboto-flex"
           onClick={goToProfileDriver}>
             Ir a inicio
           </button>
-          <button className="px-4 py-2 text-customGreen rounded-md"
+          <button className="px-4 py-2 text-customGreen rounded-md font-roboto-flex"
           onClick={goToCreateTrip}>
             Crear viaje
           </button>
