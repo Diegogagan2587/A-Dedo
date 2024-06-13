@@ -40,7 +40,7 @@ const DriverDetailTrip = () => {
   return (
     <main className=''>
       <div className="relative top-0 max-w-[400px]">
-      <section className="mt-[10vw] sm:pt-[10vw] sm:mt-[20vw] px-4 flex flex-col gap-8 items-center">
+      <section className=" px-4 flex flex-col gap-8 items-center">
         <h1 className="text-[#696969] font-roboto-flex">Detalle del Viaje</h1>
         <div className="flex text-sm items-center justify-between w-full">
           <DateDisplay date="Jueves 13 de junio 2024" />
