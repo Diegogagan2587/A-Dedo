@@ -24,10 +24,10 @@ const CreateTripPartTwo = () => {
       <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
-          <h2 className='text-textColor font-extrabold text-mainTitle text-[26px] m-2'>Punto de llegada</h2>
+          <h2 className='text-textColor font-extrabold font-baloo text-[26px] m-2'>Punto de llegada</h2>
         </section>
         <section className="m-4">
-          <h2 className="text-[18px] font-semibold">Domicilio</h2>
+          <h2 className="text-[18px] font-semibold font-roboto-flex">Domicilio</h2>
           <Input
           type="text"
           placeholder="Calle y número"
@@ -35,30 +35,30 @@ const CreateTripPartTwo = () => {
           />
         </section>
         <section className="m-4">
-          <h2 className="text-[18px] font-semibold">Localidad</h2>
+          <h2 className="text-[18px] font-semibold font-roboto-flex">Localidad</h2>
           <Input
           type="text"
           onChange={(e) => setCity(e.target.value)}
           />
         </section>
         <section className="m-4">
-          <h2 className="text-[18px] font-semibold">Código Postal</h2>
+          <h2 className="text-[18px] font-semibold font-roboto-flex">Código Postal</h2>
           <input 
           type="number"
-          className="w-[100px] border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F]"
+          className="w-[100px] border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] font-roboto-flex"
           onChange={(e) => setPostalCode(e.target.value)}
           />
         </section>
         <section className="m-4 flex items-center justify-between">
           <div>
-            <h2 className="text-[18px] font-semibold">Fecha</h2>
+            <h2 className="text-[18px] font-semibold font-roboto-flex">Fecha</h2>
             <Input
             type="date"
             onChange={(e) => setDate(e.target.value)}
             />
           </div>
           <div>
-            <h2 className="text-[18px] font-semibold">Horario</h2>
+            <h2 className="text-[18px] font-semibold font-roboto-flex">Horario</h2>
             <Input
             type="time"
             onChange={(e) => setTime(e.target.value)}

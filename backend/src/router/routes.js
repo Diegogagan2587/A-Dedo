@@ -10,10 +10,13 @@ import { default as messages_controller } from "../controllers/messagesControlle
 
 // user
 routes.post('/register', usersController.register);
+routes.post('/register/driver', usersController.registerDriver);
 routes.post('/authenticate', usersController.authenticate);
+
 
 // trip
 routes.post('/trip/create', tripsController.create);
+routes.get('/trips', tripsController.index)
 
 // message
 routes.use('/message', messages_controller);

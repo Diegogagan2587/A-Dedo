@@ -30,8 +30,8 @@ const Navbar = ({isLoggedIn}) => {
       <div className="flex items-center justify-center z-30 relative top-0 pt-2 w-full">
         <Link to="/trips" className="flex items-center border-white w-3/4 justify-center">
           <div className="flex flex-col">
-            <h1 className="font-title text-white text-4xl">a dedo</h1>
-            <p className="text-white text-sm text-center ml-8">
+            <h2 className="font-title text-white text-4xl">a dedo</h2>
+            <p className="text-white text-sm text-center ml-8 font-roboto-flex">
               viajes compartidos
             </p>
           </div>
@@ -49,7 +49,7 @@ const Navbar = ({isLoggedIn}) => {
       name="Elena"
       bio="“Tengo 45 años y viajo todos los dias por mi trabajo a mardel.”"
       driverProfile={driverProfile} />}
-    {navigationLayout === "details-driver-nav" && <NavDetailsTrip name="marcos"/>}
+    {navigationLayout === "driver-details-trip" && <NavDetailsTrip name="marcos"/>}
     {navigationLayout === "back-nav" && <BackNav text="Reservar viaje" to={"/trips/:id/details"}/>}
     {navigationLayout === "create-trip-1" && <BackNav text="Crear viaje" to="/trips" /> }
     {navigationLayout === "create-trip-2" && <BackNav text="Crear viaje" to="/trips/new/step-1" /> }

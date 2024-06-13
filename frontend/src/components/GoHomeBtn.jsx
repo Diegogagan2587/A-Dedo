@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types'
 
 const GoHomeBtn = ({to}) => {
   return (
-    <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2">
+    <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2 font-roboto-flex">
     <Link to={to||"/trips"}>ir a inicio</Link>
     </button>
   )
