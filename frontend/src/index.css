@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-p{
-    color:black;
-		font-family:  'Roboto Flex', 'sans-serif';
+p {
+  color: black;
+  font-family: 'Roboto Flex', sans-serif;
 }
