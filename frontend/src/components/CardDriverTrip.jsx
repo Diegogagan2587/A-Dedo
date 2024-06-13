@@ -4,6 +4,7 @@ import passenger from '../assets/pasajero.png'
 import passengerOne from '../assets/pasajerouno.png';
 import passengerTwo from '../assets/pasajerodos.png';
 import { Link } from 'react-router-dom';
+import formatDate from '../store/utils/formatDate';
 
 function CardDriverTrip({date, origin, destination, startTime, endTime}) {
   return (
@@ -12,7 +13,7 @@ function CardDriverTrip({date, origin, destination, startTime, endTime}) {
         <img src={passenger} alt="" />
         <p className='text-customGreen font-bold'>x1</p>
       </div>
-      <h2>{date}</h2>
+      <h2>{formatDate(date)}</h2>
       <section id="locations" className="flex items-center justify-center w-full mt-4">
             <div id="location-bar-icon" className="flex flex-col justify-center items-center gap-1 p-2">
               <img src={location} alt="location" className="w-[24px] h-[27px]" />
