@@ -32,8 +32,9 @@ function CreateAccountOne() {
       <form>
         <section id="name" className='m-4 mt-5'>
           <h2 className='font-semibold text-[18px]'>¿Cuál es tu nombre?</h2>
-          <Input 
+          <Input
             id="name"
+            ariaLabel="nombre y apellido"
             type="text"
             placeholder="Nombre y apellido"
             onChange={(e) => setName(e.target.value)}
@@ -42,8 +43,9 @@ function CreateAccountOne() {
       
         <section id="email" className='m-4 mt-5'>
           <h2 className='font-semibold text-[18px]'>Email</h2>
-          <Input 
+          <Input
             id="email"
+            ariaLabel="email"
             type="email"
             placeholder="Email"
             onChange={(e) => setMail(e.target.value)}
@@ -53,13 +55,14 @@ function CreateAccountOne() {
         <section id="phone" className='m-4 mt-5'>
           <h2 className='font-semibold text-[18px]'>¿Cuál es tu número de teléfono?</h2>
           <div className='flex items-center gap-3 p-2'>
-          <img src={argentina} alt="" />
-          <Input 
-            id="phone"
-            type="phone"
-            placeholder="Teléfono"
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
+            <img src={argentina} alt="" />
+            <Input
+              id="phone"
+              ariaLabel="teléfono"
+              type="phone"
+              placeholder="Teléfono"
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
           </div>
         </section>
       </form>
