@@ -51,10 +51,11 @@ const CreateAccountTwo = () => {
         </section>
         <section className="m-4 flex items-center">
           <input type="checkbox" className="w-[21px] h-[20px] border border-black" 
+          id="terms"
           checked={terms}
           onChange={() => setTerms(!terms)}
           />
-          <p className="m-3">He leído y acepto los <span className="text-customGreen">TÉRMINOS Y CONDICIONES</span></p>
+          <label htmlFor="terms" className="m-3">He leído y acepto los <span className="text-customGreen">TÉRMINOS Y CONDICIONES</span></label>
         </section>
         <section className="flex items-center justify-center">
           <button 
