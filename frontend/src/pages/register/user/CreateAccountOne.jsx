@@ -66,12 +66,14 @@ function CreateAccountOne() {
           </div>
         </section>
       </form>
-      <button className='bg-customGreen rounded-full absolute right-10 mt-3'
-        onClick={handleNext}>
-        <Link to="/register/step-2">
-            <img src={back} alt="" className='w-[60px] h-[60px]' />
-        </Link>
-      </button>
+      <Link
+        className='bg-customGreen rounded-full absolute right-10 mt-3'
+        to="/register/step-2"
+        onClick={handleNext}
+        aria-label="siguiente"
+      >
+        <img src={back} alt="" className="w-[60px] h-[60px]" />
+      </Link>
     </main>
   )
 }
