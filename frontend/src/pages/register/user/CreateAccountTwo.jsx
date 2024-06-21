@@ -33,6 +33,7 @@ const CreateAccountTwo = () => {
         <section className="m-4">
         <Input 
             id="password"
+            ariaLabel="contraseña"
             type="password"
             placeholder="Contraseña"
             onChange={(e) => setPasswordA(e.target.value)}
@@ -42,6 +43,7 @@ const CreateAccountTwo = () => {
           <h2 className='font-semibold text-[18px] mb-2'>Escribe nuevamente tu contraseña</h2>
           <Input 
             id="password"
+            ariaLabel="confirmar contraseña"
             type="password"
             placeholder="Contraseña"
             onChange={(e) => setPasswordB(e.target.value)}
