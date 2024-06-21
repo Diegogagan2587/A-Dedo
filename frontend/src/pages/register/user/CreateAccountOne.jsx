@@ -25,13 +25,13 @@ function CreateAccountOne() {
   return (
     <main className='mt-20'>
       <section className='flex flex-col items-center'>
-        <span className='font-semibold text-[#696969]'>1 de 2</span>
-        <h2 className='text-textColor font-extrabold text-mainTitle text-[20px]'>Crea tu cuenta en 2 pasos</h2>
+        <span className='font-semibold text-[#696969] font-roboto-flex'>1 de 2</span>
+        <h2 className='text-textColor font-extrabold font-baloo text-[20px]'>Crea tu cuenta en 2 pasos</h2>
       </section>
 
       <form>
         <section id="name" className='m-4 mt-5'>
-          <h2 className='font-semibold text-[18px]'>¿Cuál es tu nombre?</h2>
+          <h2 className='font-semibold text-[18px] font-roboto-flex'>¿Cuál es tu nombre?</h2>
           <Input
             id="name"
             ariaLabel="nombre y apellido"
@@ -42,7 +42,7 @@ function CreateAccountOne() {
         </section>
       
         <section id="email" className='m-4 mt-5'>
-          <h2 className='font-semibold text-[18px]'>Email</h2>
+          <h2 className='font-semibold text-[18px] font-roboto-flex'>Email</h2>
           <Input
             id="email"
             ariaLabel="email"
@@ -53,7 +53,7 @@ function CreateAccountOne() {
         </section>
 
         <section id="phone" className='m-4 mt-5'>
-          <h2 className='font-semibold text-[18px]'>¿Cuál es tu número de teléfono?</h2>
+          <h2 className='font-semibold text-[18px] font-roboto-flex'>¿Cuál es tu número de teléfono?</h2>
           <div className='flex items-center gap-3 p-2'>
             <img src={argentina} alt="" />
             <Input

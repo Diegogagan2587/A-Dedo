@@ -33,7 +33,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     dispatch(getTrips());
-  }, []);
+  }, [dispatch]);
   
 
   return (

@@ -7,7 +7,7 @@ const TripFeature = ({ text, icon }) => {
       flex flex-col items-center"
       >
         <img src={icon} alt="icon" />
-        <span className='text-center'>{text}</span>
+        <span className='text-center font-roboto-flex'>{text}</span>
       </li>
     );
   };
