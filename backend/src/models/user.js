@@ -28,6 +28,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    vehicle: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Vehicle',
+        required: false,
+      },
     history_trip: [
         {
             type: mongoose.Schema.Types.ObjectId,
