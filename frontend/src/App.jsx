@@ -7,7 +7,7 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import TripDetails from './pages/trips/TripDetails';
-import CreateAccountOne from './pages/register/user/UserDetailsForm';
+import UserDetailsForm from './pages/register/user/UserDetailsForm';
 import CreateAccountTwo from './pages/register/user/CreateAccountTwo';
 import CreateAccountEnd from './pages/register/user/CreateAccountEnd';
 import CreateTripPartOne from './pages/trips/new/CreateTripPartOne';
@@ -68,7 +68,7 @@ function App() {
               
             </Route>
             <Route path="/register">
-              <Route path="step-1" element={<CreateAccountOne />} />
+              <Route path="step-1" element={<UserDetailsForm />} />
               <Route path="step-2" element={<CreateAccountTwo />} />
               <Route path="step-3" element={<CreateAccountEnd />} />
               <Route path="driver" element={<DriverRegister />} />

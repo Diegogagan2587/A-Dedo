@@ -10,7 +10,7 @@ import Input from '../../../components/Input';
 import argentina from '../../../assets/argentina.png'
 import back from '../../../assets/back.png'
 
-function CreateAccountOne() {
+function UserDetailsForm () {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
@@ -78,4 +78,4 @@ function CreateAccountOne() {
   )
 }
 
-export default CreateAccountOne
+export default UserDetailsForm;
