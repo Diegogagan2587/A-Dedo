@@ -18,7 +18,7 @@ import TripEnd from './pages/trips/new/TripEnd';
 import DriverRegister from './pages/register/driver/DriverRegister';
 import DriverDNI from './pages/register/driver/DriverDNI';
 import DriverWait from './pages/register/driver/DriverWait';
-import DriverEnd from './pages/register/driver/DriverEnd';
+import DriverRegistrationSuccess from './pages/register/driver/DriverRegistrationSuccess';
 import CarRegister from './pages/register/driver/CarRegister';
 import CarWait from './pages/register/driver/CarWait';
 import CarEnd from './pages/register/driver/CarEnd'
@@ -73,7 +73,7 @@ function App() {
               <Route path="step-3" element={<CreateAccountEnd />} />
               <Route path="driver" element={<DriverRegister />} />
               <Route path="driver-dni" element={<DriverDNI />} />
-              <Route path="driver-end" element={<DriverEnd />} />
+              <Route path="driver-end" element={<DriverRegistrationSuccess />} />
               <Route path="vehicle" element={<CarRegister />} />
               <Route path="vehicle-end" element={<CarEnd />} />
               <Route path="driver-wait" element={<DriverWait />} />  {/*ommited due lack of logic*/}
