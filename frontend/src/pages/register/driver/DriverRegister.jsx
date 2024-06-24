@@ -18,7 +18,7 @@ const DriverRegister = () => {
         <h2 className='text-[20px] font-roboto-flex'>Prepara tu DNI y licencia de conducir</h2>
         <img src={tarjetadeidentificacion} alt="" className='m-3 p-4' />
         <GreenLinkButton 
-          to="'/register/driver-dni'" 
+          to="/register/driver-dni"
           text = "Comenzar el registro"
         />
       </section>
