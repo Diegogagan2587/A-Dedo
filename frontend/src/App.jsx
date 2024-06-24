@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import TripDetails from './pages/trips/TripDetails';
 import UserDetailsForm from './pages/register/user/UserDetailsForm';
 import PasswordAndTermsForm from './pages/register/user/PasswordAndTermsForm';
-import CreateAccountEnd from './pages/register/user/CreateAccountEnd';
+import UserRegistrationSuccess from './pages/register/user/UserRegistrationSuccess';
 import CreateTripPartOne from './pages/trips/new/CreateTripPartOne';
 import CreateTripPartTwo from './pages/trips/new/CreateTripPartTwo';
 import CreateTripPartThree from './pages/trips/new/CreateTripPartThree';
@@ -70,7 +70,7 @@ function App() {
             <Route path="/register">
               <Route path="step-1" element={<UserDetailsForm />} />
               <Route path="step-2" element={<PasswordAndTermsForm />} />
-              <Route path="step-3" element={<CreateAccountEnd />} />
+              <Route path="step-3" element={<RegistrationSuccess />} />
               <Route path="driver" element={<DriverRegister />} />
               <Route path="driver-dni" element={<DriverDNI />} />
               <Route path="driver-end" element={<DriverRegistrationSuccess />} />

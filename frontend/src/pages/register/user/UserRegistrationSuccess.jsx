@@ -4,7 +4,7 @@ import papelpicado2 from '../../../assets/papel-picado2.png'
 import papelpicado3 from '../../../assets/papel-picado3.png'
 import createaccountIMG from '../../../assets/createaccountIMG.png'
 
-const UserRegistrationSuccess.jsx = () => {
+const UserRegistrationSuccess = () => {
   return (
     <main className="mt-20">
       <section className="m-4 flex flex-col items-center">
@@ -35,4 +35,4 @@ const UserRegistrationSuccess.jsx = () => {
   );
 }
 
-export default UserRegistrationSuccess
+export default UserRegistrationSuccess;
