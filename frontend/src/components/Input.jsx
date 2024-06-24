@@ -1,9 +1,10 @@
 import { PropTypes } from 'prop-types';
 
-const Input = ({ type, placeholder, value, onChange, required = false, ariaLabel }) => {
+const Input = ({ id, type, placeholder, value, onChange, required = false, ariaLabel }) => {
   return (
     <>
       <input
+        id={id}
         className='border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] placeholder-[#49454F] placeholder:text-sm text-base font-roboto-flex'
         type={type}
         value={value}
@@ -17,6 +18,7 @@ const Input = ({ type, placeholder, value, onChange, required = false, ariaLabel
 };
 
 Input.propTypes = {
+  id: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
