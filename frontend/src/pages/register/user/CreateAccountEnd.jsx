@@ -20,15 +20,19 @@ const CreateAccountEnd = () => {
         <img src={createaccountIMG} alt="" />
       </section>
       <section className='m-5 flex justify-center'>
-        <button className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2 font-roboto-flex">
-          <Link to="/register/driver">Crear viaje</Link>
-        </button>
+        <Link
+          className="w-[103px] h-14 border border-customGreen text-customGreen rounded-full m-6 p-2 font-roboto-flex
+          flex items-center justify-center"
+          to="/register/driver"
+        >
+          Crear viaje
+        </Link>
         <button className='w-[103px] h-14 bg-customGreen text-white rounded-full m-6 font-roboto-flex'>
           <Link to="/trips">Ver viajes</Link>
         </button>
       </section>
     </main>
-  )
+  );
 }
 
 export default CreateAccountEnd
