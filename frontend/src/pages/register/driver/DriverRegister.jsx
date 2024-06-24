@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import tarjetadeidentificacion from '../../../assets/tarjeta-de-identificacion.png'
-import RegisterBtn from '../../../components/RegisterBtn'
+import RegisterBtn from '../../../components/buttons/RegisterBtn'
 
 const DriverRegister = () => {
   const navigate = useNavigate();
