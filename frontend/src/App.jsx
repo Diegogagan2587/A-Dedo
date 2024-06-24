@@ -21,7 +21,7 @@ import DriverWait from './pages/register/driver/DriverWait';
 import DriverRegistrationSuccess from './pages/register/driver/DriverRegistrationSuccess';
 import CarRegister from './pages/register/driver/CarRegister';
 import CarWait from './pages/register/driver/CarWait';
-import CarEnd from './pages/register/driver/CarEnd'
+import VehicleRegistrationSuccess from './pages/register/driver/VehicleRegistrationSuccess'
 import ProfileDriver from './pages/profile-driver/ProfileDriver';
 import DriverDetailTrip from './pages/profile-driver/DriverDetailTrip';
 import ReserveConfirmation from './pages/trips/ReserveConfirmation';
@@ -75,7 +75,7 @@ function App() {
               <Route path="driver-dni" element={<DriverDNI />} />
               <Route path="driver-end" element={<DriverRegistrationSuccess />} />
               <Route path="vehicle" element={<CarRegister />} />
-              <Route path="vehicle-end" element={<CarEnd />} />
+              <Route path="vehicle-end" element={<VehicleRegistrationSuccess />} />
               <Route path="driver-wait" element={<DriverWait />} />  {/*ommited due lack of logic*/}
               <Route path="car-wait" element={<CarWait />} />        {/*ommited due lack of logic*/}
             </Route>
