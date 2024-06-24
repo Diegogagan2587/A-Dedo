@@ -7,7 +7,7 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import TripDetails from './pages/trips/TripDetails';
-import CreateAccountOne from './pages/register/user/CreateAccountOne';
+import CreateAccountOne from './pages/register/user/UserDetailsForm';
 import CreateAccountTwo from './pages/register/user/CreateAccountTwo';
 import CreateAccountEnd from './pages/register/user/CreateAccountEnd';
 import CreateTripPartOne from './pages/trips/new/CreateTripPartOne';
