@@ -10,6 +10,7 @@ import App from '../../src/App';
 import exampleTrips from './exampleTrips';
 
 const SIGNUP_URL = `${VITE_API_URL_BASE}/register`;
+const REGISTER_DRIVER_URL = `${VITE_API_URL_BASE}/register/driver`;
 const GET_TRIPS_URL = `${VITE_API_URL_BASE}/trips`;
 
 const server = setupServer();
@@ -36,10 +37,21 @@ server.use(
 );
 
 server.use(
+  http.post(REGISTER_DRIVER_URL, async () => {
+    return HttpResponse.json({
+      message: 'Driver registered successfullly',
+      vehicle: { makeAndModel: 'Toyota - Corolla' },
+    });
+  })
+);
+
+
+server.use(
   http.get(GET_TRIPS_URL, async () => {
     return HttpResponse.json(exampleTrips);
   })
 );
+
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
