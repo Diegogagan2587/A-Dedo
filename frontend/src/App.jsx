@@ -70,7 +70,7 @@ function App() {
             <Route path="/register">
               <Route path="step-1" element={<UserDetailsForm />} />
               <Route path="step-2" element={<PasswordAndTermsForm />} />
-              <Route path="step-3" element={<RegistrationSuccess />} />
+              <Route path="step-3" element={<UserRegistrationSuccess />} />
               <Route path="driver" element={<DriverRegister />} />
               <Route path="driver-dni" element={<DriverDNI />} />
               <Route path="driver-end" element={<DriverRegistrationSuccess />} />
