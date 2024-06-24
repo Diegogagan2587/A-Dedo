@@ -27,6 +27,7 @@ const CarRegister = () => {
             value={makeAndModel}
             onChange={(e) => setMakeAndModel(e.target.value)}
             required={true}
+            ariaLabel="Marca y modelo"
           />
         </form>
       </section>
