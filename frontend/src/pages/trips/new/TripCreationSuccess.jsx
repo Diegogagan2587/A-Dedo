@@ -2,7 +2,7 @@ import viajeCreado from '../../../assets/viaje-creado.png'
 import BtnHomeGreen from '../../../components/BtnHomeGreen'
 import DeleteTripBtn from '../../../components/DeleteTripBtn'
 
-const TripEnd = () => {
+const TripCreationSuccess = () => {
   return (
     <main className='mt-20 flex flex-col items-center justify-center'>
     <img src={viajeCreado} alt="" />
@@ -17,4 +17,4 @@ const TripEnd = () => {
   )
 }
 
-export default TripEnd
+export default TripCreationSuccess
