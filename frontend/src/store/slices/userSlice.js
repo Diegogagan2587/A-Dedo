@@ -55,6 +55,7 @@ export const userSlice = createSlice({
       })
       .addCase("driver/register/fulfilled", (state, action) => {
         state.data = { ...state.data, ...action.payload };
+        state.data.rol = ['passenger','driver'];
       })
       
   },
