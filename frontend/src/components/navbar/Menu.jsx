@@ -33,7 +33,7 @@ const Menu = ({ isActive, setIsActive }) => {
     >
       {user._id ? (
         <>
-          <Item text="Perfil" onClick={handleOnClick} icon={userIcon} to={user}/>
+          <Item text="Perfil" onClick={handleOnClick} icon={userIcon}/>
           <Item text="Chat" onClick={handleOnClick} icon={chat} to="#"/>
           <Item text="Mis viajes" onClick={handleOnClick} icon={car} to="#"/>
           { isDriver ? null : <Item text="Quiero ser conductor" onClick={handleOnClick} icon={driving} to="/register/driver"/> }
