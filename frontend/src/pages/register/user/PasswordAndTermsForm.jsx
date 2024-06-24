@@ -16,7 +16,6 @@ const PasswordAndTermsForm = () => {
   }
 
   const handleNext = () => {
-    console.log('handle next-->', passwordA, passwordB);
     dispatch(setPassword({passwordA, passwordB}));
     dispatch(acceptTerms(terms));
     togglePopup();
