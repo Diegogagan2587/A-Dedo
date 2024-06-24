@@ -4,7 +4,7 @@ import { setPassword, acceptTerms } from "../../../store/slices/userSlice";
 import Input from "../../../components/Input"
 import PopupCreateAccount from "../../../components/PopupCreateAccount";
 
-const CreateAccountTwo = () => {
+const PasswordAndTermsForm = () => {
   const dispatch = useDispatch();
   const [showPopup, setShowPopup] = useState(false);
   const [passwordA, setPasswordA] = useState("");
@@ -69,4 +69,4 @@ const CreateAccountTwo = () => {
   )
 }
 
-export default CreateAccountTwo
+export default PasswordAndTermsForm;
