@@ -22,11 +22,11 @@ const PopupCreateAccount = ({ show, onClose }) => {
           className="px-4 py-2 text-[#5F5C5C] rounded-md font-roboto-flex">
             Cancelar
           </button>
-          <button 
-            onClick={handleContinue}
-            className="px-4 py-2 text-customGreen rounded-md font-roboto-flex">
-            <Link to="/register/step-3"> Continuar</Link>
-          </button>
+          <Link 
+            className="px-4 py-2 text-customGreen rounded-md font-roboto-flex"
+            onClick={handleContinue}  
+            to="/register/step-3"
+          > Continuar</Link>
         </div>
       </div>
     </div>
