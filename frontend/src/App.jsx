@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import getTrips from './store/requests/getTrips';
 import Navbar from './components/navbar/Navbar';
-import Main from './pages/Main';
+import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import TripDetails from './pages/trips/TripDetails';
@@ -44,7 +44,7 @@ function App() {
         relative top-[75px]
         '>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<LandingPage />} />
             <Route
               path="/login"
               element={<Login setIsLoggedIn={setIsLoggedIn} />}
