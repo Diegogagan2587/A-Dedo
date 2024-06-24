@@ -1,7 +1,7 @@
 import reserveConfirm from '../../assets/reserve-confirm.png'
 import BtnHomeGreen from '../../components/BtnHomeGreen'
 
-function ReserveConfirmation() {
+function TripReservationSuccess() {
   return (
       <main className='mt-20 flex flex-col items-center justify-center'>
       <img src={reserveConfirm} alt="" />
@@ -15,4 +15,4 @@ function ReserveConfirmation() {
   )
 }
 
-export default ReserveConfirmation
+export default TripReservationSuccess

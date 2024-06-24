@@ -24,7 +24,7 @@ import CarWait from './pages/register/driver/CarWait';
 import VehicleRegistrationSuccess from './pages/register/driver/VehicleRegistrationSuccess'
 import ProfileDriver from './pages/profile-driver/ProfileDriver';
 import DriverDetailTrip from './pages/profile-driver/DriverDetailTrip';
-import ReserveConfirmation from './pages/trips/ReserveConfirmation';
+import TripReservationSuccess from './pages/trips/TripReservationSuccess';
 import ReserveTrip from './pages/trips/ReserveTrip';
 
 function App() {
@@ -57,7 +57,7 @@ function App() {
               <Route path=":id/details" element={<TripDetails />} />
               <Route path=":id/details-driver" element={<DriverDetailTrip />} />
               <Route path=':id/reserve' element={<ReserveTrip />} />  
-              <Route path=":id/reserve/confirmation" element={<ReserveConfirmation />} />               
+              <Route path=":id/reserve/confirmation" element={<TripReservationSuccess />} />               
               <Route path="new">
                 <Route path="step-1" element={<CreateTripPartOne />} />
                 <Route path="step-2" element={<CreateTripPartTwo />} />
