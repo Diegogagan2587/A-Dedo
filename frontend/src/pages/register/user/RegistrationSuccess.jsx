@@ -4,7 +4,7 @@ import papelpicado2 from '../../../assets/papel-picado2.png'
 import papelpicado3 from '../../../assets/papel-picado3.png'
 import createaccountIMG from '../../../assets/createaccountIMG.png'
 
-const CreateAccountEnd = () => {
+const RegistrationSuccess = () => {
   return (
     <main className="mt-20">
       <section className="m-4 flex flex-col items-center">
@@ -35,4 +35,4 @@ const CreateAccountEnd = () => {
   );
 }
 
-export default CreateAccountEnd
+export default RegistrationSuccess
