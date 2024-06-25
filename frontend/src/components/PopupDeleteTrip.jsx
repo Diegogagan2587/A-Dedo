@@ -1,11 +1,11 @@
 import { PropTypes } from 'prop-types';
+import PopupContainer from './PopupContainer';
 
 const PopupDeleteTrip = ({ show, onClose, onContinue }) => {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <PopupContainer >
         <h2 className="mb-4 text-lg font-roboto-flex">Estas por eliminar el viaje</h2>
         <p className="mb-6 text-lg">¿Deseas continuar?</p>
         <div className="flex justify-around">
@@ -20,8 +20,7 @@ const PopupDeleteTrip = ({ show, onClose, onContinue }) => {
             Continuar
           </button>
         </div>
-      </div>
-    </div>
+    </PopupContainer>
   )
 }
 

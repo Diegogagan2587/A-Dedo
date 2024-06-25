@@ -2,6 +2,7 @@ import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import postReservation from '../store/requests/postReservation';
+import PopupContainer from './PopupContainer';
 
 const PopupReserveTrip = ({ show, onClose }) => {
   
@@ -13,8 +14,7 @@ const PopupReserveTrip = ({ show, onClose }) => {
 
   if (!show) return null;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <PopupContainer >
         <h2 className="mb-4 text-lg font-roboto-flex">Estas por reservar un viaje</h2>
         <p className="mb-6 text-lg">¿Deseas continuar?</p>
         <div className="flex justify-around">
@@ -29,8 +29,7 @@ const PopupReserveTrip = ({ show, onClose }) => {
             <Link to={"/trips/:id/reserve/confirmation"}>Continuar</Link>
           </button>
         </div>
-      </div>
-    </div>
+    </PopupContainer>
   )
 }
 

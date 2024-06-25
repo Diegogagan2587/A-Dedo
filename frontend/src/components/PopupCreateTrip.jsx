@@ -2,6 +2,7 @@ import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import PopupContainer from './PopupContainer';
 import createTrip from '../store/requests/createTrip'
 
 const PopupCreateTrip = ({ show, onClose }) => {
@@ -13,8 +14,7 @@ const PopupCreateTrip = ({ show, onClose }) => {
   };
   if (!show) return null;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <PopupContainer >
         <h2 className="mb-4 text-lg font-roboto-flex">Estas por crear un nuevo viaje</h2>
         <p className="mb-6 text-lg font-roboto-flex">¿Deseas continuar?</p>
         <div className="flex justify-around">
@@ -29,8 +29,7 @@ const PopupCreateTrip = ({ show, onClose }) => {
             <Link to="/trips/new/step-5"> Continuar</Link>
           </button>
         </div>
-      </div>
-    </div>
+    </PopupContainer>
   )
 }
 
