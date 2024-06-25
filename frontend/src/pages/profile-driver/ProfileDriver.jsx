@@ -48,12 +48,12 @@ const ProfileDriver = () => {
           Último viaje realizado
         </h2>
         <LastTripCard 
-        rol="Pasajero"
-        date="21/05/2024"
-        time="13:00hs"
-        price="Valor: $890"
-        startLocation="Barranca de los lobos 303, Santa Clara del mar, Prov de Bs. As."
-        endLocation="Av. Colón 1186, Mar del plata, Prov de Bs. As."
+          rol="Pasajero"
+          date="21/05/2024"
+          time="13:00hs"
+          price="Valor: $890"
+          startLocation="Barranca de los lobos 303, Santa Clara del mar, Prov de Bs. As."
+          endLocation="Av. Colón 1186, Mar del plata, Prov de Bs. As."
         />
         <div className='flex justify-center items-center'>
           <SeeTripHistory />
