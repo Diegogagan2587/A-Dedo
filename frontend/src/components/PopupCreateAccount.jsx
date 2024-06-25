@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
-import PopupContainer from './PopupContainer';
+import PopupContainer from './popups/PopupContainer';
 import registerUser from '../store/requests/registerUser';
 
 const PopupCreateAccount = ({ show, onClose }) => {

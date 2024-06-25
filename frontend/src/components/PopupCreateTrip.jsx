@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import PopupContainer from './PopupContainer';
+import PopupContainer from './popups/PopupContainer';
 import createTrip from '../store/requests/createTrip'
 
 const PopupCreateTrip = ({ show, onClose }) => {

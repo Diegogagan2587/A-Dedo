@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-import PopupContainer from './PopupContainer';
+import PopupContainer from './popups/PopupContainer';
 
 const PopupDeleteTrip = ({ show, onClose, onContinue }) => {
   if (!show) return null;

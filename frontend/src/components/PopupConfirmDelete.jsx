@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import PopupContainer from './PopupContainer';
+import PopupContainer from './popups/PopupContainer';
 
 const PopupConfirmDelete = ({ show }) => {
   const navigate = useNavigate();
