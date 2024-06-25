@@ -6,7 +6,7 @@ import volante from "../../../assets/volante.png"
 import BtnNextIcon from "../../../components/BtnNextIcon"
 import { setDestination } from '../../../store/slices/tripsSlice';
 
-const CreateTripPartTwo = () => {
+const TripDestinationForm = () => {
   const dispatch = useDispatch();
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
@@ -76,4 +76,4 @@ const CreateTripPartTwo = () => {
   )
 }
 
-export default CreateTripPartTwo
+export default TripDestinationForm

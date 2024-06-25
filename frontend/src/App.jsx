@@ -11,7 +11,7 @@ import UserDetailsForm from './pages/register/user/UserDetailsForm';
 import PasswordAndTermsForm from './pages/register/user/PasswordAndTermsForm';
 import UserRegistrationSuccess from './pages/register/user/UserRegistrationSuccess';
 import TripOriginForm from './pages/trips/new/TripOriginForm';
-import CreateTripPartTwo from './pages/trips/new/CreateTripPartTwo';
+import TripDestinationForm from './pages/trips/new/TripDestinationForm';
 import CreateTripPartThree from './pages/trips/new/CreateTripPartThree';
 import CreateTripPartFour from './pages/trips/new/CreateTripPartFour';
 import TripCreationSuccess from './pages/trips/new/TripCreationSuccess';
@@ -60,7 +60,7 @@ function App() {
               <Route path=":id/reserve/confirmation" element={<TripReservationSuccess />} />               
               <Route path="new">
                 <Route path="step-1" element={<TripOriginForm />} />
-                <Route path="step-2" element={<CreateTripPartTwo />} />
+                <Route path="step-2" element={<TripDestinationForm />} />
                 <Route path="step-3" element={<CreateTripPartThree />} />
                 <Route path="step-4" element={<CreateTripPartFour />} />
                 <Route path="step-5" element={<TripCreationSuccess />} />
