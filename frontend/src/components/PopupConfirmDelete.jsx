@@ -1,5 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import PopupContainer from './PopupContainer';
 
 const PopupConfirmDelete = ({ show }) => {
   const navigate = useNavigate();
@@ -15,8 +16,7 @@ const PopupConfirmDelete = ({ show }) => {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <PopupContainer >
         <h2 className="mb-4 text-lg font-roboto-flex">Tu viaje ha sido <br /> eliminado con exito.</h2>
         <div className="flex justify-around">
           <button 
@@ -29,8 +29,7 @@ const PopupConfirmDelete = ({ show }) => {
             Crear viaje
           </button>
         </div>
-      </div>
-    </div>
+    </PopupContainer>
   )
 }
 
