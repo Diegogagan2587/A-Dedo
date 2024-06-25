@@ -3,6 +3,7 @@ import DriverDocuments from '../../components/DriverDocuments'
 import LastTripCard from '../../components/LastTripCard'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import SeeTripHistory from '../../components/SeeTripHistory'
 
 const ProfileDriver = () => {
   const myDriverID = useSelector((state)=>state.user.data._id)
@@ -47,6 +48,9 @@ const ProfileDriver = () => {
           Último viaje realizado
         </h2>
         <LastTripCard />
+        <div className='flex justify-center items-center'>
+          <SeeTripHistory />
+        </div>
       </section>
     </div>
   );
