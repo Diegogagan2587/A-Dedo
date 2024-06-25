@@ -13,7 +13,7 @@ import UserRegistrationSuccess from './pages/register/user/UserRegistrationSucce
 import TripOriginForm from './pages/trips/new/TripOriginForm';
 import TripDestinationForm from './pages/trips/new/TripDestinationForm';
 import TripCompanionsForm from './pages/trips/new/TripCompanionsForm';
-import CreateTripPartFour from './pages/trips/new/CreateTripPartFour';
+import TripAdditionalOptionsForm from './pages/trips/new/TripAdditionalOptionsForm';
 import TripCreationSuccess from './pages/trips/new/TripCreationSuccess';
 import DriverRegister from './pages/register/driver/DriverRegister';
 import DriverDNI from './pages/register/driver/DriverDNI';
@@ -62,7 +62,7 @@ function App() {
                 <Route path="step-1" element={<TripOriginForm />} />
                 <Route path="step-2" element={<TripDestinationForm />} />
                 <Route path="step-3" element={<TripCompanionsForm />} />
-                <Route path="step-4" element={<CreateTripPartFour />} />
+                <Route path="step-4" element={<TripAdditionalOptionsForm />} />
                 <Route path="step-5" element={<TripCreationSuccess />} />
               </Route>
               
