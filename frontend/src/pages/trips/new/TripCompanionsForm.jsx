@@ -7,7 +7,7 @@ import addCricle from "../../../assets/add_circle.png"
 import BtnNextIcon from "../../../components/BtnNextIcon"
 import { setAvailableSeats } from '../../../store/slices/tripsSlice';
 
-const CreateTripPartThree = () => {
+const TripCompanionsForm = () => {
   const dispatch = useDispatch();
   const [seats, setSeats] = useState(0);
 
@@ -54,4 +54,4 @@ const CreateTripPartThree = () => {
   )
 }
 
-export default CreateTripPartThree
+export default TripCompanionsForm
