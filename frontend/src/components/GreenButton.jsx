@@ -1,10 +1,12 @@
 import { PropTypes } from "prop-types";
+import { Link } from 'react-router-dom'
 
 const GreenButton = ({onClick}) => {
   return (
-    <button onClick={onClick} className="w-36 h-14 bg-customGreen text-white rounded-full m-6 font-roboto-flex">
+    <Link to="/login" onClick={onClick} className="w-36 h-14 bg-customGreen text-white rounded-full m-6 font-roboto-flex
+    flex justify-center items-center">
       Ingresar
-    </button>
+    </Link>
   )
 }
 

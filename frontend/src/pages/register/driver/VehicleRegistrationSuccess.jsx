@@ -2,7 +2,7 @@ import carEnd from '../../../assets/carEnd.png'
 import CreateTripBtn from '../../../components/CreateTripBtn'
 import GoHomeBtn from '../../../components/GoHomeBtn'
 
-const CarEnd = () => {
+const VehicleRegistrationSuccess = () => {
   return (
     <main className='mt-20 flex flex-col items-center justify-center'>
     <img src={carEnd} alt="" />
@@ -18,4 +18,4 @@ const CarEnd = () => {
   )
 }
 
-export default CarEnd
+export default VehicleRegistrationSuccess

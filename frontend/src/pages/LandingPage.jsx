@@ -12,7 +12,7 @@ import medioAmbiente from '../assets/medioambiente.png'
 import imageEnd from '../assets/image-end.png'
 import { useNavigate } from "react-router-dom"
 
-function Main() {
+function LandingPage() {
   const navigate = useNavigate();
   const handleRedirect = () => {
     navigate('/login');
@@ -103,4 +103,4 @@ function Main() {
   )
 }
 
-export default Main
+export default LandingPage

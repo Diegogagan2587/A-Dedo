@@ -7,18 +7,21 @@ import auto from '../assets/auto.png';
 import DateDisplay from '../components/DateDisplay';
 import PassengerDriverBtn from '../components/PassengerDriverBtn';
 import ProfileDriver from './profile-driver/ProfileDriver';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
   const { fullName, rol } = useSelector((state) => state.user.data || {});
   const isDriver = rol && rol.length > 1 ? true : false;
-  const [driverIsActive, setDriverIsActive] = useState(false);
-  console.log('si driver active?', driverIsActive);
+  const [driverIsActive, setDriverIsActive] = useState(false); // state for active role [driver/passenger]
   const trips = useSelector((state) => state.trips.list);
   const tripsByDate = sortTripsByDate(trips);
   const sortedDates = Object.keys(tripsByDate).sort(
     (a, b) => new Date(a) - new Date(b)
   );
+
+  useEffect(() => {
+
+  }, [fullName, rol, driverIsActive, isDriver]);
   
 
   return (

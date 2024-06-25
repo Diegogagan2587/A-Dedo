@@ -36,6 +36,7 @@ const Login = ({setIsLoggedIn}) => {
       <h1 className="my-2 text-[22px] font-medium font-roboto-flex">Iniciar sesión</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input 
+        ariaLabel="email"
         type="email" 
         value={user.email}
         onChange={(e) => setUser({...user, email: e.target.value})}
@@ -43,6 +44,7 @@ const Login = ({setIsLoggedIn}) => {
         required={true}
         />
         <Input 
+        ariaLabel="contraseña"
         type="password" 
         value={user.password}
         onChange={(e) => setUser({...user, password: e.target.value})}

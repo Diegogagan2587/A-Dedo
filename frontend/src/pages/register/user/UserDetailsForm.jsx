@@ -10,7 +10,7 @@ import Input from '../../../components/Input';
 import argentina from '../../../assets/argentina.png'
 import back from '../../../assets/back.png'
 
-function CreateAccountOne() {
+function UserDetailsForm () {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
@@ -32,8 +32,9 @@ function CreateAccountOne() {
       <form>
         <section id="name" className='m-4 mt-5'>
           <h2 className='font-semibold text-[18px] font-roboto-flex'>¿Cuál es tu nombre?</h2>
-          <Input 
+          <Input
             id="name"
+            ariaLabel="nombre y apellido"
             type="text"
             placeholder="Nombre y apellido"
             onChange={(e) => setName(e.target.value)}
@@ -42,8 +43,9 @@ function CreateAccountOne() {
       
         <section id="email" className='m-4 mt-5'>
           <h2 className='font-semibold text-[18px] font-roboto-flex'>Email</h2>
-          <Input 
+          <Input
             id="email"
+            ariaLabel="email"
             type="email"
             placeholder="Email"
             onChange={(e) => setMail(e.target.value)}
@@ -53,24 +55,27 @@ function CreateAccountOne() {
         <section id="phone" className='m-4 mt-5'>
           <h2 className='font-semibold text-[18px] font-roboto-flex'>¿Cuál es tu número de teléfono?</h2>
           <div className='flex items-center gap-3 p-2'>
-          <img src={argentina} alt="" />
-          <Input 
-            id="phone"
-            type="phone"
-            placeholder="Teléfono"
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
+            <img src={argentina} alt="" />
+            <Input
+              id="phone"
+              ariaLabel="teléfono"
+              type="phone"
+              placeholder="Teléfono"
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
           </div>
         </section>
       </form>
-      <button className='bg-customGreen rounded-full absolute right-10 mt-3'
-        onClick={handleNext}>
-        <Link to="/register/step-2">
-            <img src={back} alt="" className='w-[60px] h-[60px]' />
-        </Link>
-      </button>
+      <Link
+        className='bg-customGreen rounded-full absolute right-10 mt-3'
+        to="/register/step-2"
+        onClick={handleNext}
+        aria-label="siguiente"
+      >
+        <img src={back} alt="" className="w-[60px] h-[60px]" />
+      </Link>
     </main>
   )
 }
 
-export default CreateAccountOne
+export default UserDetailsForm;
