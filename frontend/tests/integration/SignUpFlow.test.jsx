@@ -91,7 +91,7 @@ describe('Sign In Flow', () => {
     await user.click(submitButton);
 
     // Complete registration and navigate to the Trips page
-    const continueButton = screen.getByRole('link', { name: /continuar/i });
+    const continueButton = screen.getByRole('button', { name: /continuar/i });
     await user.click(continueButton);
     const seeTripsButton = screen.getByRole('link', { name: /ver viajes/i });
     await user.click(seeTripsButton);
