@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import curve from '../../assets//navbar/curve-2.svg';
-import BackBtn from '../../components/BackBtn';
+import BackBtn from '../../components/buttons/BackBtn';
 import whatsapp from "../../assets/whatsapp.png"
 import { Link } from 'react-router-dom';
 
