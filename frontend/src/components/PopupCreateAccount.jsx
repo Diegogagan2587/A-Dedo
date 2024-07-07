@@ -1,5 +1,4 @@
 import { PropTypes } from 'prop-types';
-import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
 import PopupContainer from './popups/PopupContainer';
 import PopupButtonGroup from './popups/PopupButtonGroup';
