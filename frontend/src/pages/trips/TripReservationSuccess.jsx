@@ -1,5 +1,5 @@
 import reserveConfirm from '../../assets/reserve-confirm.png'
-import BtnHomeGreen from '../../components/BtnHomeGreen'
+import BtnHomeGreen from '../../components/buttons/BtnHomeGreen'
 
 function TripReservationSuccess() {
   return (

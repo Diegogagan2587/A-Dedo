@@ -1,5 +1,5 @@
 import viajeCreado from '../../../assets/viaje-creado.png'
-import BtnHomeGreen from '../../../components/BtnHomeGreen'
+import BtnHomeGreen from '../../../components/buttons/BtnHomeGreen'
 import DeleteTripBtn from '../../../components/DeleteTripBtn'
 
 const TripCreationSuccess = () => {
