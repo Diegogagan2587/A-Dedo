@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import  authenticateUser  from '../store/requests/authenticateUser';
 import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
-import ButtonGreen from '../components/ButtonGreen';
+import ButtonGreen from '../components/buttons/ButtonGreen';
 import Input from '../components/Input';
 
 const Login = ({setIsLoggedIn}) => {
