@@ -4,7 +4,7 @@ import { setNavigationLayout } from '../../../store/slices/navigationSlice';
 import volante from "../../../assets/volante.png"
 import removeCricle from "../../../assets/remove_circle.png"
 import addCricle from "../../../assets/add_circle.png"
-import BtnNextIcon from "../../../components/BtnNextIcon"
+import BtnNextIcon from "../../../components/buttons/BtnNextIcon"
 import { setAvailableSeats } from '../../../store/slices/tripsSlice';
 
 const TripCompanionsForm = () => {

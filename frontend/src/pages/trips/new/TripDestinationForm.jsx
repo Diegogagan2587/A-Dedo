@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { setNavigationLayout } from '../../../store/slices/navigationSlice';
 import Input from "../../../components/Input"
 import volante from "../../../assets/volante.png"
-import BtnNextIcon from "../../../components/BtnNextIcon"
+import BtnNextIcon from "../../../components/buttons/BtnNextIcon"
 import { setDestination } from '../../../store/slices/tripsSlice';
 
 const TripDestinationForm = () => {
