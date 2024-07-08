@@ -1,13 +1,19 @@
 import CardDriverTrip from '../../components/CardDriverTrip'
 import DriverDocuments from '../../components/DriverDocuments'
 import LastTripCard from '../../components/LastTripCard'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import SeeTripHistory from '../../components/SeeTripHistory'
 
 const ProfileDriver = () => {
   const myDriverID = useSelector((state)=>state.user.data._id)
   const trips = useSelector((state)=>state.trips.list)
   const myTrips = trips.filter((trip) => trip.driver && trip.driver._id === myDriverID) || [];
+
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate('/profile/user-history');
+  }
 
   return (
     <div className="flex flex-col ">
@@ -46,7 +52,19 @@ const ProfileDriver = () => {
         <h2 className="font-semibold text-[18px] ml-4 font-roboto-flex">
           Último viaje realizado
         </h2>
-        <LastTripCard />
+        <LastTripCard 
+          rol="Pasajero"
+          date="21/05/2024"
+          time="13:00hs"
+          price="Valor: $890"
+          startLocation="Barranca de los lobos 303, Santa Clara del mar, Prov de Bs. As."
+          endLocation="Av. Colón 1186, Mar del plata, Prov de Bs. As."
+        />
+        <div className='flex justify-center items-center'>
+          <SeeTripHistory 
+          onClick={handleRedirect}
+          />
+        </div>
       </section>
     </div>
   );
