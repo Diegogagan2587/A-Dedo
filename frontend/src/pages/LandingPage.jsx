@@ -1,4 +1,4 @@
-import GreenButton from "../components/GreenButton"
+import GreenButton from "../components/buttons/GreenButton"
 import './Main.css'
 import mainDriver from '../assets/main-driver.png'
 import mainTrip from '../assets/main-trip.png'
