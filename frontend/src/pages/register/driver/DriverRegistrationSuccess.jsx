@@ -1,5 +1,5 @@
 import tarjetaIdentificacionLista from '../../../assets/documento.png'
-import { NextBtn } from '../../../components/NextBtn'
+import { NextBtn } from '../../../components/buttons/NextBtn'
 
 const DriverRegistrationSuccess = () => {
   return (
