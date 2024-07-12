@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import back from '../assets/back.png'
+import back from '../../assets/back.png'
 import { PropTypes } from 'prop-types';
 
 const BtnNextIcon = ({ to, onClick }) => {
