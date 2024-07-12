@@ -1,5 +1,5 @@
 import { PropTypes } from "prop-types";
-import RoundedBtn from "../RoundedBtn";
+import RoundedBtn from "./RoundedBtn";
 
 const ButtonGreen = ({ text, className, onClick }) => {
     return (

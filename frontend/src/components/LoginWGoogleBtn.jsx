@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import googleSVG from '../assets/google.svg';
-import RoundedBtn from './RoundedBtn';
+import RoundedBtn from './buttons/RoundedBtn';
 
 const LoginWGoogleBtn = ({text}) => {
   const handleLogin = () => {
