@@ -5,7 +5,7 @@ import DriverButton from '../components/buttons/DriverButton';
 import mainProfilePicture from '../assets/main-profilepic.png';
 import auto from '../assets/auto.png';
 import DateDisplay from '../components/DateDisplay';
-import PassengerDriverBtn from '../components/PassengerDriverBtn';
+import PassengerDriverBtn from '../components/buttons/PassengerDriverBtn';
 import ProfileDriver from './profile-driver/ProfileDriver';
 import { useEffect, useState } from 'react';
 
