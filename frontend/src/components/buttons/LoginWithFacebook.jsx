@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import facebookSVG from '../assets/facebook.svg';
-import RoundedBtn from './buttons/RoundedBtn';
+import RoundedBtn from './RoundedBtn';
 
 const LoginWithFacebook = ({ text, handleLogin }) => {
   return (
