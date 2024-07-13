@@ -10,14 +10,9 @@ import ahorroTiempo from '../assets/ahorrar-tiempo.png'
 import amigos from '../assets/convencion.png'
 import medioAmbiente from '../assets/medioambiente.png'
 import imageEnd from '../assets/image-end.png'
-import { useNavigate } from "react-router-dom"
 
 function LandingPage() {
-  const navigate = useNavigate();
-  const handleRedirect = () => {
-    navigate('/login');
-  }
-
+  
   return (
     <div>
         <main className="h-screen bg-main-image flex items-center flex-col justify-center ">
