@@ -1,4 +1,4 @@
-import GreenButton from "../components/buttons/GreenButton"
+import GreenLinkButton from "../components/buttons/GreenLinkButton"
 import './Main.css'
 import mainDriver from '../assets/main-driver.png'
 import mainTrip from '../assets/main-trip.png'
@@ -23,9 +23,9 @@ function LandingPage() {
         <main className="h-screen bg-main-image flex items-center flex-col justify-center ">
               <h1 className="font-baloo text-white text-center text-5xl font-extrabold mb-4">Viaja <br /> ahorrando</h1>
               <p className="font-roboto-flex text-white w-1/2 text-1xl mb-4 ">Conectate con personas que van al mismo lugar que vos y ahorra dinero.</p>
-              <GreenButton 
-              onClick={handleRedirect}
-              />
+              <GreenLinkButton 
+                to="/login"
+                text="Ingresar"/>
         </main>
     <section className="flex flex-col">
         <h2 className="mt-3 p-4 text-center text-2xl font-roboto-flex">¿Qué es <span className="text-customGreen font-title">a dedo</span>?</h2>
