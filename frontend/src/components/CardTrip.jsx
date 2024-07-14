@@ -24,15 +24,15 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
       aria-labelledby='trip-card'
       className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
       <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
-      <section>
-        <h2 className="text-base font-bold text-center font-baloo">{name}</h2>
+      <header>
+        <h3 className="text-base font-bold text-center font-baloo">{name}</h3>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
         <div className='mt-2 flex flex-row justify-between'>
           <img src={petsIcon} alt="pets icon" />
           <img src={handIcon} alt="hand icon" />
           <img src={kidsIcon} alt="kids icon" />
         </div>
-      </section>
+      </header>
       <section className='h-full'>
           <div>       
             <div className='flex items-center space-x-2'>
