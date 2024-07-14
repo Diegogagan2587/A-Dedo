@@ -1,6 +1,6 @@
 import viajeCreado from '../../../assets/viaje-creado.png'
-import BtnHomeGreen from '../../../components/BtnHomeGreen'
-import DeleteTripBtn from '../../../components/DeleteTripBtn'
+import GreenLinkButton from '../../../components/buttons/GreenLinkButton'
+import DeleteTripBtn from '../../../components/buttons/DeleteTripBtn'
 
 const TripCreationSuccess = () => {
   return (
@@ -10,7 +10,7 @@ const TripCreationSuccess = () => {
     <p className='text-center m-4 text-[20px]'>Has creado con exito tu viaje</p>
 
     <section className='mt-10 flex flex-col items-center'>
-      <BtnHomeGreen />
+      <GreenLinkButton to='/trips' text='Ir a inicio' />
       <DeleteTripBtn />
     </section>
   </main>

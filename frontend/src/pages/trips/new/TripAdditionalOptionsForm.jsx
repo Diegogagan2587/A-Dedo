@@ -10,7 +10,7 @@ import family from "../../../assets/family.png"
 import fastFood from "../../../assets/fastfood.png"
 import PopupCreateTrip from "../../../components/PopupCreateTrip"
 
-const CreateTripPartFour = () => {
+const TripAdditionalOptionsForm = () => {
   const dispatch = useDispatch();
   const [showPopup, setShowPopup] = useState(false);
   const [stops, setStops] = useState(false);
@@ -99,4 +99,4 @@ const CreateTripPartFour = () => {
   )
 }
 
-export default CreateTripPartFour
+export default TripAdditionalOptionsForm

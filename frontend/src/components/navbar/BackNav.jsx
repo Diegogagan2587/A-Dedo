@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
-import navbg from "../assets/nav-background.svg"
-import arrow from '../assets/leading-icon.png'
+import navbg from "../../assets/nav-background.svg"
+import arrow from '../../assets/leading-icon.png'
 import { Link } from "react-router-dom";
 
 const BackNav = ({text, to}) => {

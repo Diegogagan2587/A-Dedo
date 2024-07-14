@@ -1,6 +1,6 @@
 import carEnd from '../../../assets/carEnd.png'
-import CreateTripBtn from '../../../components/CreateTripBtn'
-import GoHomeBtn from '../../../components/GoHomeBtn'
+import CreateTripBtn from '../../../components/buttons/CreateTripBtn'
+import GoHomeBtn from '../../../components/buttons/GoHomeBtn'
 
 const VehicleRegistrationSuccess = () => {
   return (

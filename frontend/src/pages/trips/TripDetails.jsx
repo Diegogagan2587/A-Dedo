@@ -4,7 +4,7 @@ import DateDisplay from '../../components/DateDisplay';
 import Time from '../../components/Time';
 import LocationBarIcons from '../../components/LocationBarIcons';
 import TripFeature from '../../components/TripFeature';
-import ButtonGreen from '../../components/ButtonGreen';
+import ButtonGreen from '../../components/buttons/ButtonGreen';
 import freeSeats from '../../assets/free-seats.svg';
 import hand from '../../assets/back_hand.svg';
 import kids from '../../assets/kids.svg';

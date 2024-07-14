@@ -100,7 +100,7 @@ describe('Register Driver Flow', () => {
     await user.click(registerButton);
 
       // in the PopUp we Complete registration and navigate to the Trips page 
-    const popupContinueButton = screen.getByRole('link', { name: "Continuar"});
+    const popupContinueButton = screen.getByRole('button', { name: "Continuar"});
     await user.click(popupContinueButton);
     expect(window.location.pathname).toBe('/register/step-3');
 
