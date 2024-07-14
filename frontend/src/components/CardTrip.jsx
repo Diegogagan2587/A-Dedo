@@ -34,25 +34,24 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
         </div>
       </header>
       <LocationBarIcons />
-      <section className='h-full'>
-          <div>       
-            <div className='flex items-center space-x-2'>
-              <p className='text-[13px] text-textColor font-semibold'>{startLocation}</p>
-            </div>
-              <p className="text-gray-700 ml-7 text-[11px]">{startTime}</p>
-          </div> 
-          <div className="relative h-10">
-            </div>
-          <div> 
-            <div className='flex items-center space-x-2 '>
-              <p className='text-[13px] text-textColor font-semibold'>{endLocation}</p>
-          </div>
-            <p className="text-gray-700 ml-7 text-[11px]">{endTime}</p>
-          </div>
+      <section className="location-container flex flex-col gap-6">
+        <div className='location-origin flex flex-col items-center'>
+          <p className="text-[13px] text-textColor font-semibold">
+            {startLocation}
+          </p>
+          <p className="text-gray-700 text-[11px]">{startTime}</p>
+        </div>
+        <div className='location-origin flex flex-col items-center'>
+          <p className="text-[13px] text-textColor font-semibold">
+            {endLocation}
+          </p>
+
+          <p className="text-gray-700 text-[11px]">{endTime}</p>
+        </div>
       </section>
     </article>
-  )
-}
+  );
+};
 
 CardTrip.propTypes = {
     id: PropTypes.string.isRequired,  
