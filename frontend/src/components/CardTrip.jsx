@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setSelectedTrip } from '../store/slices/tripsSlice';
-import location from '../assets/location.png';
+import LocationBarIcons from './LocationBarIcons';
 import petsIcon from '../assets/pets.png'
 import handIcon from '../assets/hand.png'
 import kidsIcon from '../assets/family.png'
@@ -33,20 +33,18 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
           <img src={kidsIcon} alt="kids icon" />
         </div>
       </header>
+      <LocationBarIcons />
       <section className='h-full'>
           <div>       
             <div className='flex items-center space-x-2'>
-              <img src={location} alt="location icon" className='w-4 h-5' />
               <p className='text-[13px] text-textColor font-semibold'>{startLocation}</p>
             </div>
               <p className="text-gray-700 ml-7 text-[11px]">{startTime}</p>
           </div> 
           <div className="relative h-10">
-              <div className="absolute left-2 bottom-2 h-full border-l-2 border-dashed border-customGreen"></div>
             </div>
           <div> 
             <div className='flex items-center space-x-2 '>
-              <img src={location} alt="location icon" className='w-4 h-5' />
               <p className='text-[13px] text-textColor font-semibold'>{endLocation}</p>
           </div>
             <p className="text-gray-700 ml-7 text-[11px]">{endTime}</p>
