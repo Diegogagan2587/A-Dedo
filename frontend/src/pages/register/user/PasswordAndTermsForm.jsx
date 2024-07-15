@@ -4,7 +4,7 @@ import { setPassword, acceptTerms } from "../../../store/slices/userSlice";
 import Input from "../../../components/Input"
 import PopupCreateAccount from "../../../components/PopupCreateAccount";
 
-const CreateAccountTwo = () => {
+const PasswordAndTermsForm = () => {
   const dispatch = useDispatch();
   const [showPopup, setShowPopup] = useState(false);
   const [passwordA, setPasswordA] = useState("");
@@ -16,7 +16,6 @@ const CreateAccountTwo = () => {
   }
 
   const handleNext = () => {
-    console.log('handle next-->', passwordA, passwordB);
     dispatch(setPassword({passwordA, passwordB}));
     dispatch(acceptTerms(terms));
     togglePopup();
@@ -33,6 +32,7 @@ const CreateAccountTwo = () => {
         <section className="m-4">
         <Input 
             id="password"
+            ariaLabel="contraseña"
             type="password"
             placeholder="Contraseña"
             onChange={(e) => setPasswordA(e.target.value)}
@@ -42,6 +42,7 @@ const CreateAccountTwo = () => {
           <h2 className='font-semibold text-[18px] mb-2 font-roboto-flex'>Escribe nuevamente tu contraseña</h2>
           <Input 
             id="password"
+            ariaLabel="confirmar contraseña"
             type="password"
             placeholder="Contraseña"
             onChange={(e) => setPasswordB(e.target.value)}
@@ -49,10 +50,11 @@ const CreateAccountTwo = () => {
         </section>
         <section className="m-4 flex items-center">
           <input type="checkbox" className="w-[21px] h-[20px] border border-black" 
+          id="terms"
           checked={terms}
           onChange={() => setTerms(!terms)}
           />
-          <p className="m-3">He leído y acepto los <span className="text-customGreen font-roboto-flex">TÉRMINOS Y CONDICIONES</span></p>
+          <label htmlFor="terms" className="m-3">He leído y acepto los <span className="text-customGreen font-roboto-flex">TÉRMINOS Y CONDICIONES</span></label>
         </section>
         <section className="flex items-center justify-center">
           <button 
@@ -66,4 +68,4 @@ const CreateAccountTwo = () => {
   )
 }
 
-export default CreateAccountTwo
+export default PasswordAndTermsForm;

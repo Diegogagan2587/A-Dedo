@@ -1,7 +1,7 @@
 import tarjetaIdentificacionLista from '../../../assets/documento.png'
-import { NextBtn } from '../../../components/NextBtn'
+import { NextBtn } from '../../../components/buttons/NextBtn'
 
-const DriverEnd = () => {
+const DriverRegistrationSuccess = () => {
   return (
     <main className='mt-20 flex flex-col items-center justify-center'>
       <img src={tarjetaIdentificacionLista} alt="" />
@@ -15,4 +15,4 @@ const DriverEnd = () => {
   )
 }
 
-export default DriverEnd
+export default DriverRegistrationSuccess

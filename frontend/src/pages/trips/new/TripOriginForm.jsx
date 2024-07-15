@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { setNavigationLayout } from '../../../store/slices/navigationSlice';
+import { setOrigin } from '../../../store/slices/tripsSlice';
 import Input from "../../../components/Input"
 import volante from "../../../assets/volante.png"
-import BtnNextIcon from "../../../components/BtnNextIcon"
-import { setDestination } from '../../../store/slices/tripsSlice';
+import BtnNextIcon from "../../../components/buttons/BtnNextIcon"
 
-const CreateTripPartTwo = () => {
+const TripOriginForm = () => {
   const dispatch = useDispatch();
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
@@ -15,16 +15,16 @@ const CreateTripPartTwo = () => {
   const [time, setTime] = useState('');
 
   useEffect(()=>{
-    dispatch( setNavigationLayout("create-trip-2") )
+    dispatch( setNavigationLayout("create-trip-1") )
     return ()=> dispatch( setNavigationLayout("main-nav") )
   },[dispatch]);
 
   return (
-    <div className="">
+    <div className="w-full">
       <main className="">
         <section className="m-4 flex items-center">
           <img src={volante} alt="" />
-          <h2 className='text-textColor font-extrabold font-baloo text-[26px] m-2'>Punto de llegada</h2>
+          <h2 className='text-textColor font-extrabold font-baloo text-[26px] m-2'>Punto de partida</h2>
         </section>
         <section className="m-4">
           <h2 className="text-[18px] font-semibold font-roboto-flex">Domicilio</h2>
@@ -45,7 +45,7 @@ const CreateTripPartTwo = () => {
           <h2 className="text-[18px] font-semibold font-roboto-flex">Código Postal</h2>
           <input 
           type="number"
-          className="w-[100px] border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F] font-roboto-flex"
+          className="w-[100px] border-[1px] border-black px-4 my-2 py-2 rounded-md text-[#49454F]"
           onChange={(e) => setPostalCode(e.target.value)}
           />
         </section>
@@ -66,9 +66,9 @@ const CreateTripPartTwo = () => {
           </div>
         </section>
         <span className="absolute right-12">
-          <BtnNextIcon 
-            to="/trips/new/step-3"
-            onClick={()=>dispatch(setDestination({address, city, postalCode, date, time}))}
+          <BtnNextIcon
+          to="/trips/new/step-2"
+          onClick={()=>dispatch(setOrigin({address, city, postalCode, date, time}))}
           />
         </span>
       </main>
@@ -76,4 +76,4 @@ const CreateTripPartTwo = () => {
   )
 }
 
-export default CreateTripPartTwo
+export default TripOriginForm

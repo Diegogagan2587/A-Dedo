@@ -2,14 +2,14 @@ import { PropTypes } from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setSelectedTrip } from '../store/slices/tripsSlice';
-import location from '../assets/location.png';
-import petsIcon from '../assets/pets.png'
-import handIcon from '../assets/hand.png'
-import kidsIcon from '../assets/family.png'
+import LocationBarIcons from './LocationBarIcons';
+import LocationAndTime from './cardTrip/LocationAndTime';
+import Pets from './options/Pets';
+import Stop from './options/Stop';
+import Childrens from './options/Childrens';
 import profilePicturePlaceHolder from '../assets/profile1.png'
 
-
-const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
+const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime, acceptPets, acceptStops, acceptChildren }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -20,39 +20,30 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
   };
 
   return (
-    <article id={id} onClick={handleClick} className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
-      <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
-      <section>
-        <h2 className="text-base font-bold text-center font-baloo">{name}</h2>
+    <article id={id} onClick={handleClick} 
+      aria-label={`Trip card for ${name}`}
+      className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
+      <figure>
+        <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
+        <figcaption className='hidden'>{name}</figcaption>
+      </figure>
+      <header>
+        <h3 className="text-base font-bold text-center font-baloo">{name}</h3>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
         <div className='mt-2 flex flex-row justify-between'>
-          <img src={petsIcon} alt="pets icon" />
-          <img src={handIcon} alt="hand icon" />
-          <img src={kidsIcon} alt="kids icon" />
+          <Pets isAllowed={acceptPets} />
+          <Stop isAllowed={acceptStops} />
+          <Childrens isAllowed={acceptChildren} />
         </div>
-      </section>
-      <section className='h-full'>
-          <div>       
-            <div className='flex items-center space-x-2'>
-              <img src={location} alt="location icon" className='w-4 h-5' />
-              <p className='text-[13px] text-textColor font-semibold'>{startLocation}</p>
-            </div>
-              <p className="text-gray-700 ml-7 text-[11px]">{startTime}</p>
-          </div> 
-          <div className="relative h-10">
-              <div className="absolute left-2 bottom-2 h-full border-l-2 border-dashed border-customGreen"></div>
-            </div>
-          <div> 
-            <div className='flex items-center space-x-2 '>
-              <img src={location} alt="location icon" className='w-4 h-5' />
-              <p className='text-[13px] text-textColor font-semibold'>{endLocation}</p>
-          </div>
-            <p className="text-gray-700 ml-7 text-[11px]">{endTime}</p>
-          </div>
+      </header>
+      <LocationBarIcons />
+      <section className="location-container flex flex-col gap-6">
+        <LocationAndTime id={`start-location-${id}`} location={startLocation} time={startTime} />
+        <LocationAndTime id={`end-location-${id}`} location={endLocation} time={endTime} />
       </section>
     </article>
-  )
-}
+  );
+};
 
 CardTrip.propTypes = {
     id: PropTypes.string.isRequired,  
@@ -62,7 +53,11 @@ CardTrip.propTypes = {
     startLocation: PropTypes.string.isRequired,
     startTime: PropTypes.string.isRequired,
     endLocation: PropTypes.string.isRequired,
-    endTime: PropTypes.string.isRequired
+    endTime: PropTypes.string.isRequired,
+    acceptPets: PropTypes.bool,
+    acceptStops: PropTypes.bool,
+    acceptChildren: PropTypes.bool,
+
 };
 
 export default CardTrip

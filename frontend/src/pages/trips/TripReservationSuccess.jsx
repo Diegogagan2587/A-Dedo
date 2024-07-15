@@ -1,7 +1,7 @@
 import reserveConfirm from '../../assets/reserve-confirm.png'
-import BtnHomeGreen from '../../components/BtnHomeGreen'
+import GreenLinkButton from '../../components/buttons/GreenLinkButton'
 
-function ReserveConfirmation() {
+function TripReservationSuccess() {
   return (
       <main className='mt-20 flex flex-col items-center justify-center'>
       <img src={reserveConfirm} alt="" />
@@ -9,10 +9,10 @@ function ReserveConfirmation() {
       <p className='text-center m-4 text-[20px]'>Has reservado tu viaje con exito.</p>
   
       <section className='mt-9 flex flex-col items-center'>
-        <BtnHomeGreen />
+        <GreenLinkButton to='/trips' text='Ir a inicio' />
       </section>
     </main>
   )
 }
 
-export default ReserveConfirmation
+export default TripReservationSuccess

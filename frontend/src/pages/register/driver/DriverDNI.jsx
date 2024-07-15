@@ -1,5 +1,5 @@
 import imagenAdjuntar from '../../../assets/Imagen-adjuntar.png'
-import { NextBtn } from '../../../components/NextBtn'
+import { NextBtn } from '../../../components/buttons/NextBtn'
 
 const DriverDNI = () => {
   return (

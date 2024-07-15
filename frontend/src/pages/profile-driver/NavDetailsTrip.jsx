@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import BackBtn from "../../components/BackBtn"
+import BackBtn from "../../components/buttons/BackBtn"
 import curve from '../../assets//navbar/curve-2.svg';
 import driverProfile from '../../assets/main-profilepic.png'
 

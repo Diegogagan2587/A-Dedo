@@ -182,16 +182,13 @@ To run the Back-End, make sure you have opened your terminal in the `backend` fo
 ```
 
 ### Run tests
+####
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  npm run test
 ```
---->
 
 ### Deployment
 #### front-end

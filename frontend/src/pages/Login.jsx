@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import  authenticateUser  from '../store/requests/authenticateUser';
-import LoginWGoogleBtn from '../components/LoginWGoogleBtn';
-import ButtonGreen from '../components/ButtonGreen';
+import LoginWGoogleBtn from '../components/buttons/LoginWGoogleBtn';
+import ButtonGreen from '../components/buttons/ButtonGreen';
 import Input from '../components/Input';
 
 const Login = ({setIsLoggedIn}) => {
@@ -36,6 +36,7 @@ const Login = ({setIsLoggedIn}) => {
       <h1 className="my-2 text-[22px] font-medium font-roboto-flex">Iniciar sesión</h1>
       <form className="flex flex-col w-full items-center justify-around">
         <Input 
+        ariaLabel="email"
         type="email" 
         value={user.email}
         onChange={(e) => setUser({...user, email: e.target.value})}
@@ -43,6 +44,7 @@ const Login = ({setIsLoggedIn}) => {
         required={true}
         />
         <Input 
+        ariaLabel="contraseña"
         type="password" 
         value={user.password}
         onChange={(e) => setUser({...user, password: e.target.value})}

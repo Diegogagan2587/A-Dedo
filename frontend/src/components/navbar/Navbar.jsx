@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import TripDetailsTop from '../../pages/trips/TripDetailsTop';
 import NavDetailsTrip from '../../pages/profile-driver/NavDetailsTrip';
-import BackNav from "../../components/BackNav"
+import BackNav from "./BackNav"
 import Menu from './Menu';
 import logo from '../../assets/logo.png';
 import bgNavCurve from '../../assets/nav-background.svg';

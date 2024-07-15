@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import registerDriver from '../../../store/requests/registerDriver'
 import Input from "../../../components/Input"
 import imagenAdjuntar from '../../../assets/Imagen-adjuntar.png'
-import { NextBtn } from "../../../components/NextBtn"
+import { NextBtn } from "../../../components/buttons/NextBtn"
 
 const CarRegister = () => {
   const dispatch = useDispatch();
@@ -27,6 +27,7 @@ const CarRegister = () => {
             value={makeAndModel}
             onChange={(e) => setMakeAndModel(e.target.value)}
             required={true}
+            ariaLabel="Marca y modelo"
           />
         </form>
       </section>
