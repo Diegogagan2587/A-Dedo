@@ -61,6 +61,9 @@ const Home = () => {
                 startTime={trip.origin.time}
                 endLocation={trip.destination.city}
                 endTime={trip.destination.time}
+                acceptPets={trip.pets}
+                acceptStops={trip.stops}
+                acceptChildren={trip.childrens}
               />
             ))}
           </section>

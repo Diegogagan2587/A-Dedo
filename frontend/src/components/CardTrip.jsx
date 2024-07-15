@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux';
 import { setSelectedTrip } from '../store/slices/tripsSlice';
 import LocationBarIcons from './LocationBarIcons';
 import LocationAndTime from './cardTrip/LocationAndTime';
-import petsIcon from '../assets/pets.png'
-import handIcon from '../assets/hand.png'
-import kidsIcon from '../assets/family.png'
+import Pets from './options/Pets';
+import Stop from './options/Stop';
+import Childrens from './options/Childrens';
 import profilePicturePlaceHolder from '../assets/profile1.png'
 
-const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
+const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime, acceptPets, acceptStops, acceptChildren }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -31,9 +31,9 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
         <h3 className="text-base font-bold text-center font-baloo">{name}</h3>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
         <div className='mt-2 flex flex-row justify-between'>
-          <img src={petsIcon} alt="pets icon" />
-          <img src={handIcon} alt="hand icon" />
-          <img src={kidsIcon} alt="kids icon" />
+          <Pets isAllowed={acceptPets} />
+          <Stop isAllowed={acceptStops} />
+          <Childrens isAllowed={acceptChildren} />
         </div>
       </header>
       <LocationBarIcons />
@@ -53,7 +53,11 @@ CardTrip.propTypes = {
     startLocation: PropTypes.string.isRequired,
     startTime: PropTypes.string.isRequired,
     endLocation: PropTypes.string.isRequired,
-    endTime: PropTypes.string.isRequired
+    endTime: PropTypes.string.isRequired,
+    acceptPets: PropTypes.bool,
+    acceptStops: PropTypes.bool,
+    acceptChildren: PropTypes.bool,
+
 };
 
 export default CardTrip
