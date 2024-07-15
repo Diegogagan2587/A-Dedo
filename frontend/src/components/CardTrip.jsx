@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setSelectedTrip } from '../store/slices/tripsSlice';
 import LocationBarIcons from './LocationBarIcons';
+import LocationAndTime from './cardTrip/LocationAndTime';
 import petsIcon from '../assets/pets.png'
 import handIcon from '../assets/hand.png'
 import kidsIcon from '../assets/family.png'
 import profilePicturePlaceHolder from '../assets/profile1.png'
-
 
 const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime }) => {
   const navigate = useNavigate();
@@ -37,20 +37,10 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
         </div>
       </header>
       <LocationBarIcons />
-      <section className="location-container flex flex-col gap-6">
-        <div className='location-origin flex flex-col items-center'>
-          <p className="text-[13px] text-textColor font-semibold">
-            {startLocation}
-          </p>
-          <p className="text-gray-700 text-[11px]">{startTime}</p>
-        </div>
-        <div className='location-origin flex flex-col items-center'>
-          <p className="text-[13px] text-textColor font-semibold">
-            {endLocation}
-          </p>
-
-          <p className="text-gray-700 text-[11px]">{endTime}</p>
-        </div>
+      <section className="location-container flex flex-col gap-6
+        ">
+        <LocationAndTime id={`start-location-${id}`} location={startLocation} time={startTime} />
+        <LocationAndTime id={`end-location-${id}`} location={endLocation} time={endTime} />
       </section>
     </article>
   );
