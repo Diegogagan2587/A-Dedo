@@ -23,7 +23,10 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
     <article id={id} onClick={handleClick} 
       aria-labelledby='trip-card'
       className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
-      <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
+      <figure>
+        <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
+        <figcaption className='hidden'>{name}</figcaption>
+      </figure>
       <header>
         <h3 className="text-base font-bold text-center font-baloo">{name}</h3>
         <p className='text-xs text-center'>{seatsAvailable} lugares <br /> disponibles</p>
