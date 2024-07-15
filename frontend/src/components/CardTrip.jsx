@@ -21,7 +21,7 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
 
   return (
     <article id={id} onClick={handleClick} 
-      aria-labelledby='trip-card'
+      aria-label={`Trip card for ${name}`}
       className='min-w-[328px] min-h-[140px] border border-customGreen rounded-lg flex p-4 items-center space-x-4 shadow-lg mt-4 '>
       <figure>
         <img src={profilePicture || profilePicturePlaceHolder} alt={name} className="w-[68px] h-[64px] rounded-full" />
@@ -37,8 +37,7 @@ const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, sta
         </div>
       </header>
       <LocationBarIcons />
-      <section className="location-container flex flex-col gap-6
-        ">
+      <section className="location-container flex flex-col gap-6">
         <LocationAndTime id={`start-location-${id}`} location={startLocation} time={startTime} />
         <LocationAndTime id={`end-location-${id}`} location={endLocation} time={endTime} />
       </section>
