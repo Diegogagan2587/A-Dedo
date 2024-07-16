@@ -1,20 +1,51 @@
 import { PropTypes } from 'prop-types';
+import ChangePriceButton from './ChangePriceButton';
 import removeCircle from '../../../../assets/remove_circle.png';
 import addCircle from '../../../../assets/add_circle.png';
 
-const InputPricePerPassenger = () => {
+const InputPricePerPassenger = ({ price, setPrice }) => {
+  const formatCurrency = (value) => {
+    return new Intl.NumberFormat('en-US', { minimumFractionDigits: 0 }).format(
+      value
+    );
+  };
+  const handlePriceChange = (e) => {
+    const inputValue = e.target.value.replace(/[^0-9]/g, '');
+    setPrice(inputValue);
+  };
   return (
-    <section className="m-4 py-3">
-    <h2 className="text-[18px] font-semibold font-roboto-flex">Selecciona el precio por pasajero</h2>
-    <div className="flex items-center justify-around py-5">
-      <img src={removeCircle} alt="" />
-      <span className="font-semibold text-[26px] font-roboto-flex">$10.000</span>
-      <img src={addCircle} alt="" />
-    </div>
-    <p className="text-center">
-      <em className="text-[14px] py-4 font-roboto-flex">Valor recomendado por persona</em>
-    </p>
-  </section>
+    <section className="m-4 py-3 border-2">
+      <label htmlFor="" className="text-[18px] font-semibold font-roboto-flex">
+        Selecciona el precio por pasajero
+      </label>
+      <div className="flex items-center justify-around py-5">
+        <ChangePriceButton 
+          iconSrc={removeCircle} 
+          alt=""/>
+        <div
+          className="flex gap-2 items-center
+              font-semibold font-roboto-flex text-[26px] px-4
+              border-[1px] border-black py-2 rounded-md"
+        >
+          <span>$</span>
+          <input
+            className="w-full outline-none"
+            type="text"
+            value={formatCurrency(price)}
+            onChange={handlePriceChange}
+          />
+        </div>
+        <ChangePriceButton 
+          iconSrc={addCircle} 
+          alt=""
+        />
+      </div>
+      <p className="text-center">
+        <em className="text-[14px] py-4 font-roboto-flex">
+          Valor recomendado por persona
+        </em>
+      </p>
+    </section>
   );
 };
 
