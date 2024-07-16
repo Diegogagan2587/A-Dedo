@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { setNavigationLayout } from '../../../../store/slices/navigationSlice';
 import volante from "../../../../assets/volante.png"
 import BtnNextIcon from "../../../../components/buttons/BtnNextIcon"
-import { setAvailableSeats } from '../../../../store/slices/tripsSlice';
+import { setAvailableSeats, setPricePerPassenger } from '../../../../store/slices/tripsSlice';
 import InputPricePerPassenger from './InputPricePerPassenger';
 
 const TripCompanionsForm = () => {
@@ -15,6 +15,11 @@ const TripCompanionsForm = () => {
     dispatch(setNavigationLayout("create-trip-3"));
     return () => dispatch(setNavigationLayout("main-nav"));
   }, [dispatch]);
+  
+  const handleNext = () => {
+    dispatch(setAvailableSeats(seats));
+    dispatch(setPricePerPassenger(price));
+  };
 
   return (
     <div className="w-full">
@@ -37,7 +42,7 @@ const TripCompanionsForm = () => {
         <span className="absolute right-4 bottom-30">
           <BtnNextIcon
           to="/trips/new/step-4"
-          onClick={() => dispatch(setAvailableSeats(seats))}
+          onClick={handleNext}
           />
         </span>
       </main>
