@@ -150,6 +150,28 @@ Create an `.env` file and add the base API url:
 VITE_API_URL_BASE = ""
 ```
 #### Back End
+If you want to run A-dedo API in local, you need to connect it to a database,
+you could connect it using the URI for a mongodb database in the cloud or run your own
+instance of a database and use that one.
+##### How to start MongoDB in a Linux local pc
+you need to have installed mongo db already, if you are on windows and you would like 
+to run MongoDB in local please refer to mongodb docs for further assistance:
+1. Initialize the mongo db service
+```sh
+sudo systemctl start mongod
+```
+2. Check service status
+```sh
+sudo systemctl status mongod
+```
+The mongodb service should be running now. if you need to work with you database
+from terminal please install the MongoDB CLI, once install you can initialize it running
+`mongosh`.
+
+if you would like to close the MongoDB service you can do so running `sudo systemctl stop mongod`
+in your linux terminal.
+
+##### API in Local
 
 Open the `backend` folder in your terminal an run:
 
