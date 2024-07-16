@@ -75,7 +75,7 @@ describe('Home Page', () => {
       </Router>
     );
     // Act
-    const tripCards = screen.getAllByRole('article');
+    const tripCards = screen.getAllByRole('article', { name: /Trip card for/i });
     // Assert
     expect(tripCards.length).toBe(1);
   });
