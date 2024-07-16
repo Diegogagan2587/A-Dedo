@@ -1,13 +1,13 @@
 import { PropTypes } from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { setSelectedTrip } from '../store/slices/tripsSlice';
-import LocationBarIcons from './LocationBarIcons';
-import LocationAndTime from './cardTrip/LocationAndTime';
-import Pets from './options/Pets';
-import Stop from './options/Stop';
-import Childrens from './options/Childrens';
-import profilePicturePlaceHolder from '../assets/profile1.png'
+import { setSelectedTrip } from '../../store/slices/tripsSlice';
+import LocationBarIcons from '../LocationBarIcons';
+import LocationAndTime from './LocationAndTime';
+import Pets from '../options/Pets';
+import Stop from '../options/Stop';
+import Childrens from '../options/Childrens';
+import profilePicturePlaceHolder from '../../assets/profile1.png'
 
 const CardTrip = ({ id, name, profilePicture, seatsAvailable, startLocation, startTime, endLocation, endTime, acceptPets, acceptStops, acceptChildren }) => {
   const navigate = useNavigate();
