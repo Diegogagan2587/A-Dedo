@@ -11,15 +11,18 @@ const InputPricePerPassenger = ({ price, setPrice }) => {
   };
   const handlePriceChange = (e) => {
     const inputValue = e.target.value.replace(/[^0-9]/g, '');
-    setPrice(inputValue);
+    setPrice(Number(inputValue));
   };
+
   return (
-    <section className="m-4 py-3 border-2">
+    <section className="m-4 py-3">
       <label htmlFor="" className="text-[18px] font-semibold font-roboto-flex">
         Selecciona el precio por pasajero
       </label>
       <div className="flex items-center justify-around py-5">
         <ChangePriceButton 
+          id="decrease-price"
+          onClick={() => setPrice(price - 1)}
           iconSrc={removeCircle} 
           alt=""/>
         <div
@@ -36,6 +39,8 @@ const InputPricePerPassenger = ({ price, setPrice }) => {
           />
         </div>
         <ChangePriceButton 
+          id="increase-price"
+          onClick={() => setPrice(price + 1)}
           iconSrc={addCircle} 
           alt=""
         />
