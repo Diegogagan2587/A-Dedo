@@ -186,7 +186,7 @@ export const tripsSlice = createSlice({
       ];
     })
     .addCase('trips/get/fulfilled', (state, action)=>{
-      state.list = [...state.list, ...action.payload ]
+      state.list = [...action.payload ]
     })
   },
 });

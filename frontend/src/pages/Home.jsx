@@ -55,7 +55,7 @@ const Home = () => {
               <CardTrip
                 key={trip._id}
                 id={`${trip._id}`}
-                name="Elena"
+                name={trip&&trip.driver&&trip.driver.fullName || 'Nombre no disponible' }
                 seatsAvailable={`${trip.seats}`}
                 startLocation={trip.origin.city}
                 startTime={trip.origin.time}
