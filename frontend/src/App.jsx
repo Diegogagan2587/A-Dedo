@@ -12,7 +12,7 @@ import PasswordAndTermsForm from './pages/register/user/PasswordAndTermsForm';
 import UserRegistrationSuccess from './pages/register/user/UserRegistrationSuccess';
 import TripOriginForm from './pages/trips/new/TripOriginForm';
 import TripDestinationForm from './pages/trips/new/TripDestinationForm';
-import TripCompanionsForm from './pages/trips/new/TripCompanionsForm';
+import TripCompanionsForm from './pages/trips/new/TripCompanionsForm/TripCompanionsForm';
 import TripAdditionalOptionsForm from './pages/trips/new/TripAdditionalOptionsForm';
 import TripCreationSuccess from './pages/trips/new/TripCreationSuccess';
 import DriverRegister from './pages/register/driver/DriverRegister';

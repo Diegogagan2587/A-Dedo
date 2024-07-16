@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { setNavigationLayout } from '../../../store/slices/navigationSlice';
-import volante from "../../../assets/volante.png"
-import BtnNextIcon from "../../../components/buttons/BtnNextIcon"
-import { setAvailableSeats } from '../../../store/slices/tripsSlice';
-import InputPricePerPassenger from './TripCompanionsForm/InputPricePerPassenger';
+import { setNavigationLayout } from '../../../../store/slices/navigationSlice';
+import volante from "../../../../assets/volante.png"
+import BtnNextIcon from "../../../../components/buttons/BtnNextIcon"
+import { setAvailableSeats } from '../../../../store/slices/tripsSlice';
+import InputPricePerPassenger from './InputPricePerPassenger';
 
 const TripCompanionsForm = () => {
   const dispatch = useDispatch();
