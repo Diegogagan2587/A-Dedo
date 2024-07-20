@@ -171,6 +171,9 @@ export const tripsSlice = createSlice({
     },
     setReserve: (state, action)=>{
       state.reserve = action.payload
+    },
+    setPricePerPassenger: (state, action)=>{
+      state.new.price = action.payload;
     }
   },
   extraReducers: (builder) => {
@@ -198,5 +201,6 @@ export const {
   setAdditionalOptions,
   setSelectedTrip,
   setReserve,
+  setPricePerPassenger
 } = tripsSlice.actions;
 export default tripsSlice.reducer;
