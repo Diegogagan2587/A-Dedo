@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import sortTripsByDate from '../store/utils/sortTripsByDate';
-import CardTrip from '../components/CardTrip';
+import CardTrip from '../components/cardTrip/CardTrip';
 import DriverButton from '../components/buttons/DriverButton';
 import mainProfilePicture from '../assets/main-profilepic.png';
 import auto from '../assets/auto.png';

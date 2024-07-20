@@ -1,20 +1,25 @@
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { setNavigationLayout } from '../../../store/slices/navigationSlice';
-import volante from "../../../assets/volante.png"
-import removeCricle from "../../../assets/remove_circle.png"
-import addCricle from "../../../assets/add_circle.png"
-import BtnNextIcon from "../../../components/buttons/BtnNextIcon"
-import { setAvailableSeats } from '../../../store/slices/tripsSlice';
+import { setNavigationLayout } from '../../../../store/slices/navigationSlice';
+import volante from "../../../../assets/volante.png"
+import BtnNextIcon from "../../../../components/buttons/BtnNextIcon"
+import { setAvailableSeats, setPricePerPassenger } from '../../../../store/slices/tripsSlice';
+import InputPricePerPassenger from './InputPricePerPassenger';
 
 const TripCompanionsForm = () => {
   const dispatch = useDispatch();
   const [seats, setSeats] = useState(0);
+  const [price, setPrice] = useState(10000);
 
   useEffect(() => {
     dispatch(setNavigationLayout("create-trip-3"));
     return () => dispatch(setNavigationLayout("main-nav"));
   }, [dispatch]);
+  
+  const handleNext = () => {
+    dispatch(setAvailableSeats(seats));
+    dispatch(setPricePerPassenger(price));
+  };
 
   return (
     <div className="w-full">
@@ -32,21 +37,12 @@ const TripCompanionsForm = () => {
           onChange={(e) => setSeats(e.target.value)}
           />
         </section>
-        <section className="m-4 py-3">
-          <h2 className="text-[18px] font-semibold font-roboto-flex">Selecciona el precio por pasajero</h2>
-          <div className="flex items-center justify-around py-5">
-            <img src={removeCricle} alt="" />
-            <span className="font-semibold text-[26px] font-roboto-flex">$10.000</span>
-            <img src={addCricle} alt="" />
-          </div>
-          <p className="text-center">
-            <em className="text-[14px] py-4 font-roboto-flex">Valor recomendado por persona</em>
-          </p>
-        </section>
+        <InputPricePerPassenger price={price} setPrice={setPrice}/>
+        
         <span className="absolute right-4 bottom-30">
           <BtnNextIcon
           to="/trips/new/step-4"
-          onClick={() => dispatch(setAvailableSeats(seats))}
+          onClick={handleNext}
           />
         </span>
       </main>

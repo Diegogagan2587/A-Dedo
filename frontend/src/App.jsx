@@ -12,7 +12,7 @@ import PasswordAndTermsForm from './pages/register/user/PasswordAndTermsForm';
 import UserRegistrationSuccess from './pages/register/user/UserRegistrationSuccess';
 import TripOriginForm from './pages/trips/new/TripOriginForm';
 import TripDestinationForm from './pages/trips/new/TripDestinationForm';
-import TripCompanionsForm from './pages/trips/new/TripCompanionsForm';
+import TripCompanionsForm from './pages/trips/new/TripCompanionsForm/TripCompanionsForm';
 import TripAdditionalOptionsForm from './pages/trips/new/TripAdditionalOptionsForm';
 import TripCreationSuccess from './pages/trips/new/TripCreationSuccess';
 import DriverRegister from './pages/register/driver/DriverRegister';
@@ -26,6 +26,7 @@ import ProfileDriver from './pages/profile-driver/ProfileDriver';
 import DriverDetailTrip from './pages/profile-driver/DriverDetailTrip';
 import TripReservationSuccess from './pages/trips/TripReservationSuccess';
 import ReserveTrip from './pages/trips/ReserveTrip';
+import UserTripHistory from './pages/trips/UserTripHistory';
 
 function App() {
   const dispatch = useDispatch();
@@ -51,6 +52,7 @@ function App() {
             />
             <Route path="/profile">
               <Route path="driver" element={<ProfileDriver />} />
+              <Route path="user-history" element={<UserTripHistory />}/>
             </Route>
             <Route path="/trips" >
               <Route path="/trips" element={<Home />}/>
