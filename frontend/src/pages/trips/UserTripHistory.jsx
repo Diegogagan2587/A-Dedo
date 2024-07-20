@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PassengerDriverBtn from "../../components/PassengerDriverBtn"
+import PassengerDriverBtn from "../../components/buttons/PassengerDriverBtn";
 import { useDispatch } from "react-redux";
 import { setNavigationLayout } from "../../store/slices/navigationSlice";
 import NoTripsAvailable from "../../components/NoTripsAvailable";
