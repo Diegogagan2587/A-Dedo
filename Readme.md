@@ -215,11 +215,10 @@ npm run start
 
 > Below our beloved team members!
 
-👤 **Author1**
+👤 **José Martinez - Back End Developer**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@josent19](https://github.com/josent19)
+- LinkedIn: [José Martinez](https://www.linkedin.com/in/josegregoriomartinez/)
 
 👤 **Rocio Naomi Clause - Designer**
 
