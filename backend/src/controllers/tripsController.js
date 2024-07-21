@@ -3,7 +3,11 @@ import Trip from '../models/trip.js'
 const tripsController = {
     index: async (req, res) => {
         try {
-            const trips = await Trip.find().populate('driver passengers messages_trip');
+            const trips = await Trip.find().populate('passengers messages_trip').populate({
+              path: "driver",
+              select: "fullName",
+              populate: "vehicle"
+            });
             res.status(200).json(trips);
         } catch (err) {
             console.log("Error fetching trips: ", err);
