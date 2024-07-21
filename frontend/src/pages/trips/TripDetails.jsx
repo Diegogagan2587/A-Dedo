@@ -37,7 +37,7 @@ const TripDetails = () => {
         <div className="flex text-sm items-center justify-between w-full flex-wrap">
           <DateDisplay date={trip.origin.date} />
           <Time time={trip.origin.time} />
-          <CarModel text="EcoSport - Ford" />
+          <CarModel text={trip.driver.vehicle.makeAndModel} />
         </div>
         <div id="locations" className="flex items-center justify-center w-full">
           <LocationBarIcons />
